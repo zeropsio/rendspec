@@ -19,9 +19,12 @@ import (
 	"github.com/mark3labs/mcp-go/server"
 )
 
-const dslReference = `
+const dslSyntaxHint = ` IMPORTANT: If you are unfamiliar with the rendspec DSL syntax, call the "get_dsl_reference" tool FIRST to get the full syntax documentation and working examples before writing any source.`
 
-COMPLETE WORKING EXAMPLE (use this as your starting template):
+const dslReference = `rendspec DSL Reference
+======================
+
+WORKING EXAMPLE — use as starting template:
 
 root:
   width: 1280
@@ -63,7 +66,7 @@ root:
         font: 700 32 Inter
         color: "#0f172a"
 
-CRITICAL RULES — read these before writing ANY source:
+CRITICAL RULES — read before writing ANY source:
 - The top-level key MUST be "root:" (NOT canvas, NOT config, NOT scene, NOT layout)
 - Rectangles/containers are "- frame: name" (NOT type: rect, NOT - rect, NOT layers)
 - Text is "- text: \"content\"" (NOT - label, NOT type: text)
@@ -182,24 +185,24 @@ MULTI-PAGE:
     - name: Dashboard
       root: { width: 1280, height: 800, ... }`
 
-const renderDesignDesc = `Render a rendspec .rds design to SVG (or PNG). The source parameter takes a YAML-based DSL that describes visual designs — UI mockups, diagrams, architecture charts, etc. No coordinate math or browser required; the engine handles layout automatically via flexbox and grid.` + dslReference
-
-const validateDesignDesc = `Validate a rendspec .rds DSL source without rendering. Returns canvas size, frame/text/edge counts, and any warnings or parse errors. Use this to check DSL syntax before rendering.` + dslReference
-
-const inspectLayoutDesc = `Parse and lay out a rendspec .rds DSL source, then return the computed layout tree as JSON. Each node includes type, id, x, y, width, height, and children. Use this to debug layout issues or extract positioning data.` + dslReference
-
-const generateHandoverDesc = `Generate a structured Markdown handover document from a rendspec .rds DSL source. Returns component tree, CSS property mappings, design tokens as CSS variables, and implementation notes for developers. Useful for converting a visual design into a development specification.` + dslReference
-
 func main() {
 	s := server.NewMCPServer("rendspec", "0.1.0",
 		server.WithToolCapabilities(true),
 	)
 
+	// Tool: get_dsl_reference — returns full DSL syntax documentation
+	s.AddTool(
+		mcp.NewTool("get_dsl_reference",
+			mcp.WithDescription("Get the complete rendspec DSL syntax reference with working examples. CALL THIS FIRST before using any other rendspec tool if you are not already familiar with the DSL syntax. Returns the full documentation including: working example, critical rules, all frame/text/edge properties, components, tokens, and themes."),
+		),
+		handleGetDSLReference,
+	)
+
 	// Tool: render_design
 	s.AddTool(
 		mcp.NewTool("render_design",
-			mcp.WithDescription(renderDesignDesc),
-			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML format). See the tool description for full DSL reference.")),
+			mcp.WithDescription("Render a rendspec .rds design to SVG or PNG. The source is a YAML-based DSL with flexbox/grid layout."+dslSyntaxHint),
+			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML). Must start with 'root:' containing width, height, fill, and child frames/text nodes.")),
 			mcp.WithString("format", mcp.Description("Output format: svg (default) or png")),
 			mcp.WithNumber("scale", mcp.Description("PNG scale factor (default: 2). Only used when format is png.")),
 		),
@@ -209,8 +212,8 @@ func main() {
 	// Tool: validate_design
 	s.AddTool(
 		mcp.NewTool("validate_design",
-			mcp.WithDescription(validateDesignDesc),
-			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML format). See the tool description for full DSL reference.")),
+			mcp.WithDescription("Validate a rendspec .rds DSL source without rendering. Returns canvas size, frame/text/edge counts, and warnings."+dslSyntaxHint),
+			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML). Must start with 'root:' containing width, height, fill, and child frames/text nodes.")),
 		),
 		handleValidate,
 	)
@@ -218,8 +221,8 @@ func main() {
 	// Tool: inspect_layout
 	s.AddTool(
 		mcp.NewTool("inspect_layout",
-			mcp.WithDescription(inspectLayoutDesc),
-			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML format). See the tool description for full DSL reference.")),
+			mcp.WithDescription("Parse and lay out a rendspec .rds DSL source, returning the computed layout tree as JSON with positions."+dslSyntaxHint),
+			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML). Must start with 'root:' containing width, height, fill, and child frames/text nodes.")),
 		),
 		handleInspect,
 	)
@@ -227,8 +230,8 @@ func main() {
 	// Tool: generate_handover
 	s.AddTool(
 		mcp.NewTool("generate_handover",
-			mcp.WithDescription(generateHandoverDesc),
-			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML format). See the tool description for full DSL reference.")),
+			mcp.WithDescription("Generate a Markdown handover document from a rendspec .rds DSL source with CSS mappings and implementation notes."+dslSyntaxHint),
+			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML). Must start with 'root:' containing width, height, fill, and child frames/text nodes.")),
 		),
 		handleHandover,
 	)
@@ -237,6 +240,10 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 		os.Exit(1)
 	}
+}
+
+func handleGetDSLReference(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
+	return mcp.NewToolResultText(dslReference), nil
 }
 
 func handleRender(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallToolResult, error) {
