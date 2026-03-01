@@ -1,4 +1,4 @@
-module github.com/fxck/rendspec
+module github.com/zeropsio/rendspec
 
 go 1.23.0
 

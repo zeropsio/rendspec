@@ -1,6 +1,6 @@
 # Compiled binaries
-rendspec
-rendspec-mcp
+/rendspec
+/rendspec-mcp
 bin/
 
 # Go build artifacts

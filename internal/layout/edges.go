@@ -4,7 +4,7 @@ import (
 	"math"
 	"sort"
 
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/scene"
 )
 
 // Rect represents a frame's absolute position and size.

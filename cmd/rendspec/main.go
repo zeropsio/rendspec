@@ -11,13 +11,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fxck/rendspec/internal/handover"
-	"github.com/fxck/rendspec/internal/inspect"
-	"github.com/fxck/rendspec/internal/layout"
-	"github.com/fxck/rendspec/internal/parser"
-	pngrender "github.com/fxck/rendspec/internal/png"
-	"github.com/fxck/rendspec/internal/render"
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/handover"
+	"github.com/zeropsio/rendspec/internal/inspect"
+	"github.com/zeropsio/rendspec/internal/layout"
+	"github.com/zeropsio/rendspec/internal/parser"
+	pngrender "github.com/zeropsio/rendspec/internal/png"
+	"github.com/zeropsio/rendspec/internal/render"
+	"github.com/zeropsio/rendspec/internal/scene"
 )
 
 const version = "0.1.0"

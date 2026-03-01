@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/scene"
 )
 
 // Options configures handover generation.

@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/fxck/rendspec/internal/preprocess"
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/preprocess"
+	"github.com/zeropsio/rendspec/internal/scene"
 	"gopkg.in/yaml.v3"
 )
 

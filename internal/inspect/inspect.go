@@ -3,7 +3,7 @@
 package inspect
 
 import (
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/scene"
 	"math"
 )
 

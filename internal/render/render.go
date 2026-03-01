@@ -8,8 +8,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/fxck/rendspec/internal/fonts"
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/fonts"
+	"github.com/zeropsio/rendspec/internal/scene"
 )
 
 // fmtN formats a float cleanly for SVG output.

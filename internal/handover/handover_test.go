@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/fxck/rendspec/internal/layout"
-	"github.com/fxck/rendspec/internal/parser"
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/layout"
+	"github.com/zeropsio/rendspec/internal/parser"
+	"github.com/zeropsio/rendspec/internal/scene"
 )
 
 func TestGenerate_MinimalScene(t *testing.T) {

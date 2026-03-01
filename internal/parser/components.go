@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/scene"
 )
 
 // parseComponentInstance instantiates a component with optional variant and parameters.

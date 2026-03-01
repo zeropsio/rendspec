@@ -7,11 +7,19 @@ Works as a CLI or as an [MCP server](#mcp-server) for AI agents.
 ## Install
 
 ```bash
+curl -fsSL https://raw.githubusercontent.com/zeropsio/rendspec/main/install.sh | sh
+```
+
+This downloads the latest release binary for your platform and installs `rendspec` + `rendspec-mcp` to `/usr/local/bin` (or `~/.local/bin` if no write access).
+
+Install a specific version: `curl -fsSL ... | sh -s v0.2.0`
+
+Or install from source:
+
+```bash
 go install github.com/zeropsio/rendspec/cmd/rendspec@latest
 go install github.com/zeropsio/rendspec/cmd/rendspec-mcp@latest
 ```
-
-Or `make build` from source.
 
 ## Usage
 
@@ -97,6 +105,18 @@ Full DSL reference in [`CLAUDE.md`](CLAUDE.md).
 | `validate_design` | Canvas size, frame/text/edge counts, warnings |
 | `inspect_layout` | JSON layout tree with computed positions |
 | `generate_handover` | Markdown dev spec with component tree and CSS mappings |
+
+After [installing](#install), add the MCP server:
+
+### Claude Code
+
+```bash
+claude mcp add rendspec rendspec-mcp
+```
+
+### Claude Desktop / other MCP clients
+
+Add to your MCP config (e.g. `claude_desktop_config.json`):
 
 ```json
 {

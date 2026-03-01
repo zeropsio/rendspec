@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/scene"
 )
 
 var gradientRE = regexp.MustCompile(`(?i)(linear|radial)-gradient\(\s*(.+)\s*\)`)

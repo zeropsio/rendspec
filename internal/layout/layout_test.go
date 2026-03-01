@@ -5,8 +5,8 @@ import (
 	"math"
 	"testing"
 
-	"github.com/fxck/rendspec/internal/parser"
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/parser"
+	"github.com/zeropsio/rendspec/internal/scene"
 )
 
 func TestMeasureText_Basic(t *testing.T) {

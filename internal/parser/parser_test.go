@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/scene"
 )
 
 // --- Font ---

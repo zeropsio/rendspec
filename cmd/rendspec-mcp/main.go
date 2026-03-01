@@ -7,12 +7,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/fxck/rendspec/internal/handover"
-	"github.com/fxck/rendspec/internal/inspect"
-	"github.com/fxck/rendspec/internal/layout"
-	"github.com/fxck/rendspec/internal/parser"
-	"github.com/fxck/rendspec/internal/render"
-	"github.com/fxck/rendspec/internal/scene"
+	"github.com/zeropsio/rendspec/internal/handover"
+	"github.com/zeropsio/rendspec/internal/inspect"
+	"github.com/zeropsio/rendspec/internal/layout"
+	"github.com/zeropsio/rendspec/internal/parser"
+	"github.com/zeropsio/rendspec/internal/render"
+	"github.com/zeropsio/rendspec/internal/scene"
 	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/mark3labs/mcp-go/server"
 )
