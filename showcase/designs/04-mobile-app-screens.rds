@@ -1,0 +1,319 @@
+theme: dark
+
+tokens:
+  color:
+    bg: "#000000"
+    card: "#1c1c1e"
+    card-alt: "#2c2c2e"
+    accent: "#0a84ff"
+    green: "#30d158"
+    orange: "#ff9f0a"
+    red: "#ff453a"
+    text: "#ffffff"
+    text2: "#98989d"
+    separator: "#38383a"
+  radius:
+    sm: 8
+    md: 12
+    lg: 16
+    card: 20
+
+components:
+  status-bar:
+    direction: row
+    justify: between
+    padding: 12 24
+    - text: "9:41"
+      font: 600 15 SF Pro
+      color: white
+    - frame:
+      direction: row
+      gap: 6
+      - text: "5G"
+        font: 600 12 SF Pro
+        color: white
+      - text: "100%"
+        font: 600 12 SF Pro
+        color: white
+
+  bottom-tab:
+    padding: 8 0
+    align: center
+    gap: 4
+    flex: 1
+    params:
+      label: { default: "Tab" }
+      active: { default: "false" }
+    - text: "{{label}}"
+      font: 500 10 SF Pro
+      color: $color.text2
+
+  list-item:
+    direction: row
+    padding: 14 0
+    gap: 12
+    align: center
+    border-bottom: 0.5 solid $color.separator
+    params:
+      title: { default: "Item" }
+      subtitle: { default: "" }
+      value: { default: "" }
+      value-color: { default: "#ffffff" }
+    - frame:
+      flex: 1
+      gap: 2
+      - text: "{{title}}"
+        font: 400 17 SF Pro
+        color: white
+      - text: "{{subtitle}}"
+        font: 400 13 SF Pro
+        color: $color.text2
+    - text: "{{value}}"
+      font: 600 17 SF Pro
+      color: "{{value-color}}"
+
+pages:
+  - name: Home
+    root:
+      width: 390
+      height: 844
+      fill: $color.bg
+      clip: true
+      radius: 44
+
+      - use: status-bar
+
+      # Greeting
+      - frame: greeting
+        padding: 24
+        gap: 4
+        - text: "Good Morning"
+          font: 400 14 SF Pro
+          color: $color.text2
+        - text: "Alex"
+          font: 700 34 SF Pro
+          color: white
+
+      # Balance card
+      - frame: balance-card
+        fill: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)
+        radius: $radius.card
+        padding: 24
+        margin: 0 24
+        gap: 20
+        shadow: 0 8 32 rgba(0,0,0,0.4)
+        - frame:
+          gap: 4
+          - text: "Total Balance"
+            font: 400 14 SF Pro
+            color: $color.text2
+          - text: "$24,562.80"
+            font: 700 36 SF Pro
+            color: white
+        - frame: actions
+          direction: row
+          gap: 16
+          - frame:
+            fill: $color.accent
+            radius: $radius.md
+            padding: 12 24
+            align: center
+            flex: 1
+            - text: "Send"
+              font: 600 15 SF Pro
+              color: white
+          - frame:
+            fill: $color.card-alt
+            radius: $radius.md
+            padding: 12 24
+            align: center
+            flex: 1
+            - text: "Receive"
+              font: 600 15 SF Pro
+              color: white
+          - frame:
+            fill: $color.card-alt
+            radius: $radius.md
+            padding: 12 24
+            align: center
+            flex: 1
+            - text: "More"
+              font: 600 15 SF Pro
+              color: white
+
+      # Recent transactions
+      - frame: recent
+        padding: 24
+        gap: 16
+        flex: 1
+        - frame:
+          direction: row
+          justify: between
+          - text: "Recent"
+            font: 700 20 SF Pro
+            color: white
+          - text: "See All"
+            font: 400 15 SF Pro
+            color: $color.accent
+        - frame: tx-list
+          gap: 0
+          - use: list-item
+            title: "Apple Store"
+            subtitle: "Today, 2:30 PM"
+            value: "-$1,299.00"
+            value-color: $color.red
+          - use: list-item
+            title: "Salary Deposit"
+            subtitle: "Yesterday"
+            value: "+$5,400.00"
+            value-color: $color.green
+          - use: list-item
+            title: "Netflix"
+            subtitle: "Jan 15"
+            value: "-$15.99"
+            value-color: $color.red
+          - use: list-item
+            title: "Freelance Payment"
+            subtitle: "Jan 14"
+            value: "+$2,500.00"
+            value-color: $color.green
+
+      # Bottom tabs
+      - frame: tab-bar
+        direction: row
+        fill: $color.card
+        padding: 8 0 32 0
+        border-top: 0.5 solid $color.separator
+        - use: bottom-tab
+          label: "Home"
+        - use: bottom-tab
+          label: "Cards"
+        - use: bottom-tab
+          label: "Stats"
+        - use: bottom-tab
+          label: "Profile"
+
+  - name: Stats
+    root:
+      width: 390
+      height: 844
+      fill: $color.bg
+      clip: true
+      radius: 44
+
+      - use: status-bar
+
+      # Header
+      - frame:
+        padding: 24
+        gap: 4
+        - text: "Statistics"
+          font: 700 34 SF Pro
+          color: white
+        - text: "Your spending overview"
+          font: 400 14 SF Pro
+          color: $color.text2
+
+      # Period selector
+      - frame: period
+        direction: row
+        padding: 0 24
+        gap: 8
+        - frame:
+          fill: $color.accent
+          radius: 20
+          padding: 8 20
+          - text: "Week"
+            font: 600 13 SF Pro
+            color: white
+        - frame:
+          fill: $color.card
+          radius: 20
+          padding: 8 20
+          - text: "Month"
+            font: 600 13 SF Pro
+            color: $color.text2
+        - frame:
+          fill: $color.card
+          radius: 20
+          padding: 8 20
+          - text: "Year"
+            font: 600 13 SF Pro
+            color: $color.text2
+
+      # Spending card
+      - frame: spending
+        fill: $color.card
+        radius: $radius.card
+        margin: 16 24
+        padding: 24
+        gap: 16
+        - frame:
+          direction: row
+          justify: between
+          - frame:
+            gap: 4
+            - text: "This Week"
+              font: 400 14 SF Pro
+              color: $color.text2
+            - text: "$1,847.32"
+              font: 700 28 SF Pro
+              color: white
+          - frame:
+            fill: rgba(48,209,88,0.15)
+            radius: 8
+            padding: 6 12
+            align: center
+            justify: center
+            height: 28
+            - text: "-12.5%"
+              font: 600 13 SF Pro
+              color: $color.green
+
+        # Chart placeholder
+        - frame: chart
+          height: 160
+          fill: linear-gradient(180deg, rgba(10,132,255,0.15), rgba(10,132,255,0))
+          radius: $radius.md
+
+      # Categories
+      - frame: categories
+        padding: 0 24
+        gap: 12
+        flex: 1
+        - text: "Top Categories"
+          font: 700 20 SF Pro
+          color: white
+        - frame: cat-list
+          gap: 0
+          - use: list-item
+            title: "Shopping"
+            subtitle: "12 transactions"
+            value: "$845.00"
+          - use: list-item
+            title: "Food & Drinks"
+            subtitle: "28 transactions"
+            value: "$412.50"
+          - use: list-item
+            title: "Transport"
+            subtitle: "8 transactions"
+            value: "$189.00"
+          - use: list-item
+            title: "Entertainment"
+            subtitle: "5 transactions"
+            value: "$156.82"
+
+      # Bottom tabs
+      - frame:
+        direction: row
+        fill: $color.card
+        padding: 8 0 32 0
+        border-top: 0.5 solid $color.separator
+        - use: bottom-tab
+          label: "Home"
+        - use: bottom-tab
+          label: "Cards"
+        - use: bottom-tab
+          label: "Stats"
+        - use: bottom-tab
+          label: "Profile"

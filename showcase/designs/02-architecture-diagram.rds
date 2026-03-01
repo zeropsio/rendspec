@@ -1,0 +1,304 @@
+theme:
+  background: "#0a0a1a"
+  foreground: "#e2e8f0"
+  muted: "#64748b"
+  accent: "#06b6d4"
+  border: "#1e293b"
+  radius: 12
+  font-family: Inter
+  font-size: 14
+  font-weight: 400
+
+tokens:
+  color:
+    cyan: "#06b6d4"
+    purple: "#8b5cf6"
+    green: "#10b981"
+    orange: "#f59e0b"
+    pink: "#ec4899"
+    blue: "#3b82f6"
+    node-bg: "#111827"
+    zone-bg: "rgba(6,182,212,0.05)"
+    zone-border: "rgba(6,182,212,0.2)"
+
+components:
+  service-node:
+    fill: $color.node-bg
+    radius: 12
+    padding: 16
+    gap: 6
+    border: 1.5 solid #1e293b
+    shadow: 0 4 20 rgba(0,0,0,0.3)
+    align: center
+    width: 160
+    params:
+      name: { default: "Service" }
+      tech: { default: "" }
+      color: { default: "#06b6d4" }
+    - text: "{{name}}"
+      font: 600 14 Inter
+      color: "{{color}}"
+      text-align: center
+    - text: "{{tech}}"
+      font: 400 11 Inter
+      color: "#64748b"
+      text-align: center
+
+  db-node:
+    fill: $color.node-bg
+    radius: 12
+    padding: 16
+    gap: 6
+    border: 1.5 solid #1e293b
+    shadow: 0 4 20 rgba(0,0,0,0.3)
+    align: center
+    shape: rect
+    width: 160
+    params:
+      name: { default: "Database" }
+      tech: { default: "" }
+    - text: "{{name}}"
+      font: 600 14 Inter
+      color: $color.orange
+      text-align: center
+    - text: "{{tech}}"
+      font: 400 11 Inter
+      color: "#64748b"
+      text-align: center
+
+root:
+  width: 1400
+  height: 900
+  fill: "#0a0a1a"
+  padding: 48
+
+  # Title
+  - frame: title-area
+    gap: 8
+    padding: 0 0 32 0
+    - text: "Microservices Architecture"
+      font: 700 32 Inter
+      color: "#e2e8f0"
+    - text: "Production Infrastructure — Q1 2026"
+      font: 400 14 Inter
+      color: "#64748b"
+
+  - frame: diagram
+    flex: 1
+    direction: row
+    gap: 48
+    align: start
+
+    # Client Layer
+    - frame: client-layer
+      gap: 24
+      align: center
+      - text: "CLIENT LAYER"
+        font: 700 11 Inter
+        color: $color.cyan
+        letter-spacing: 2
+      - frame: clients
+        gap: 16
+        - use: service-node
+          id: web-app
+          name: "Web App"
+          tech: "React + Next.js"
+          color: $color.cyan
+        - use: service-node
+          id: mobile-app
+          name: "Mobile App"
+          tech: "React Native"
+          color: $color.cyan
+        - use: service-node
+          id: cli
+          name: "CLI Tool"
+          tech: "Go"
+          color: $color.cyan
+
+    # API Gateway
+    - frame: gateway-layer
+      gap: 24
+      align: center
+      - text: "API GATEWAY"
+        font: 700 11 Inter
+        color: $color.purple
+        letter-spacing: 2
+      - frame: gateways
+        gap: 16
+        - use: service-node
+          id: api-gw
+          name: "API Gateway"
+          tech: "Kong / Envoy"
+          color: $color.purple
+        - use: service-node
+          id: auth
+          name: "Auth Service"
+          tech: "OAuth2 + JWT"
+          color: $color.purple
+        - use: service-node
+          id: rate-limit
+          name: "Rate Limiter"
+          tech: "Redis"
+          color: $color.purple
+
+    # Services
+    - frame: service-layer
+      gap: 24
+      align: center
+      - text: "MICROSERVICES"
+        font: 700 11 Inter
+        color: $color.green
+        letter-spacing: 2
+      - frame: services
+        gap: 16
+        - use: service-node
+          id: user-svc
+          name: "User Service"
+          tech: "Go + gRPC"
+          color: $color.green
+        - use: service-node
+          id: order-svc
+          name: "Order Service"
+          tech: "Go + gRPC"
+          color: $color.green
+        - use: service-node
+          id: payment-svc
+          name: "Payment Service"
+          tech: "Go + gRPC"
+          color: $color.green
+        - use: service-node
+          id: notify-svc
+          name: "Notification Svc"
+          tech: "Node.js"
+          color: $color.green
+
+    # Data Layer
+    - frame: data-layer
+      gap: 24
+      align: center
+      - text: "DATA LAYER"
+        font: 700 11 Inter
+        color: $color.orange
+        letter-spacing: 2
+      - frame: databases
+        gap: 16
+        - use: db-node
+          id: postgres
+          name: "PostgreSQL"
+          tech: "Primary DB"
+        - use: db-node
+          id: redis
+          name: "Redis"
+          tech: "Cache + Queue"
+        - use: db-node
+          id: elastic
+          name: "Elasticsearch"
+          tech: "Search + Logs"
+        - use: db-node
+          id: s3
+          name: "Object Storage"
+          tech: "S3 Compatible"
+
+    # Infra
+    - frame: infra-layer
+      gap: 24
+      align: center
+      - text: "INFRASTRUCTURE"
+        font: 700 11 Inter
+        color: $color.pink
+        letter-spacing: 2
+      - frame: infra
+        gap: 16
+        - use: service-node
+          id: k8s
+          name: "Kubernetes"
+          tech: "Orchestration"
+          color: $color.pink
+        - use: service-node
+          id: prometheus
+          name: "Prometheus"
+          tech: "Monitoring"
+          color: $color.pink
+        - use: service-node
+          id: grafana
+          name: "Grafana"
+          tech: "Dashboards"
+          color: $color.pink
+
+edges:
+  - from: web-app
+    to: api-gw
+    stroke: $color.cyan
+    style: solid
+    curve: straight
+  - from: mobile-app
+    to: api-gw
+    stroke: $color.cyan
+    style: solid
+    curve: straight
+  - from: cli
+    to: api-gw
+    stroke: $color.cyan
+    style: dashed
+    curve: straight
+  - from: api-gw
+    to: auth
+    stroke: $color.purple
+    style: solid
+    curve: straight
+  - from: api-gw
+    to: user-svc
+    stroke: $color.green
+    style: solid
+    curve: straight
+  - from: api-gw
+    to: order-svc
+    stroke: $color.green
+    style: solid
+    curve: straight
+  - from: api-gw
+    to: payment-svc
+    stroke: $color.green
+    style: solid
+    curve: straight
+  - from: order-svc
+    to: notify-svc
+    stroke: "#64748b"
+    style: dashed
+    label: "events"
+    curve: straight
+  - from: user-svc
+    to: postgres
+    stroke: $color.orange
+    style: solid
+    curve: straight
+  - from: order-svc
+    to: postgres
+    stroke: $color.orange
+    style: solid
+    curve: straight
+  - from: payment-svc
+    to: redis
+    stroke: $color.orange
+    style: solid
+    curve: straight
+  - from: notify-svc
+    to: redis
+    stroke: $color.orange
+    style: dashed
+    curve: straight
+  - from: user-svc
+    to: elastic
+    stroke: $color.orange
+    style: dashed
+    curve: straight
+  - from: k8s
+    to: user-svc
+    stroke: $color.pink
+    style: dotted
+    curve: straight
+  - from: prometheus
+    to: grafana
+    stroke: $color.pink
+    style: solid
+    curve: straight

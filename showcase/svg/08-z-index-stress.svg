@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="800" height="600" viewBox="0 0 800 600">
+<style>
+  text { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+</style>
+<defs>
+  <filter id="shadow-1" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(37,99,235,0.3)" flood-opacity="1"/>
+  </filter>
+  <linearGradient id="grad-2" x1="0.15" y1="0.15" x2="0.85" y2="0.85" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#1e3a5f"/>
+    <stop offset="100%" stop-color="#2563eb"/>
+  </linearGradient>
+  <filter id="shadow-3" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(139,92,246,0.3)" flood-opacity="1"/>
+  </filter>
+  <linearGradient id="grad-4" x1="0.15" y1="0.15" x2="0.85" y2="0.85" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#3b1e5f"/>
+    <stop offset="100%" stop-color="#8b5cf6"/>
+  </linearGradient>
+  <filter id="shadow-5" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(236,72,153,0.3)" flood-opacity="1"/>
+  </filter>
+  <linearGradient id="grad-6" x1="0.15" y1="0.15" x2="0.85" y2="0.85" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#5f1e3a"/>
+    <stop offset="100%" stop-color="#ec4899"/>
+  </linearGradient>
+  <filter id="shadow-7" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(16,185,129,0.3)" flood-opacity="1"/>
+  </filter>
+  <linearGradient id="grad-8" x1="0.15" y1="0.15" x2="0.85" y2="0.85" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#1e5f3a"/>
+    <stop offset="100%" stop-color="#10b981"/>
+  </linearGradient>
+  <filter id="shadow-9" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(245,158,11,0.3)" flood-opacity="1"/>
+  </filter>
+  <linearGradient id="grad-10" x1="0.15" y1="0.15" x2="0.85" y2="0.85" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#5f3a1e"/>
+    <stop offset="100%" stop-color="#f59e0b"/>
+  </linearGradient>
+  <filter id="shadow-11" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="8" stdDeviation="20" flood-color="rgba(6,182,212,0.4)" flood-opacity="1"/>
+  </filter>
+  <radialGradient id="grad-12" cx="0.50" cy="0.50" r="0.5" fx="0.50" fy="0.50" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#06b6d4"/>
+    <stop offset="100%" stop-color="#0c4a6e"/>
+  </radialGradient>
+  <filter id="shadow-13" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(239,68,68,0.4)" flood-opacity="1"/>
+  </filter>
+</defs>
+<g>
+<rect x="0" y="0" width="800" height="600" fill="#0a0a1a"/>
+<text x="40" y="59.68" font-family='Inter, sans-serif' font-size="24" font-weight="700" fill="#e2e8f0" text-anchor="start">Z-Index &amp; Absolute Positioning Stress Test</text>
+<g>
+<g>
+<rect x="40" y="97.60" width="300" height="200" fill="url(#grad-2)" rx="16" filter="url(#shadow-1)"/>
+<text x="60" y="132.36" font-family='Inter, sans-serif' font-size="18" font-weight="700" fill="white" text-anchor="start">Layer 1</text>
+</g>
+<g>
+<rect x="100" y="137.60" width="300" height="200" fill="url(#grad-4)" rx="16" filter="url(#shadow-3)"/>
+<text x="120" y="172.36" font-family='Inter, sans-serif' font-size="18" font-weight="700" fill="white" text-anchor="start">Layer 2</text>
+</g>
+<g>
+<rect x="160" y="177.60" width="300" height="200" fill="url(#grad-6)" rx="16" filter="url(#shadow-5)"/>
+<text x="180" y="212.36" font-family='Inter, sans-serif' font-size="18" font-weight="700" fill="white" text-anchor="start">Layer 3</text>
+</g>
+<g>
+<rect x="220" y="217.60" width="300" height="200" fill="url(#grad-8)" rx="16" filter="url(#shadow-7)"/>
+<text x="240" y="252.36" font-family='Inter, sans-serif' font-size="18" font-weight="700" fill="white" text-anchor="start">Layer 4</text>
+</g>
+<g>
+<rect x="280" y="257.60" width="300" height="200" fill="url(#grad-10)" rx="16" filter="url(#shadow-9)"/>
+<text x="300" y="292.36" font-family='Inter, sans-serif' font-size="18" font-weight="700" fill="white" text-anchor="start">Layer 5 (Top)</text>
+</g>
+<g>
+<circle cx="620" cy="427.60" r="80" fill="url(#grad-12)" filter="url(#shadow-11)"/>
+<text x="597.07" y="429.52" font-family='Inter, sans-serif' font-size="16" font-weight="700" fill="white" text-anchor="start">Circle</text>
+</g>
+<g>
+<rect x="390" y="107.60" width="120" height="40" fill="#ef4444" rx="20" filter="url(#shadow-13)"/>
+<text x="438.15" y="129.28" font-family='Inter, sans-serif' font-size="14" font-weight="700" fill="white" text-anchor="start">z:10</text>
+</g>
+</g>
+</g>
+</svg>

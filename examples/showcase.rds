@@ -1,0 +1,182 @@
+theme: dark
+
+tokens:
+  color:
+    primary: "#3b82f6"
+    secondary: "#8b5cf6"
+    success: "#10b981"
+    warning: "#f59e0b"
+    danger: "#ef4444"
+    bg:
+      card: "#1e293b"
+      surface: "#0f172a"
+  radius:
+    sm: 6
+    md: 12
+    lg: 20
+  font:
+    heading: "700 24 Inter"
+    body: "400 14 Inter"
+    mono: "400 13 JetBrains Mono"
+
+components:
+  stat-card:
+    fill: $color.bg.card
+    radius: $radius.md
+    padding: 20
+    gap: 8
+    border: 1 solid #334155
+    params:
+      title:
+        type: string
+        default: "Metric"
+      value:
+        type: string
+        default: "0"
+    - text: "{{title}}"
+      font: 500 12 Inter
+      color: "#94a3b8"
+    - text: "{{value}}"
+      font: 700 28 Inter
+      color: "#f8fafc"
+
+root:
+  width: 1280
+  height: 800
+  fill: $color.bg.surface
+  padding: 32
+  gap: 24
+
+  # Header with gradient
+  - frame: header
+    direction: row
+    justify: between
+    align: center
+    - frame:
+      gap: 4
+      - text: "rendspec v0.1"
+        font: 700 28 Inter
+        color: "#f8fafc"
+      - text: "Features Showcase"
+        font: 400 14 Inter
+        color: "#94a3b8"
+    - frame: badge
+      fill: linear-gradient(135deg, #3b82f6, #8b5cf6)
+      radius: $radius.lg
+      padding: 8 20
+      align: center
+      justify: center
+      - text: "NEW"
+        font: 700 12 Inter
+        color: white
+
+  # Stats grid using grid layout
+  - frame: stats
+    layout: grid
+    columns: 4
+    column-gap: 16
+    row-gap: 16
+    - use: stat-card
+      title: "Total Views"
+      value: "24,521"
+    - use: stat-card
+      title: "Revenue"
+      value: "$12,450"
+    - use: stat-card
+      title: "Users"
+      value: "1,203"
+    - use: stat-card
+      title: "Growth"
+      value: "+18.2%"
+
+  # Main content row
+  - frame: content
+    direction: row
+    gap: 24
+    flex: 1
+
+    # Left panel with gradient card
+    - frame: left
+      flex: 2
+      gap: 16
+      - frame: gradient-card
+        fill: linear-gradient(135deg, #1e3a5f, #3b82f6)
+        radius: $radius.md
+        padding: 24
+        gap: 12
+        shadow: 0 8 32 rgba(59,130,246,0.2)
+        - text: "Gradient Fills"
+          font: 700 20 Inter
+          color: white
+        - text: "Linear and radial gradients are now supported in the fill property."
+          font: 400 14 Inter
+          color: rgba(255,255,255,0.8)
+          max-width: 400
+
+      # Layered elements with z-index
+      - frame: z-demo
+        height: 120
+        position: relative
+        - frame:
+          position: absolute
+          x: 0
+          y: 0
+          width: 200
+          height: 100
+          fill: $color.primary
+          radius: $radius.md
+          z-index: 1
+          padding: 16
+          - text: "z-index: 1"
+            font: 500 14 Inter
+            color: white
+        - frame:
+          position: absolute
+          x: 40
+          y: 20
+          width: 200
+          height: 100
+          fill: $color.secondary
+          radius: $radius.md
+          z-index: 2
+          padding: 16
+          - text: "z-index: 2 (on top)"
+            font: 500 14 Inter
+            color: white
+
+    # Right panel
+    - frame: right
+      flex: 1
+      gap: 16
+
+      # Radial gradient
+      - frame: radial
+        fill: radial-gradient(circle, #3b82f6, #1e293b)
+        radius: $radius.md
+        padding: 24
+        height: 120
+        align: center
+        justify: center
+        - text: "Radial Gradient"
+          font: 600 16 Inter
+          color: white
+
+      # Design tokens showcase
+      - frame: tokens-card
+        fill: $color.bg.card
+        radius: $radius.md
+        padding: 16
+        gap: 8
+        border: 1 solid #334155
+        - text: "Design Tokens"
+          font: 600 16 Inter
+          color: "#f8fafc"
+        - text: "$color.primary"
+          font: $font.mono
+          color: $color.primary
+        - text: "$color.secondary"
+          font: $font.mono
+          color: $color.secondary
+        - text: "$color.success"
+          font: $font.mono
+          color: $color.success

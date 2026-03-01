@@ -1,0 +1,382 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1400" height="1800" viewBox="0 0 1400 1800">
+<style>
+  text { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+</style>
+<defs>
+  <linearGradient id="grad-1" x1="0.15" y1="0.15" x2="0.85" y2="0.85" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#1e3a8a"/>
+    <stop offset="100%" stop-color="#3b82f6"/>
+  </linearGradient>
+</defs>
+<g>
+<rect x="0" y="0" width="1400" height="1800" fill="white"/>
+<g>
+<rect x="48" y="48" width="1304" height="200.40" fill="url(#grad-1)" rx="16"/>
+<text x="96" y="135.36" font-family='Inter, sans-serif' font-size="48" font-weight="800" fill="white" text-anchor="start">Design System</text>
+<text x="96" y="189.96" font-family='Inter, sans-serif' font-size="18" font-weight="400" fill="rgba(255,255,255,0.7)" text-anchor="start">Foundation tokens, components, and patterns — v2.0</text>
+</g>
+<g>
+<text x="48" y="316.08" font-family='Inter, sans-serif' font-size="24" font-weight="700" fill="$color.gray.900" text-anchor="start">Typography</text>
+<g>
+<rect x="48" y="354" width="1304" height="402" fill="$color.gray.50" rx="12" stroke="$color.gray.200" stroke-width="1"/>
+<g>
+<text x="80" y="421.04" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.400" text-anchor="start">Display</text>
+<text x="144.25" y="425.36" font-family='Inter, sans-serif' font-size="48" font-weight="800" fill="$color.gray.900" text-anchor="start">The quick brown fox</text>
+</g>
+<g>
+<text x="80" y="497.04" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.400" text-anchor="start">H1</text>
+<text x="114.61" y="499.44" font-family='Inter, sans-serif' font-size="32" font-weight="700" fill="$color.gray.900" text-anchor="start">The quick brown fox jumps</text>
+</g>
+<g>
+<text x="80" y="556.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.400" text-anchor="start">H2</text>
+<text x="117.42" y="557.68" font-family='Inter, sans-serif' font-size="24" font-weight="700" fill="$color.gray.900" text-anchor="start">The quick brown fox jumps over</text>
+</g>
+<g>
+<text x="80" y="607.04" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.400" text-anchor="start">H3</text>
+<text x="117.42" y="608" font-family='Inter, sans-serif' font-size="20" font-weight="600" fill="$color.gray.900" text-anchor="start">The quick brown fox jumps over the lazy dog</text>
+</g>
+<g>
+<text x="80" y="663.44" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.400" text-anchor="start">Body</text>
+<text x="129.90" y="652.72" font-family='Inter, sans-serif' font-size="16" font-weight="400" fill="$color.gray.700" text-anchor="start">The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs.</text>
+</g>
+<g>
+<text x="80" y="715.64" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.400" text-anchor="start">Mono</text>
+<text x="131.14" y="715.88" font-family='"JetBrains Mono", monospace' font-size="14" font-weight="400" fill="$color.gray.700" text-anchor="start">const x = await fetch(&#39;/api&#39;)</text>
+</g>
+</g>
+</g>
+<g>
+<text x="48" y="823.68" font-family='Inter, sans-serif' font-size="24" font-weight="700" fill="$color.gray.900" text-anchor="start">Color Palette</text>
+<g>
+<text x="48" y="878" font-family='Inter, sans-serif' font-size="20" font-weight="600" fill="$color.gray.700" text-anchor="start">Brand Blue</text>
+<g>
+<g>
+<g>
+<rect x="48" y="905.60" width="80" height="48" fill="$color.brand.50" rx="8"/>
+</g>
+<text x="88" y="968.62" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">50</text>
+<text x="93" y="989.20" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.brand.50</text>
+</g>
+<g>
+<g>
+<rect x="136" y="905.60" width="80" height="48" fill="$color.brand.100" rx="8"/>
+</g>
+<text x="176" y="968.62" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">100</text>
+<text x="184" y="989.20" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.brand.100</text>
+</g>
+<g>
+<g>
+<rect x="224" y="905.60" width="80" height="48" fill="$color.brand.200" rx="8"/>
+</g>
+<text x="264" y="968.62" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">200</text>
+<text x="272" y="989.20" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.brand.200</text>
+</g>
+<g>
+<g>
+<rect x="312" y="905.60" width="80" height="48" fill="$color.brand.300" rx="8"/>
+</g>
+<text x="352" y="968.62" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">300</text>
+<text x="360" y="989.20" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.brand.300</text>
+</g>
+<g>
+<g>
+<rect x="400" y="905.60" width="80" height="48" fill="$color.brand.400" rx="8"/>
+</g>
+<text x="440" y="968.62" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">400</text>
+<text x="448" y="989.20" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.brand.400</text>
+</g>
+<g>
+<g>
+<rect x="488" y="905.60" width="80" height="48" fill="$color.brand.500" rx="8"/>
+</g>
+<text x="528" y="968.62" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">500</text>
+<text x="536" y="989.20" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.brand.500</text>
+</g>
+<g>
+<g>
+<rect x="576" y="905.60" width="80" height="48" fill="$color.brand.600" rx="8"/>
+</g>
+<text x="616" y="968.62" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">600</text>
+<text x="624" y="989.20" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.brand.600</text>
+</g>
+<g>
+<g>
+<rect x="664" y="905.60" width="80" height="48" fill="$color.brand.700" rx="8"/>
+</g>
+<text x="704" y="968.62" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">700</text>
+<text x="712" y="989.20" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.brand.700</text>
+</g>
+<g>
+<g>
+<rect x="752" y="905.60" width="80" height="48" fill="$color.brand.800" rx="8"/>
+</g>
+<text x="792" y="968.62" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">800</text>
+<text x="800" y="989.20" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.brand.800</text>
+</g>
+<g>
+<g>
+<rect x="840" y="905.60" width="80" height="48" fill="$color.brand.900" rx="8"/>
+</g>
+<text x="880" y="968.62" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">900</text>
+<text x="888" y="989.20" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.brand.900</text>
+</g>
+</g>
+</g>
+<g>
+<text x="48" y="1035.40" font-family='Inter, sans-serif' font-size="20" font-weight="600" fill="$color.gray.700" text-anchor="start">Gray</text>
+<g>
+<g>
+<g>
+<rect x="48" y="1063" width="80" height="48" fill="$color.gray.50" rx="8"/>
+</g>
+<text x="88" y="1126.02" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">50</text>
+<text x="90" y="1146.60" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.gray.50</text>
+</g>
+<g>
+<g>
+<rect x="136" y="1063" width="80" height="48" fill="$color.gray.100" rx="8"/>
+</g>
+<text x="176" y="1126.02" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">100</text>
+<text x="181" y="1146.60" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.gray.100</text>
+</g>
+<g>
+<g>
+<rect x="224" y="1063" width="80" height="48" fill="$color.gray.200" rx="8"/>
+</g>
+<text x="264" y="1126.02" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">200</text>
+<text x="269" y="1146.60" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.gray.200</text>
+</g>
+<g>
+<g>
+<rect x="312" y="1063" width="80" height="48" fill="$color.gray.300" rx="8"/>
+</g>
+<text x="352" y="1126.02" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">300</text>
+<text x="357" y="1146.60" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.gray.300</text>
+</g>
+<g>
+<g>
+<rect x="400" y="1063" width="80" height="48" fill="$color.gray.400" rx="8"/>
+</g>
+<text x="440" y="1126.02" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">400</text>
+<text x="445" y="1146.60" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.gray.400</text>
+</g>
+<g>
+<g>
+<rect x="488" y="1063" width="80" height="48" fill="$color.gray.500" rx="8"/>
+</g>
+<text x="528" y="1126.02" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">500</text>
+<text x="533" y="1146.60" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.gray.500</text>
+</g>
+<g>
+<g>
+<rect x="576" y="1063" width="80" height="48" fill="$color.gray.600" rx="8"/>
+</g>
+<text x="616" y="1126.02" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">600</text>
+<text x="621" y="1146.60" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.gray.600</text>
+</g>
+<g>
+<g>
+<rect x="664" y="1063" width="80" height="48" fill="$color.gray.700" rx="8"/>
+</g>
+<text x="704" y="1126.02" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">700</text>
+<text x="709" y="1146.60" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.gray.700</text>
+</g>
+<g>
+<g>
+<rect x="752" y="1063" width="80" height="48" fill="$color.gray.800" rx="8"/>
+</g>
+<text x="792" y="1126.02" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">800</text>
+<text x="797" y="1146.60" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.gray.800</text>
+</g>
+<g>
+<g>
+<rect x="840" y="1063" width="80" height="48" fill="$color.gray.900" rx="8"/>
+</g>
+<text x="880" y="1126.02" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">900</text>
+<text x="885" y="1146.60" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">$color.gray.900</text>
+</g>
+</g>
+</g>
+<g>
+<text x="48" y="1192.80" font-family='Inter, sans-serif' font-size="20" font-weight="600" fill="$color.gray.700" text-anchor="start">Semantic</text>
+<g>
+<g>
+<g>
+<rect x="48" y="1220.40" width="80" height="48" fill="#059669" rx="8"/>
+</g>
+<text x="88" y="1283.42" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">Success</text>
+<text x="88" y="1304" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">#059669</text>
+</g>
+<g>
+<g>
+<rect x="136" y="1220.40" width="80" height="48" fill="#d97706" rx="8"/>
+</g>
+<text x="176" y="1283.42" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">Warning</text>
+<text x="176" y="1304" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">#d97706</text>
+</g>
+<g>
+<g>
+<rect x="224" y="1220.40" width="80" height="48" fill="#dc2626" rx="8"/>
+</g>
+<text x="264" y="1283.42" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">Error</text>
+<text x="264" y="1304" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">#dc2626</text>
+</g>
+<g>
+<g>
+<rect x="312" y="1220.40" width="80" height="48" fill="#2563eb" rx="8"/>
+</g>
+<text x="352" y="1283.42" font-family='Inter, sans-serif' font-size="11" font-weight="500" fill="#64748b" text-anchor="middle">Info</text>
+<text x="352" y="1304" font-family='"JetBrains Mono", monospace' font-size="10" font-weight="400" fill="#94a3b8" text-anchor="middle">#2563eb</text>
+</g>
+</g>
+</g>
+</g>
+<g>
+<text x="48" y="1377.48" font-family='Inter, sans-serif' font-size="24" font-weight="700" fill="$color.gray.900" text-anchor="start">Buttons</text>
+<g>
+<rect x="48" y="1415.40" width="1304" height="214.80" fill="$color.gray.50" rx="12" stroke="$color.gray.200" stroke-width="1"/>
+<g>
+<text x="80" y="1468.64" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.400" text-anchor="start">Primary</text>
+<g>
+<g>
+<rect x="139.99" y="1447.40" width="92.74" height="39.60" fill="$color.brand.600" rx="8"/>
+<text x="159.99" y="1468.88" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="white" text-anchor="start">Default</text>
+</g>
+</g>
+<g>
+<g>
+<rect x="248.74" y="1447.40" width="79.37" height="39.60" fill="$color.brand.700" rx="8"/>
+<text x="268.74" y="1468.88" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="white" text-anchor="start">Hover</text>
+</g>
+</g>
+<g>
+<g>
+<rect x="344.10" y="1447.40" width="96.95" height="39.60" fill="$color.gray.200" rx="8"/>
+<text x="364.10" y="1468.88" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="$color.gray.400" text-anchor="start">Disabled</text>
+</g>
+</g>
+</g>
+<g>
+<text x="80" y="1524.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.400" text-anchor="start">Secondary</text>
+<g>
+<g>
+<rect x="153.10" y="1503" width="92.74" height="39.60" fill="$color.gray.100" rx="8"/>
+<text x="173.10" y="1524.48" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="$color.gray.800" text-anchor="start">Default</text>
+</g>
+</g>
+<g>
+<g>
+<rect x="261.84" y="1503" width="79.37" height="39.60" fill="$color.gray.200" rx="8"/>
+<text x="281.84" y="1524.48" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="$color.gray.800" text-anchor="start">Hover</text>
+</g>
+</g>
+</g>
+<g>
+<text x="80" y="1579.84" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.400" text-anchor="start">Danger</text>
+<g>
+<g>
+<rect x="135.62" y="1558.60" width="85.10" height="39.60" fill="#dc2626" rx="8"/>
+<text x="155.62" y="1580.08" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="white" text-anchor="start">Delete</text>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g>
+<text x="48" y="1697.88" font-family='Inter, sans-serif' font-size="24" font-weight="700" fill="$color.gray.900" text-anchor="start">Spacing Scale</text>
+<g>
+<rect x="48" y="1735.80" width="1304" height="104" fill="$color.gray.50" rx="12" stroke="$color.gray.200" stroke-width="1"/>
+<g>
+<g>
+<rect x="80" y="1767.80" width="40" height="40" fill="#dbeafe" rx="4"/>
+</g>
+<g>
+<text x="128" y="1780.54" font-family='Inter, sans-serif' font-size="12" font-weight="600" fill="#0f172a" text-anchor="start">xs</text>
+<text x="128" y="1798.52" font-family='"JetBrains Mono", monospace' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">4px</text>
+</g>
+</g>
+<g>
+<g>
+<rect x="163.80" y="1767.80" width="40" height="40" fill="#dbeafe" rx="4"/>
+</g>
+<g>
+<text x="211.80" y="1780.54" font-family='Inter, sans-serif' font-size="12" font-weight="600" fill="#0f172a" text-anchor="start">sm</text>
+<text x="211.80" y="1798.52" font-family='"JetBrains Mono", monospace' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">8px</text>
+</g>
+</g>
+<g>
+<g>
+<rect x="247.60" y="1767.80" width="40" height="40" fill="#dbeafe" rx="4"/>
+</g>
+<g>
+<text x="295.60" y="1780.54" font-family='Inter, sans-serif' font-size="12" font-weight="600" fill="#0f172a" text-anchor="start">md</text>
+<text x="295.60" y="1798.52" font-family='"JetBrains Mono", monospace' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">16px</text>
+</g>
+</g>
+<g>
+<g>
+<rect x="338" y="1767.80" width="40" height="40" fill="#dbeafe" rx="4"/>
+</g>
+<g>
+<text x="386" y="1780.54" font-family='Inter, sans-serif' font-size="12" font-weight="600" fill="#0f172a" text-anchor="start">lg</text>
+<text x="386" y="1798.52" font-family='"JetBrains Mono", monospace' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">24px</text>
+</g>
+</g>
+<g>
+<g>
+<rect x="428.40" y="1767.80" width="40" height="40" fill="#dbeafe" rx="4"/>
+</g>
+<g>
+<text x="476.40" y="1780.54" font-family='Inter, sans-serif' font-size="12" font-weight="600" fill="#0f172a" text-anchor="start">xl</text>
+<text x="476.40" y="1798.52" font-family='"JetBrains Mono", monospace' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">32px</text>
+</g>
+</g>
+<g>
+<g>
+<rect x="518.80" y="1767.80" width="40" height="40" fill="#dbeafe" rx="4"/>
+</g>
+<g>
+<text x="566.80" y="1780.54" font-family='Inter, sans-serif' font-size="12" font-weight="600" fill="#0f172a" text-anchor="start">xxl</text>
+<text x="566.80" y="1798.52" font-family='"JetBrains Mono", monospace' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">48px</text>
+</g>
+</g>
+</g>
+</g>
+<g>
+<text x="48" y="1907.48" font-family='Inter, sans-serif' font-size="24" font-weight="700" fill="$color.gray.900" text-anchor="start">Border Radius</text>
+<g>
+<rect x="48" y="1945.40" width="1304" height="152.80" fill="$color.gray.50" rx="12" stroke="$color.gray.200" stroke-width="1"/>
+<g>
+<g>
+<rect x="80" y="1977.40" width="64" height="64" fill="$color.brand.500" rx="4"/>
+</g>
+<text x="96.40" y="2059.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.500" text-anchor="start">sm (4)</text>
+</g>
+<g>
+<g>
+<rect x="160" y="1977.40" width="64" height="64" fill="$color.brand.500" rx="8"/>
+</g>
+<text x="176.40" y="2059.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.500" text-anchor="start">md (8)</text>
+</g>
+<g>
+<g>
+<rect x="240" y="1977.40" width="64" height="64" fill="$color.brand.500" rx="12"/>
+</g>
+<text x="257.18" y="2059.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.500" text-anchor="start">lg (12)</text>
+</g>
+<g>
+<g>
+<rect x="320" y="1977.40" width="64" height="64" fill="$color.brand.500" rx="16"/>
+</g>
+<text x="337.18" y="2059.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.500" text-anchor="start">xl (16)</text>
+</g>
+<g>
+<g>
+<circle cx="432" cy="2009.40" r="32" fill="$color.brand.500"/>
+</g>
+<text x="422.33" y="2059.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="$color.gray.500" text-anchor="start">full</text>
+</g>
+</g>
+</g>
+</g>
+</svg>

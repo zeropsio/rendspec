@@ -1,0 +1,155 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1440" height="900" viewBox="0 0 1440 900">
+<style>
+  text { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+</style>
+<defs>
+  <filter id="shadow-1" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.2)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-2" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.2)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-3" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.2)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-4" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.2)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-5" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.2)" flood-opacity="1"/>
+  </filter>
+  <linearGradient id="grad-6" x1="0.50" y1="0" x2="0.50" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="rgba(59,130,246,0.1)"/>
+    <stop offset="100%" stop-color="rgba(59,130,246,0)"/>
+  </linearGradient>
+  <filter id="shadow-7" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.2)" flood-opacity="1"/>
+  </filter>
+</defs>
+<g>
+<rect x="0" y="0" width="1440" height="900" fill="#0f172a"/>
+<g>
+<rect x="0" y="0" width="240" height="900" fill="#1e293b"/>
+<line x1="240" y1="0" x2="240" y2="900" stroke="#334155" stroke-width="1"/>
+<g>
+<text x="24" y="38.76" font-family='Inter, sans-serif' font-size="18" font-weight="700" fill="#3b82f6" text-anchor="start">Acme Analytics</text>
+</g>
+<g>
+<text x="40" y="102.68" font-family='Inter, sans-serif' font-size="14" font-weight="500" fill="#94a3b8" text-anchor="start">Dashboard</text>
+</g>
+<g>
+<text x="40" y="150.28" font-family='Inter, sans-serif' font-size="14" font-weight="500" fill="#94a3b8" text-anchor="start">Analytics</text>
+</g>
+<g>
+<text x="40" y="197.88" font-family='Inter, sans-serif' font-size="14" font-weight="500" fill="#94a3b8" text-anchor="start">Customers</text>
+</g>
+<g>
+<text x="40" y="245.48" font-family='Inter, sans-serif' font-size="14" font-weight="500" fill="#94a3b8" text-anchor="start">Revenue</text>
+</g>
+<g>
+<text x="40" y="293.08" font-family='Inter, sans-serif' font-size="14" font-weight="500" fill="#94a3b8" text-anchor="start">Settings</text>
+</g>
+</g>
+<g>
+<g>
+<g>
+<text x="272" y="54.96" font-family='Inter, sans-serif' font-size="28" font-weight="700" fill="#f8fafc" text-anchor="start">Dashboard Overview</text>
+<text x="272" y="86.68" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#94a3b8" text-anchor="start">Welcome back, here&#39;s what&#39;s happening today</text>
+</g>
+<g>
+<g>
+<rect x="1068.99" y="45.60" width="240" height="35.60" fill="#0f172a" rx="6" stroke="#334155" stroke-width="1"/>
+<text x="1084.99" y="65.08" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#64748b" text-anchor="start">Search...</text>
+</g>
+<g>
+<rect x="1320.99" y="45.60" width="87.01" height="35.60" fill="#3b82f6" rx="6"/>
+<text x="1340.99" y="65.08" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="white" text-anchor="start">Export</text>
+</g>
+</g>
+</g>
+<g>
+<g>
+<rect x="272" y="118.80" width="269" height="134.40" fill="#1e293b" rx="12" stroke="#334155" stroke-width="1" filter="url(#shadow-1)"/>
+<text x="292" y="148.64" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="#64748b" text-anchor="start">Total Revenue</text>
+<text x="292" y="189.84" font-family='Inter, sans-serif' font-size="32" font-weight="700" fill="#f8fafc" text-anchor="start">$45,231</text>
+<text x="292" y="226.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="#10b981" text-anchor="start">+20.1% from last month</text>
+</g>
+<g>
+<rect x="561" y="118.80" width="269" height="134.40" fill="#1e293b" rx="12" stroke="#334155" stroke-width="1" filter="url(#shadow-2)"/>
+<text x="581" y="148.64" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="#64748b" text-anchor="start">Active Users</text>
+<text x="581" y="189.84" font-family='Inter, sans-serif' font-size="32" font-weight="700" fill="#f8fafc" text-anchor="start">2,350</text>
+<text x="581" y="226.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="#10b981" text-anchor="start">+15.3% from last month</text>
+</g>
+<g>
+<rect x="850" y="118.80" width="269" height="134.40" fill="#1e293b" rx="12" stroke="#334155" stroke-width="1" filter="url(#shadow-3)"/>
+<text x="870" y="148.64" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="#64748b" text-anchor="start">Churn Rate</text>
+<text x="870" y="189.84" font-family='Inter, sans-serif' font-size="32" font-weight="700" fill="#f8fafc" text-anchor="start">3.2%</text>
+<text x="870" y="226.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="#10b981" text-anchor="start">-0.4% from last month</text>
+</g>
+<g>
+<rect x="1139" y="118.80" width="269" height="134.40" fill="#1e293b" rx="12" stroke="#334155" stroke-width="1" filter="url(#shadow-4)"/>
+<text x="1159" y="148.64" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="#64748b" text-anchor="start">Avg. Order</text>
+<text x="1159" y="189.84" font-family='Inter, sans-serif' font-size="32" font-weight="700" fill="#f8fafc" text-anchor="start">$124</text>
+<text x="1159" y="226.24" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="#ef4444" text-anchor="start">-2.1% from last month</text>
+</g>
+</g>
+<g>
+<g>
+<rect x="272" y="277.20" width="741.33" height="590.80" fill="#1e293b" rx="12" stroke="#334155" stroke-width="1" filter="url(#shadow-5)"/>
+<g>
+<text x="296" y="315.52" font-family='Inter, sans-serif' font-size="16" font-weight="600" fill="#f8fafc" text-anchor="start">Revenue Over Time</text>
+<g>
+<g>
+<rect x="852.86" y="301.20" width="38.66" height="24.80" fill="#3b82f6" rx="4"/>
+<text x="864.86" y="315.04" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="white" text-anchor="start">7D</text>
+</g>
+<g>
+<text x="907.53" y="315.04" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="#64748b" text-anchor="start">30D</text>
+</g>
+<g>
+<text x="956.43" y="315.04" font-family='Inter, sans-serif' font-size="12" font-weight="500" fill="#64748b" text-anchor="start">90D</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="296" y="342" width="693.33" height="0" fill="url(#grad-6)" rx="6"/>
+</g>
+</g>
+<g>
+<rect x="1037.33" y="277.20" width="370.67" height="590.80" fill="#1e293b" rx="12" stroke="#334155" stroke-width="1" filter="url(#shadow-7)"/>
+<text x="1061.33" y="314.32" font-family='Inter, sans-serif' font-size="16" font-weight="600" fill="#f8fafc" text-anchor="start">Recent Transactions</text>
+<g>
+<g>
+<line x1="1061.33" y1="381.80" x2="1384" y2="381.80" stroke="#1e293b" stroke-width="1"/>
+<text x="1077.33" y="362.26" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#f8fafc" text-anchor="start">Stripe Payment</text>
+<text x="1170.28" y="362.26" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#94a3b8" text-anchor="start">2 min ago</text>
+<text x="1224.36" y="362.26" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#10b981" text-anchor="start">+$420.00</text>
+<text x="1275.40" y="362.26" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#64748b" text-anchor="start">Completed</text>
+</g>
+<g>
+<line x1="1061.33" y1="424" x2="1384" y2="424" stroke="#1e293b" stroke-width="1"/>
+<text x="1077.33" y="404.46" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#f8fafc" text-anchor="start">PayPal Transfer</text>
+<text x="1175.69" y="404.46" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#94a3b8" text-anchor="start">15 min ago</text>
+<text x="1233.49" y="404.46" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#10b981" text-anchor="start">+$89.50</text>
+<text x="1277.77" y="404.46" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#64748b" text-anchor="start">Completed</text>
+</g>
+<g>
+<line x1="1061.33" y1="466.20" x2="1384" y2="466.20" stroke="#1e293b" stroke-width="1"/>
+<text x="1077.33" y="446.66" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#f8fafc" text-anchor="start">Bank Transfer</text>
+<text x="1164.20" y="446.66" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#94a3b8" text-anchor="start">1 hr ago</text>
+<text x="1209.15" y="446.66" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#10b981" text-anchor="start">+$1,200</text>
+<text x="1250.39" y="446.66" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#64748b" text-anchor="start">Pending</text>
+</g>
+<g>
+<line x1="1061.33" y1="508.40" x2="1384" y2="508.40" stroke="#1e293b" stroke-width="1"/>
+<text x="1077.33" y="488.86" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#f8fafc" text-anchor="start">Refund #4521</text>
+<text x="1153.38" y="488.86" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#94a3b8" text-anchor="start">3 hr ago</text>
+<text x="1201.38" y="488.86" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#10b981" text-anchor="start">-$45.00</text>
+<text x="1245.66" y="488.86" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#64748b" text-anchor="start">Processed</text>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

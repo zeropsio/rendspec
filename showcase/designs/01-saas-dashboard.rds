@@ -1,0 +1,266 @@
+theme: dark
+
+tokens:
+  color:
+    primary: "#3b82f6"
+    secondary: "#8b5cf6"
+    success: "#10b981"
+    warning: "#f59e0b"
+    danger: "#ef4444"
+    bg:
+      page: "#0f172a"
+      card: "#1e293b"
+      input: "#0f172a"
+    text:
+      primary: "#f8fafc"
+      secondary: "#94a3b8"
+      muted: "#64748b"
+  radius:
+    sm: 6
+    md: 12
+    lg: 16
+  shadow:
+    card: "0 4 24 rgba(0,0,0,0.2)"
+
+components:
+  stat-card:
+    fill: $color.bg.card
+    radius: $radius.md
+    padding: 20
+    gap: 8
+    border: 1 solid #334155
+    shadow: $shadow.card
+    params:
+      label: { default: "Metric" }
+      value: { default: "0" }
+      trend: { default: "" }
+      trend-color: { default: "#10b981" }
+    - text: "{{label}}"
+      font: 500 12 Inter
+      color: $color.text.muted
+    - text: "{{value}}"
+      font: 700 32 Inter
+      color: $color.text.primary
+    - text: "{{trend}}"
+      font: 500 12 Inter
+      color: "{{trend-color}}"
+
+  nav-item:
+    padding: 10 16
+    radius: $radius.sm
+    direction: row
+    gap: 10
+    align: center
+    params:
+      label: { default: "Item" }
+      active: { default: "false" }
+    - text: "{{label}}"
+      font: 500 14 Inter
+      color: $color.text.secondary
+
+  table-row:
+    direction: row
+    padding: 12 16
+    border-bottom: 1 solid #1e293b
+    align: center
+    params:
+      col1: { default: "-" }
+      col2: { default: "-" }
+      col3: { default: "-" }
+      col4: { default: "-" }
+    - text: "{{col1}}"
+      font: 400 13 Inter
+      color: $color.text.primary
+      flex: 2
+    - text: "{{col2}}"
+      font: 400 13 Inter
+      color: $color.text.secondary
+      flex: 1
+    - text: "{{col3}}"
+      font: 500 13 Inter
+      color: $color.success
+      flex: 1
+    - text: "{{col4}}"
+      font: 400 13 Inter
+      color: $color.text.muted
+      flex: 1
+
+root:
+  width: 1440
+  height: 900
+  fill: $color.bg.page
+  direction: row
+
+  # Sidebar
+  - frame: sidebar
+    width: 240
+    fill: $color.bg.card
+    padding: 24
+    gap: 8
+    border-right: 1 solid #334155
+    - frame: logo
+      padding: 0 0 24 0
+      - text: "Acme Analytics"
+        font: 700 18 Inter
+        color: $color.primary
+    - use: nav-item
+      label: "Dashboard"
+    - use: nav-item
+      label: "Analytics"
+    - use: nav-item
+      label: "Customers"
+    - use: nav-item
+      label: "Revenue"
+    - use: nav-item
+      label: "Settings"
+
+  # Main content
+  - frame: main
+    flex: 1
+    padding: 32
+    gap: 24
+
+    # Header
+    - frame: header
+      direction: row
+      justify: between
+      align: center
+      - frame:
+        gap: 4
+        - text: "Dashboard Overview"
+          font: 700 28 Inter
+          color: $color.text.primary
+        - text: "Welcome back, here's what's happening today"
+          font: 400 14 Inter
+          color: $color.text.secondary
+
+      - frame: header-actions
+        direction: row
+        gap: 12
+        - frame: search
+          fill: $color.bg.input
+          border: 1 solid #334155
+          radius: $radius.sm
+          padding: 8 16
+          width: 240
+          - text: "Search..."
+            font: 400 14 Inter
+            color: $color.text.muted
+        - frame: btn-export
+          fill: $color.primary
+          radius: $radius.sm
+          padding: 8 20
+          align: center
+          justify: center
+          - text: "Export"
+            font: 600 14 Inter
+            color: white
+
+    # Stats row
+    - frame: stats
+      layout: grid
+      columns: 4
+      column-gap: 20
+      row-gap: 20
+      - use: stat-card
+        label: "Total Revenue"
+        value: "$45,231"
+        trend: "+20.1% from last month"
+        trend-color: "#10b981"
+      - use: stat-card
+        label: "Active Users"
+        value: "2,350"
+        trend: "+15.3% from last month"
+        trend-color: "#10b981"
+      - use: stat-card
+        label: "Churn Rate"
+        value: "3.2%"
+        trend: "-0.4% from last month"
+        trend-color: "#10b981"
+      - use: stat-card
+        label: "Avg. Order"
+        value: "$124"
+        trend: "-2.1% from last month"
+        trend-color: "#ef4444"
+
+    # Content row
+    - frame: content-row
+      direction: row
+      gap: 24
+      flex: 1
+
+      # Chart area
+      - frame: chart-card
+        flex: 2
+        fill: $color.bg.card
+        radius: $radius.md
+        padding: 24
+        gap: 16
+        border: 1 solid #334155
+        shadow: $shadow.card
+        - frame: chart-header
+          direction: row
+          justify: between
+          align: center
+          - text: "Revenue Over Time"
+            font: 600 16 Inter
+            color: $color.text.primary
+          - frame: chart-tabs
+            direction: row
+            gap: 4
+            - frame:
+              fill: $color.primary
+              radius: 4
+              padding: 4 12
+              - text: "7D"
+                font: 500 12 Inter
+                color: white
+            - frame:
+              padding: 4 12
+              - text: "30D"
+                font: 500 12 Inter
+                color: $color.text.muted
+            - frame:
+              padding: 4 12
+              - text: "90D"
+                font: 500 12 Inter
+                color: $color.text.muted
+        - frame: chart-placeholder
+          flex: 1
+          fill: linear-gradient(180deg, rgba(59,130,246,0.1), rgba(59,130,246,0))
+          radius: $radius.sm
+
+      # Recent activity
+      - frame: activity-card
+        flex: 1
+        fill: $color.bg.card
+        radius: $radius.md
+        padding: 24
+        gap: 16
+        border: 1 solid #334155
+        shadow: $shadow.card
+        - text: "Recent Transactions"
+          font: 600 16 Inter
+          color: $color.text.primary
+        - frame: table
+          gap: 0
+          - use: table-row
+            col1: "Stripe Payment"
+            col2: "2 min ago"
+            col3: "+$420.00"
+            col4: "Completed"
+          - use: table-row
+            col1: "PayPal Transfer"
+            col2: "15 min ago"
+            col3: "+$89.50"
+            col4: "Completed"
+          - use: table-row
+            col1: "Bank Transfer"
+            col2: "1 hr ago"
+            col3: "+$1,200"
+            col4: "Pending"
+          - use: table-row
+            col1: "Refund #4521"
+            col2: "3 hr ago"
+            col3: "-$45.00"
+            col4: "Processed"

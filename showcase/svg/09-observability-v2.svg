@@ -1,0 +1,405 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="822.40" viewBox="0 0 1280 822.40">
+<style>
+  text { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+</style>
+<g>
+<rect x="0" y="0" width="1280" height="822.40" fill="white"/>
+<g>
+<rect x="32" y="32" width="1216" height="758.40" fill="#F0F0F0" rx="16" stroke="#D8D7D7" stroke-width="1"/>
+<g>
+<text x="86" y="77.84" font-family='Geologica, sans-serif' font-size="12" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="2">PROJECT</text>
+<text x="86" y="96" font-family='"Roboto Mono", monospace' font-size="10" font-weight="400" fill="#254E4A" text-anchor="start" opacity="0.5">Private VXLAN network</text>
+</g>
+<g>
+<rect x="68" y="133.80" width="1144" height="116" fill="#EBEBEB" rx="6"/>
+<g>
+<text x="86" y="184.42" font-family='Geologica, sans-serif' font-size="11" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="2">YOUR</text>
+<text x="86" y="201.82" font-family='Geologica, sans-serif' font-size="11" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="2">SERVICES</text>
+</g>
+<g>
+<g>
+<rect x="394.67" y="151.80" width="94.67" height="80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<g>
+<rect x="426" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="431" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="431" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="431" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+</g>
+<text x="410.67" y="212" font-family='Geologica, sans-serif' font-size="10" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1.20">Forwarder</text>
+</g>
+<g>
+<rect x="505.34" y="151.80" width="136" height="80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<g>
+<rect x="521.34" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="526.34" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="526.34" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="526.34" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<g>
+<rect x="557.34" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="562.34" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="562.34" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="562.34" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<g>
+<rect x="593.34" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="598.34" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="598.34" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="598.34" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+</g>
+<text x="549.15" y="212" font-family='Geologica, sans-serif' font-size="10" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1.20">api:3000</text>
+</g>
+<g>
+<rect x="657.34" y="151.80" width="136" height="80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<g>
+<rect x="673.34" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="678.34" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="678.34" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="678.34" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<g>
+<rect x="709.34" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="714.34" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="714.34" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="714.34" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<g>
+<rect x="745.34" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="750.34" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="750.34" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="750.34" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+</g>
+<text x="703.25" y="212" font-family='Geologica, sans-serif' font-size="10" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1.20">db:5432</text>
+</g>
+<g>
+<rect x="809.34" y="151.80" width="100" height="80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<g>
+<rect x="825.34" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="830.34" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="830.34" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="830.34" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<g>
+<rect x="861.34" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="866.34" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="866.34" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="866.34" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+</g>
+<text x="827.26" y="212" font-family='Geologica, sans-serif' font-size="10" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1.20">cache:6379</text>
+</g>
+<g>
+<rect x="925.34" y="151.80" width="100" height="80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<g>
+<rect x="941.34" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="946.34" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="946.34" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="946.34" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<g>
+<rect x="977.34" y="163.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="982.34" y="171.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="982.34" y="178.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="982.34" y="184.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+</g>
+<text x="948.97" y="212" font-family='Geologica, sans-serif' font-size="10" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1.20">wrk:8080</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="68" y="281.80" width="1144" height="123.40" fill="#EBEBEB" rx="6"/>
+<g>
+<text x="86" y="327.42" font-family='Geologica, sans-serif' font-size="11" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="2">DEDICATED</text>
+<text x="86" y="344.82" font-family='Geologica, sans-serif' font-size="11" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="2">INFRASTRUCTURE</text>
+<text x="86" y="362.22" font-family='Geologica, sans-serif' font-size="11" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="2">CORE</text>
+</g>
+<g>
+<g>
+<rect x="620.92" y="299.80" width="178.17" height="87.40" fill="#DFFFFC" rx="10" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<g>
+<rect x="655.63" y="315.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="660.63" y="323.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="660.63" y="330.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="660.63" y="336.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<text x="652.92" y="362.82" font-family='Geologica, sans-serif' font-size="11" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1.30">Stats</text>
+</g>
+<g>
+<g>
+<rect x="728.72" y="315.80" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="733.72" y="323.55" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="733.72" y="330.05" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="733.72" y="336.55" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<text x="722.35" y="362.82" font-family='Geologica, sans-serif' font-size="11" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1.30">Logger</text>
+</g>
+</g>
+</g>
+</g>
+<g>
+<g>
+<rect x="68" y="577.20" width="130" height="189.20" fill="#EBEBEB" rx="6"/>
+<text x="80" y="600.22" font-family='Geologica, sans-serif' font-size="11" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="2">GUI</text>
+<g>
+<rect x="80" y="618.60" width="106" height="46.80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<text x="116.80" y="635.98" font-family='"Roboto Mono", monospace' font-size="9" font-weight="400" fill="#254E4A" text-anchor="start">Zerops</text>
+<text x="125.80" y="650.76" font-family='"Roboto Mono", monospace' font-size="8" font-weight="400" fill="#254E4A" text-anchor="start" opacity="0.5">GUI</text>
+</g>
+</g>
+<g>
+<rect x="210" y="577.20" width="810" height="189.20" fill="#EBEBEB" rx="6"/>
+<text x="224" y="600.22" font-family='Geologica, sans-serif' font-size="11" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="2">SELF-HOSTED</text>
+<g>
+<g>
+<rect x="224" y="616.60" width="308.80" height="135.80" fill="#E4E3E3" rx="6"/>
+<text x="234" y="636.80" font-family='Geologica, sans-serif' font-size="10" font-weight="600" fill="#254E4A" text-anchor="start" opacity="0.5" letter-spacing="2">METRICS</text>
+<g>
+<g>
+<rect x="234" y="650.60" width="140.40" height="89.80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<rect x="288.20" y="660.60" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="293.20" y="668.35" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="293.20" y="674.85" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="293.20" y="681.35" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<text x="273.40" y="705.98" font-family='Geologica, sans-serif' font-size="9" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1">Prometheus</text>
+<text x="294.26" y="723.76" font-family='Geologica, sans-serif' font-size="8" font-weight="600" fill="#254E4A" text-anchor="start" opacity="0.5">:9090</text>
+</g>
+<g>
+<rect x="382.40" y="650.60" width="140.40" height="89.80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<rect x="436.60" y="660.60" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="441.60" y="668.35" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="441.60" y="674.85" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="441.60" y="681.35" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<text x="431.53" y="705.98" font-family='Geologica, sans-serif' font-size="9" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1">Grafana</text>
+<text x="442.66" y="723.76" font-family='Geologica, sans-serif' font-size="8" font-weight="600" fill="#254E4A" text-anchor="start" opacity="0.5">:3000</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="542.80" y="616.60" width="463.20" height="135.80" fill="#E4E3E3" rx="6"/>
+<text x="552.80" y="636.80" font-family='Geologica, sans-serif' font-size="10" font-weight="600" fill="#254E4A" text-anchor="start" opacity="0.5" letter-spacing="2">ELK</text>
+<g>
+<g>
+<rect x="552.80" y="650.60" width="142.40" height="89.80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<rect x="608" y="660.60" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="613" y="668.35" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="613" y="674.85" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="613" y="681.35" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<text x="599.98" y="705.98" font-family='Geologica, sans-serif' font-size="9" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1">Logstash</text>
+</g>
+<g>
+<rect x="703.20" y="650.60" width="142.40" height="89.80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<g>
+<rect x="723.40" y="660.60" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="728.40" y="668.35" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="728.40" y="674.85" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="728.40" y="681.35" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<g>
+<rect x="758.40" y="660.60" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="763.40" y="668.35" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="763.40" y="674.85" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="763.40" y="681.35" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<g>
+<rect x="793.40" y="660.60" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="798.40" y="668.35" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="798.40" y="674.85" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="798.40" y="681.35" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+</g>
+<text x="739.10" y="703.98" font-family='Geologica, sans-serif' font-size="9" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="0.80">Elasticsearch</text>
+<text x="764.46" y="719.76" font-family='Geologica, sans-serif' font-size="8" font-weight="600" fill="#254E4A" text-anchor="start" opacity="0.5">:9200</text>
+</g>
+<g>
+<rect x="853.60" y="650.60" width="142.40" height="89.80" fill="#F0F0F0" rx="8" stroke="#D8D7D7" stroke-width="0.50"/>
+<g>
+<rect x="908.80" y="660.60" width="32" height="32" fill="#fff" rx="6"/>
+<g>
+<rect x="913.80" y="668.35" width="22" height="3.50" fill="#e91e63" rx="1.50"/>
+</g>
+<g>
+<rect x="913.80" y="674.85" width="22" height="3.50" fill="#009688" rx="1.50"/>
+</g>
+<g>
+<rect x="913.80" y="681.35" width="22" height="3.50" fill="#2196f3" rx="1.50"/>
+</g>
+</g>
+<text x="907.80" y="705.98" font-family='Geologica, sans-serif' font-size="9" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1">Kibana</text>
+<text x="915.85" y="723.76" font-family='Geologica, sans-serif' font-size="8" font-weight="600" fill="#254E4A" text-anchor="start" opacity="0.5">:5601</text>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g>
+<rect x="1032" y="577.20" width="180" height="189.20" fill="#EBEBEB" rx="6"/>
+<text x="1044" y="600.22" font-family='Geologica, sans-serif' font-size="11" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="2">THIRD PARTY</text>
+<g>
+<rect x="1044" y="614.60" width="156" height="38" fill="#F0F0F0" rx="5"/>
+<g>
+<rect x="1048" y="618.60" width="148" height="30" fill="#fff" rx="4"/>
+<text x="1084.55" y="634.80" font-family='Geologica, sans-serif' font-size="10" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1.20">BetterStack</text>
+</g>
+</g>
+<g>
+<rect x="1044" y="660.60" width="156" height="38" fill="#F0F0F0" rx="5"/>
+<g>
+<rect x="1048" y="664.60" width="148" height="30" fill="#fff" rx="4"/>
+<text x="1090.75" y="680.80" font-family='Geologica, sans-serif' font-size="10" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1.20">Papertrail</text>
+</g>
+</g>
+<g>
+<rect x="1044" y="706.60" width="156" height="38" fill="#F0F0F0" rx="5"/>
+<g>
+<rect x="1048" y="710.60" width="148" height="30" fill="#fff" rx="4"/>
+<text x="1088.65" y="726.80" font-family='Geologica, sans-serif' font-size="10" font-weight="600" fill="#254E4A" text-anchor="start" letter-spacing="1.20">Ext. syslog</text>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<path d="M 442 231.80 L 442 282.80 Q 442 294.80 454 294.80 L 661.13 294.80 Q 671.63 294.80 671.63 305.30 L 671.63 315.80" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 710 387.20 L 710 451.20 Q 710 463.20 698 463.20 L 145 463.20 Q 133 463.20 133 475.20 L 133 577.20" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 710 387.20 L 710 491.20 Q 710 503.20 698 503.20 L 316.20 503.20 Q 304.20 503.20 304.20 515.20 L 304.20 650.60" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 710 387.20 L 710 511.20 Q 710 523.20 698 523.20 L 636 523.20 Q 624 523.20 624 535.20 L 624 650.60" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 710 387.20 L 710 471.20 Q 710 483.20 722 483.20 L 1110 483.20 Q 1122 483.20 1122 495.20 L 1122 577.20" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 374.40 695.50 L 382.40 695.50" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 695.20 695.50 L 703.20 695.50" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 845.60 695.50 L 853.60 695.50" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 573.34 231.80 L 573.34 281.80" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 725.34 231.80 L 725.34 281.80" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 859.34 231.80 L 859.34 281.80" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+<path d="M 975.34 231.80 L 975.34 281.80" fill="none" stroke="#D8D7D7" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4"/>
+</svg>

@@ -1,0 +1,206 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="2400" viewBox="0 0 1280 2400">
+<style>
+  text { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+</style>
+<defs>
+  <linearGradient id="grad-1" x1="0.15" y1="0.15" x2="0.85" y2="0.85" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#6366f1"/>
+    <stop offset="50%" stop-color="#8b5cf6"/>
+    <stop offset="100%" stop-color="#a78bfa"/>
+  </linearGradient>
+  <filter id="shadow-2" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.1)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-3" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.04)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-4" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.04)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-5" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.04)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-6" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.04)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-7" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.04)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-8" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.04)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-9" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(0,0,0,0.06)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-10" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(0,0,0,0.06)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-11" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="8" stdDeviation="16" flood-color="rgba(0,0,0,0.06)" flood-opacity="1"/>
+  </filter>
+  <linearGradient id="grad-12" x1="0.15" y1="0.15" x2="0.85" y2="0.85" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#4f46e5"/>
+    <stop offset="100%" stop-color="#7c3aed"/>
+  </linearGradient>
+  <filter id="shadow-13" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.2)" flood-opacity="1"/>
+  </filter>
+</defs>
+<g>
+<rect x="0" y="0" width="1280" height="2400" fill="#ffffff"/>
+<g>
+<rect x="208.32" y="0" width="863.35" height="416.80" fill="url(#grad-1)"/>
+<text x="640" y="125.92" font-family='Inter, sans-serif' font-size="56" font-weight="800" fill="white" text-anchor="middle">Build faster. Ship smarter.</text>
+<text x="640" y="198.80" font-family='Inter, sans-serif' font-size="20" font-weight="400" fill="rgba(255,255,255,0.85)" text-anchor="middle">The developer platform that scales with you. From prototype to production in minutes, not months.</text>
+<g>
+<g>
+<rect x="463.39" y="286.40" width="191.98" height="50.40" fill="white" rx="8" filter="url(#shadow-2)"/>
+<text x="495.39" y="313.52" font-family='Inter, sans-serif' font-size="16" font-weight="600" fill="#6366f1-dark" text-anchor="start">Start Free Trial</text>
+</g>
+<g>
+<rect x="671.37" y="286.40" width="145.24" height="50.40" fill="none" rx="8" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+<text x="703.37" y="313.52" font-family='Inter, sans-serif' font-size="16" font-weight="600" fill="white" text-anchor="start">View Demo</text>
+</g>
+</g>
+</g>
+<g>
+<text x="384.13" y="461.68" font-family='Inter, sans-serif' font-size="14" font-weight="500" fill="#0f172a-secondary" text-anchor="start">Trusted by 10,000+ developers</text>
+<g>
+<text x="624.69" y="461.92" font-family='Inter, sans-serif' font-size="16" font-weight="700" fill="#94a3b8" text-anchor="start">Google</text>
+<text x="698.48" y="461.92" font-family='Inter, sans-serif' font-size="16" font-weight="700" fill="#94a3b8" text-anchor="start">Stripe</text>
+<text x="772.28" y="461.92" font-family='Inter, sans-serif' font-size="16" font-weight="700" fill="#94a3b8" text-anchor="start">Vercel</text>
+<text x="846.07" y="461.92" font-family='Inter, sans-serif' font-size="16" font-weight="700" fill="#94a3b8" text-anchor="start">Linear</text>
+</g>
+</g>
+<g>
+<g>
+<text x="640" y="600" font-family='Inter, sans-serif' font-size="40" font-weight="700" fill="#0f172a" text-anchor="middle">Everything you need</text>
+<text x="640" y="649.96" font-family='Inter, sans-serif' font-size="18" font-weight="400" fill="#0f172a-secondary" text-anchor="middle">Powerful features that give your team superpowers</text>
+</g>
+<g>
+<g>
+<rect x="64" y="708.40" width="368" height="236" fill="white" rx="16" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow-3)"/>
+<text x="96" y="766.64" font-family='Inter, sans-serif' font-size="32" font-weight="400" fill="#0f172a" text-anchor="start">⚡</text>
+<text x="96" y="817.60" font-family='Inter, sans-serif' font-size="20" font-weight="700" fill="#0f172a" text-anchor="start">Lightning Fast</text>
+<text x="96" y="856.68" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="start">Sub-millisecond response times with our edge-first architecture. Your users won&#39;t wait.</text>
+</g>
+<g>
+<rect x="456" y="708.40" width="368" height="236" fill="white" rx="16" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow-4)"/>
+<text x="488" y="766.64" font-family='Inter, sans-serif' font-size="32" font-weight="400" fill="#0f172a" text-anchor="start">🔒</text>
+<text x="488" y="817.60" font-family='Inter, sans-serif' font-size="20" font-weight="700" fill="#0f172a" text-anchor="start">Enterprise Security</text>
+<text x="488" y="856.68" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="start">SOC2 Type II compliant with end-to-end encryption. Your data stays yours.</text>
+</g>
+<g>
+<rect x="848" y="708.40" width="368" height="236" fill="white" rx="16" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow-5)"/>
+<text x="880" y="766.64" font-family='Inter, sans-serif' font-size="32" font-weight="400" fill="#0f172a" text-anchor="start">📊</text>
+<text x="880" y="817.60" font-family='Inter, sans-serif' font-size="20" font-weight="700" fill="#0f172a" text-anchor="start">Real-time Analytics</text>
+<text x="880" y="856.68" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="start">Track every metric that matters with beautiful, customizable dashboards.</text>
+</g>
+<g>
+<rect x="64" y="968.40" width="368" height="213.60" fill="white" rx="16" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow-6)"/>
+<text x="96" y="1026.64" font-family='Inter, sans-serif' font-size="32" font-weight="400" fill="#0f172a" text-anchor="start">🔌</text>
+<text x="96" y="1077.60" font-family='Inter, sans-serif' font-size="20" font-weight="700" fill="#0f172a" text-anchor="start">API-First</text>
+<text x="96" y="1116.68" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="start">RESTful and GraphQL APIs with SDKs for every major language and framework.</text>
+</g>
+<g>
+<rect x="456" y="968.40" width="368" height="213.60" fill="white" rx="16" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow-7)"/>
+<text x="488" y="1026.64" font-family='Inter, sans-serif' font-size="32" font-weight="400" fill="#0f172a" text-anchor="start">🚀</text>
+<text x="488" y="1077.60" font-family='Inter, sans-serif' font-size="20" font-weight="700" fill="#0f172a" text-anchor="start">One-Click Deploy</text>
+<text x="488" y="1116.68" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="start">Push to deploy with zero-downtime rolling updates. CI/CD built right in.</text>
+</g>
+<g>
+<rect x="848" y="968.40" width="368" height="213.60" fill="white" rx="16" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow-8)"/>
+<text x="880" y="1026.64" font-family='Inter, sans-serif' font-size="32" font-weight="400" fill="#0f172a" text-anchor="start">🤝</text>
+<text x="880" y="1077.60" font-family='Inter, sans-serif' font-size="20" font-weight="700" fill="#0f172a" text-anchor="start">Team Collaboration</text>
+<text x="880" y="1116.68" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="start">Real-time multiplayer editing with role-based access control for teams of any size.</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="223.22" y="1246" width="833.56" height="564.80" fill="#ffffff-alt"/>
+<g>
+<text x="640" y="1342.80" font-family='Inter, sans-serif' font-size="40" font-weight="700" fill="#0f172a" text-anchor="middle">Simple, transparent pricing</text>
+<text x="510.83" y="1392.76" font-family='Inter, sans-serif' font-size="18" font-weight="400" fill="#0f172a-secondary" text-anchor="start">No hidden fees. Cancel anytime.</text>
+</g>
+<g>
+<g>
+<rect x="287.22" y="1451.20" width="219.19" height="295.60" fill="white" rx="16" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow-9)"/>
+<text x="396.81" y="1494.68" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="#6366f1" text-anchor="middle">STARTER</text>
+<g>
+<text x="396.81" y="1562.16" font-family='Inter, sans-serif' font-size="48" font-weight="700" fill="#0f172a" text-anchor="middle">$0</text>
+<text x="396.81" y="1603.48" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="middle">/month</text>
+</g>
+<text x="402.58" y="1643.08" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="middle">Perfect for side projects</text>
+<g>
+<rect x="327.17" y="1671.20" width="139.29" height="43.60" fill="#6366f1" rx="8"/>
+<text x="359.17" y="1694.68" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="white" text-anchor="start">Start Free</text>
+</g>
+</g>
+<g>
+<rect x="530.41" y="1451.20" width="219.19" height="295.60" fill="white" rx="16" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow-10)"/>
+<text x="640" y="1494.68" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="#6366f1" text-anchor="middle">PRO</text>
+<g>
+<text x="640" y="1562.16" font-family='Inter, sans-serif' font-size="48" font-weight="700" fill="#0f172a" text-anchor="middle">$29</text>
+<text x="640" y="1603.48" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="middle">/month</text>
+</g>
+<text x="640" y="1643.08" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="middle">For growing teams</text>
+<g>
+<rect x="569.97" y="1671.20" width="140.06" height="43.60" fill="#6366f1" rx="8"/>
+<text x="601.97" y="1694.68" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="white" text-anchor="start">Start Trial</text>
+</g>
+</g>
+<g>
+<rect x="773.59" y="1451.20" width="219.19" height="295.60" fill="white" rx="16" stroke="#e2e8f0" stroke-width="1" filter="url(#shadow-11)"/>
+<text x="883.19" y="1494.68" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="#6366f1" text-anchor="middle">ENTERPRISE</text>
+<g>
+<text x="883.19" y="1562.16" font-family='Inter, sans-serif' font-size="48" font-weight="700" fill="#0f172a" text-anchor="middle">$99</text>
+<text x="883.19" y="1603.48" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="middle">/month</text>
+</g>
+<text x="883.19" y="1643.08" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a-secondary" text-anchor="middle">For large organizations</text>
+<g>
+<rect x="805.59" y="1671.20" width="158.79" height="43.60" fill="#6366f1" rx="8"/>
+<text x="837.59" y="1694.68" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="white" text-anchor="start">Contact Sales</text>
+</g>
+</g>
+</g>
+</g>
+<g>
+<text x="979.55" y="1907.60" font-family='Inter, sans-serif' font-size="40" font-weight="700" fill="#0f172a" text-anchor="middle">Loved by developers</text>
+<g>
+<g>
+<rect x="64" y="1962.80" width="594.36" height="124.80" fill="#ffffff-alt" rx="16"/>
+<text x="88" y="1998.28" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a" text-anchor="start">&#34;This tool has completely transformed our workflow. We shipped 3x faster in our first month.&#34;</text>
+<g>
+<text x="88" y="2036.68" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="#0f172a" text-anchor="start">Sarah Chen</text>
+<text x="88" y="2056.64" font-family='Inter, sans-serif' font-size="12" font-weight="400" fill="#0f172a-secondary" text-anchor="start">CTO at Acme Inc</text>
+</g>
+</g>
+<g>
+<rect x="682.36" y="1962.80" width="594.36" height="124.80" fill="#ffffff-alt" rx="16"/>
+<text x="706.36" y="1998.28" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a" text-anchor="start">&#34;The DX is incredible. It feels like the tool reads my mind. Our team is obsessed.&#34;</text>
+<g>
+<text x="706.36" y="2036.68" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="#0f172a" text-anchor="start">James Rodriguez</text>
+<text x="706.36" y="2056.64" font-family='Inter, sans-serif' font-size="12" font-weight="400" fill="#0f172a-secondary" text-anchor="start">Lead Engineer at Startup</text>
+</g>
+</g>
+<g>
+<rect x="1300.73" y="1962.80" width="594.36" height="124.80" fill="#ffffff-alt" rx="16"/>
+<text x="1324.73" y="1998.28" font-family='Inter, sans-serif' font-size="14" font-weight="400" fill="#0f172a" text-anchor="start">&#34;We evaluated 12 tools before choosing this one. Best decision we made all year.&#34;</text>
+<g>
+<text x="1324.73" y="2036.68" font-family='Inter, sans-serif' font-size="14" font-weight="600" fill="#0f172a" text-anchor="start">Emily Park</text>
+<text x="1324.73" y="2056.64" font-family='Inter, sans-serif' font-size="12" font-weight="400" fill="#0f172a-secondary" text-anchor="start">VP Engineering at BigCo</text>
+</g>
+</g>
+</g>
+</g>
+<g>
+<rect x="359.78" y="2151.60" width="560.43" height="343.60" fill="url(#grad-12)"/>
+<text x="640" y="2264.40" font-family='Inter, sans-serif' font-size="40" font-weight="700" fill="white" text-anchor="middle">Ready to get started?</text>
+<text x="640" y="2326.36" font-family='Inter, sans-serif' font-size="18" font-weight="400" fill="rgba(255,255,255,0.8)" text-anchor="middle">Join thousands of developers building the future.</text>
+<g>
+<rect x="516.57" y="2360.80" width="246.86" height="54.40" fill="white" rx="8" filter="url(#shadow-13)"/>
+<text x="556.57" y="2389.92" font-family='Inter, sans-serif' font-size="16" font-weight="700" fill="#6366f1-dark" text-anchor="start">Get Started for Free</text>
+</g>
+</g>
+</g>
+</svg>

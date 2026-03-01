@@ -1,0 +1,640 @@
+# Observability diagram — Zerops style (exact design tokens)
+# Only Stats + Logger (dedicated infra) get teal bg
+# Metrics + ELK subgroups side by side
+
+components:
+  bar-icon:
+    width: 32
+    height: 32
+    fill: "#fff"
+    radius: 6
+    padding: 6 5
+    direction: column
+    gap: 3
+    justify: center
+    - height: 3.5
+      fill: "#e91e63"
+      radius: 1.5
+    - height: 3.5
+      fill: "#009688"
+      radius: 1.5
+    - height: 3.5
+      fill: "#2196f3"
+      radius: 1.5
+  bar-icon-gray:
+    width: 24
+    height: 24
+    fill: "#fff"
+    radius: 4
+    padding: 5 4
+    direction: column
+    gap: 2
+    justify: center
+    - height: 2.5
+      fill: "#D8D7D7"
+      radius: 1
+    - height: 2.5
+      fill: "#D8D7D7"
+      radius: 1
+    - height: 2.5
+      fill: "#D8D7D7"
+      radius: 1
+
+root:
+  width: 1280
+  fill: white
+  padding: 32
+  direction: column
+  - frame: project
+    fill: "#F0F0F0"
+    border: 1 solid #D8D7D7
+    radius: 16
+    padding: 36 36 24 36
+    direction: column
+    gap: 32
+    # --- Project Header ---
+    - frame:
+      direction: column
+      gap: 3
+      padding: 0 0 0 18
+      - text: "PROJECT"
+        font: 600 12 Geologica
+        color: "#254E4A"
+        letter-spacing: 2
+      - text: "Private VXLAN network"
+        font: 400 10 Roboto Mono
+        color: "#254E4A"
+        opacity: 0.5
+
+    # ===========================
+    # YOUR SERVICES
+    # ===========================
+    - frame: services-zone
+      fill: "#EBEBEB"
+      radius: 6
+      padding: 18
+      direction: row
+      align: center
+      gap: 0
+      # Left label column
+      - frame:
+        width: 140
+        padding: 0 16 0 0
+        direction: column
+        gap: 2
+        - text: "YOUR"
+          font: 600 11 Geologica
+          color: "#254E4A"
+          letter-spacing: 2
+        - text: "SERVICES"
+          font: 600 11 Geologica
+          color: "#254E4A"
+          letter-spacing: 2
+
+      # Right content area
+      - frame:
+        flex: 1
+        direction: row
+        gap: 16
+        justify: center
+        # Forwarder (1 container)
+        - frame:
+          id: forwarder
+          fill: "#F0F0F0"
+          border: 0.5 solid #D8D7D7
+          radius: 8
+          padding: 12 16 14 16
+          direction: column
+          align: center
+          gap: 8
+          - frame:
+            direction: row
+            gap: 4
+            - use: bar-icon
+          - text: "Forwarder"
+            font: 600 10 Geologica
+            color: "#254E4A"
+            letter-spacing: 1.2
+
+        # api:3000 (3 containers)
+        - frame:
+          id: api
+          fill: "#F0F0F0"
+          border: 0.5 solid #D8D7D7
+          radius: 8
+          padding: 12 16 14 16
+          direction: column
+          align: center
+          gap: 8
+          - frame:
+            direction: row
+            gap: 4
+            - use: bar-icon
+            - use: bar-icon
+            - use: bar-icon
+          - text: "api:3000"
+            font: 600 10 Geologica
+            color: "#254E4A"
+            letter-spacing: 1.2
+
+        # db:5432 (3 containers)
+        - frame:
+          id: db
+          fill: "#F0F0F0"
+          border: 0.5 solid #D8D7D7
+          radius: 8
+          padding: 12 16 14 16
+          direction: column
+          align: center
+          gap: 8
+          - frame:
+            direction: row
+            gap: 4
+            - use: bar-icon
+            - use: bar-icon
+            - use: bar-icon
+          - text: "db:5432"
+            font: 600 10 Geologica
+            color: "#254E4A"
+            letter-spacing: 1.2
+
+        # cache:6379 (2 containers)
+        - frame:
+          id: cache
+          fill: "#F0F0F0"
+          border: 0.5 solid #D8D7D7
+          radius: 8
+          padding: 12 16 14 16
+          direction: column
+          align: center
+          gap: 8
+          - frame:
+            direction: row
+            gap: 4
+            - use: bar-icon
+            - use: bar-icon
+          - text: "cache:6379"
+            font: 600 10 Geologica
+            color: "#254E4A"
+            letter-spacing: 1.2
+
+        # wrk:8080 (2 containers)
+        - frame:
+          id: wrk
+          fill: "#F0F0F0"
+          border: 0.5 solid #D8D7D7
+          radius: 8
+          padding: 12 16 14 16
+          direction: column
+          align: center
+          gap: 8
+          - frame:
+            direction: row
+            gap: 4
+            - use: bar-icon
+            - use: bar-icon
+          - text: "wrk:8080"
+            font: 600 10 Geologica
+            color: "#254E4A"
+            letter-spacing: 1.2
+
+    # ===========================
+    # DEDICATED INFRASTRUCTURE CORE
+    # ===========================
+    - frame: infra-zone
+      id: infra
+      fill: "#EBEBEB"
+      radius: 6
+      padding: 18
+      direction: row
+      align: center
+      gap: 0
+      # Left label column
+      - frame:
+        width: 140
+        padding: 0 16 0 0
+        direction: column
+        gap: 2
+        - text: "DEDICATED"
+          font: 600 11 Geologica
+          color: "#254E4A"
+          letter-spacing: 2
+        - text: "INFRASTRUCTURE"
+          font: 600 11 Geologica
+          color: "#254E4A"
+          letter-spacing: 2
+        - text: "CORE"
+          font: 600 11 Geologica
+          color: "#254E4A"
+          letter-spacing: 2
+
+      # Right content area
+      - frame:
+        flex: 1
+        direction: row
+        justify: center
+        # Shared teal card for infra services
+        - frame:
+          id: teal-card
+          fill: "#DFFFFC"
+          border: 0.5 solid #D8D7D7
+          radius: 10
+          padding: 16 32 18 32
+          direction: row
+          align: start
+          justify: center
+          gap: 32
+          - frame:
+            id: stats
+            direction: column
+            align: center
+            gap: 6
+            - use: bar-icon
+            - text: "Stats"
+              font: 600 11 Geologica
+              color: "#254E4A"
+              letter-spacing: 1.3
+
+          - frame:
+            id: logger
+            direction: column
+            align: center
+            gap: 6
+            - use: bar-icon
+            - text: "Logger"
+              font: 600 11 Geologica
+              color: "#254E4A"
+              letter-spacing: 1.3
+
+    # ===========================
+    # BOTTOM ROW
+    # ===========================
+    - frame:
+      direction: row
+      gap: 12
+      margin: 140 0 0 0
+      # --- GUI ---
+      - frame:
+        id: gui
+        width: 130
+        fill: "#EBEBEB"
+        radius: 6
+        padding: 14 12
+        direction: column
+        gap: 12
+        - text: "GUI"
+          font: 600 11 Geologica
+          color: "#254E4A"
+          letter-spacing: 2
+        - frame:
+          fill: "#F0F0F0"
+          border: 0.5 solid #D8D7D7
+          radius: 8
+          padding: 10 10
+          direction: column
+          align: center
+          gap: 3
+          - text: "Zerops"
+            font: 400 9 Roboto Mono
+            color: "#254E4A"
+          - text: "GUI"
+            font: 400 8 Roboto Mono
+            color: "#254E4A"
+            opacity: 0.5
+
+      # --- SELF-HOSTED ---
+      - frame:
+        flex: 1
+        fill: "#EBEBEB"
+        radius: 6
+        padding: 14 14
+        direction: column
+        gap: 10
+        - text: "SELF-HOSTED"
+          font: 600 11 Geologica
+          color: "#254E4A"
+          letter-spacing: 2
+
+        # Subgroups side by side
+        - frame:
+          direction: row
+          gap: 10
+          # METRICS subgroup (left)
+          - frame:
+            flex: 2
+            fill: "#E4E3E3"
+            radius: 6
+            padding: 12 10
+            direction: column
+            gap: 8
+            - text: "METRICS"
+              font: 600 10 Geologica
+              color: "#254E4A"
+              opacity: 0.5
+              letter-spacing: 2
+
+            - frame:
+              direction: row
+              gap: 8
+              # Prometheus
+              - frame:
+                id: prometheus
+                flex: 1
+                fill: "#F0F0F0"
+                border: 0.5 solid #D8D7D7
+                radius: 8
+                padding: 10 10 12 10
+                direction: column
+                align: center
+                gap: 6
+                - use: bar-icon
+                - text: "Prometheus"
+                  font: 600 9 Geologica
+                  color: "#254E4A"
+                  letter-spacing: 1
+                - text: ":9090"
+                  font: 600 8 Geologica
+                  color: "#254E4A"
+                  opacity: 0.5
+
+              # Grafana
+              - frame:
+                id: grafana
+                flex: 1
+                fill: "#F0F0F0"
+                border: 0.5 solid #D8D7D7
+                radius: 8
+                padding: 10 10 12 10
+                direction: column
+                align: center
+                gap: 6
+                - use: bar-icon
+                - text: "Grafana"
+                  font: 600 9 Geologica
+                  color: "#254E4A"
+                  letter-spacing: 1
+                - text: ":3000"
+                  font: 600 8 Geologica
+                  color: "#254E4A"
+                  opacity: 0.5
+
+          # ELK subgroup (right)
+          - frame:
+            flex: 3
+            fill: "#E4E3E3"
+            radius: 6
+            padding: 12 10
+            direction: column
+            gap: 8
+            - text: "ELK"
+              font: 600 10 Geologica
+              color: "#254E4A"
+              opacity: 0.5
+              letter-spacing: 2
+
+            - frame:
+              direction: row
+              gap: 8
+              # Logstash
+              - frame:
+                id: logstash
+                flex: 1
+                fill: "#F0F0F0"
+                border: 0.5 solid #D8D7D7
+                radius: 8
+                padding: 10 10 12 10
+                direction: column
+                align: center
+                gap: 6
+                - use: bar-icon
+                - text: "Logstash"
+                  font: 600 9 Geologica
+                  color: "#254E4A"
+                  letter-spacing: 1
+
+              # Elasticsearch
+              - frame:
+                id: elasticsearch
+                flex: 1
+                fill: "#F0F0F0"
+                border: 0.5 solid #D8D7D7
+                radius: 8
+                padding: 10 8 12 8
+                direction: column
+                align: center
+                gap: 4
+                - frame:
+                  direction: row
+                  gap: 3
+                  - use: bar-icon
+                  - use: bar-icon
+                  - use: bar-icon
+                - text: "Elasticsearch"
+                  font: 600 9 Geologica
+                  color: "#254E4A"
+                  letter-spacing: 0.8
+                - text: ":9200"
+                  font: 600 8 Geologica
+                  color: "#254E4A"
+                  opacity: 0.5
+
+              # Kibana
+              - frame:
+                id: kibana
+                flex: 1
+                fill: "#F0F0F0"
+                border: 0.5 solid #D8D7D7
+                radius: 8
+                padding: 10 10 12 10
+                direction: column
+                align: center
+                gap: 6
+                - use: bar-icon
+                - text: "Kibana"
+                  font: 600 9 Geologica
+                  color: "#254E4A"
+                  letter-spacing: 1
+                - text: ":5601"
+                  font: 600 8 Geologica
+                  color: "#254E4A"
+                  opacity: 0.5
+
+      # --- THIRD PARTY ---
+      - frame:
+        id: thirdparty
+        width: 180
+        fill: "#EBEBEB"
+        radius: 6
+        padding: 14 12
+        direction: column
+        gap: 8
+        - text: "THIRD PARTY"
+          font: 600 11 Geologica
+          color: "#254E4A"
+          letter-spacing: 2
+        - frame:
+          fill: "#F0F0F0"
+          radius: 5
+          padding: 4
+          - frame:
+            fill: "#fff"
+            radius: 4
+            padding: 8 12
+            align: center
+            justify: center
+            - text: "BetterStack"
+              font: 600 10 Geologica
+              color: "#254E4A"
+              letter-spacing: 1.2
+        - frame:
+          fill: "#F0F0F0"
+          radius: 5
+          padding: 4
+          - frame:
+            fill: "#fff"
+            radius: 4
+            padding: 8 12
+            align: center
+            justify: center
+            - text: "Papertrail"
+              font: 600 10 Geologica
+              color: "#254E4A"
+              letter-spacing: 1.2
+        - frame:
+          fill: "#F0F0F0"
+          radius: 5
+          padding: 4
+          - frame:
+            fill: "#fff"
+            radius: 4
+            padding: 8 12
+            align: center
+            justify: center
+            - text: "Ext. syslog"
+              font: 600 10 Geologica
+              color: "#254E4A"
+              letter-spacing: 1.2
+
+
+edges:
+  # All edges: #D8D7D7 dashed, no arrows
+
+  # Forwarder → Stats (direct, junction inside dedicated box)
+  - from: forwarder
+    to: stats
+    from-anchor: bottom
+    to-anchor: top
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+    curve: bus
+    junction: 0.75
+
+  # Teal card → GUI (downward)
+  - from: teal-card
+    to: gui
+    from-anchor: bottom
+    to-anchor: top
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+    curve: bus
+    junction: 0.4
+
+  # Teal card → Prometheus (downward via self-hosted)
+  - from: teal-card
+    to: prometheus
+    from-anchor: bottom
+    to-anchor: top
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+    curve: bus
+
+  # Teal card → Logstash (downward)
+  - from: teal-card
+    to: logstash
+    from-anchor: bottom
+    to-anchor: top
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+    curve: bus
+
+  # Teal card → Third party (downward)
+  - from: teal-card
+    to: thirdparty
+    from-anchor: bottom
+    to-anchor: top
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+    curve: bus
+
+  # Internal flows
+  - from: prometheus
+    to: grafana
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+
+  - from: logstash
+    to: elasticsearch
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+
+  - from: elasticsearch
+    to: kibana
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+
+  # Scrape stubs
+  - from: api
+    to: infra
+    from-anchor: bottom
+    to-anchor: top
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+    curve: vertical
+
+  - from: db
+    to: infra
+    from-anchor: bottom
+    to-anchor: top
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+    curve: vertical
+
+  - from: cache
+    to: infra
+    from-anchor: bottom
+    to-anchor: top
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+    curve: vertical
+
+  - from: wrk
+    to: infra
+    from-anchor: bottom
+    to-anchor: top
+    stroke: "#D8D7D7"
+    stroke-width: 1.5
+    style: dashed
+    arrow: none
+    curve: vertical

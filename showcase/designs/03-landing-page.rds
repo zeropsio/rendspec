@@ -1,0 +1,309 @@
+theme: light
+
+tokens:
+  color:
+    brand: "#6366f1"
+    brand-light: "#818cf8"
+    brand-dark: "#4f46e5"
+    text: "#0f172a"
+    text-secondary: "#475569"
+    bg: "#ffffff"
+    bg-alt: "#f8fafc"
+    border: "#e2e8f0"
+    success: "#059669"
+  radius:
+    sm: 8
+    md: 12
+    lg: 16
+    xl: 24
+    full: 9999
+
+components:
+  feature-card:
+    fill: white
+    radius: $radius.lg
+    padding: 32
+    gap: 16
+    border: 1 solid $color.border
+    shadow: 0 4 24 rgba(0,0,0,0.04)
+    params:
+      icon: { default: "⚡" }
+      title: { default: "Feature" }
+      desc: { default: "Description" }
+    - text: "{{icon}}"
+      font: 400 32 Inter
+    - text: "{{title}}"
+      font: 700 20 Inter
+      color: $color.text
+    - text: "{{desc}}"
+      font: 400 14 Inter
+      color: $color.text-secondary
+      line-height: 1.6
+      max-width: 280
+
+  pricing-card:
+    fill: white
+    radius: $radius.lg
+    padding: 32
+    gap: 20
+    border: 1 solid $color.border
+    shadow: 0 8 32 rgba(0,0,0,0.06)
+    align: center
+    flex: 1
+    params:
+      plan: { default: "Plan" }
+      price: { default: "$0" }
+      period: { default: "/month" }
+      desc: { default: "For individuals" }
+      cta: { default: "Get Started" }
+    - text: "{{plan}}"
+      font: 600 14 Inter
+      color: $color.brand
+      text-align: center
+    - frame:
+      align: center
+      gap: 2
+      - text: "{{price}}"
+        font: 700 48 Inter
+        color: $color.text
+        text-align: center
+      - text: "{{period}}"
+        font: 400 14 Inter
+        color: $color.text-secondary
+        text-align: center
+    - text: "{{desc}}"
+      font: 400 14 Inter
+      color: $color.text-secondary
+      text-align: center
+    - frame:
+      fill: $color.brand
+      radius: $radius.sm
+      padding: 12 32
+      align: center
+      justify: center
+      - text: "{{cta}}"
+        font: 600 14 Inter
+        color: white
+
+  testimonial:
+    fill: $color.bg-alt
+    radius: $radius.lg
+    padding: 24
+    gap: 16
+    flex: 1
+    params:
+      quote: { default: "Great product!" }
+      name: { default: "User" }
+      role: { default: "Engineer" }
+    - text: "\"{{quote}}\""
+      font: 400 14 Inter
+      color: $color.text
+      line-height: 1.6
+    - frame:
+      gap: 2
+      - text: "{{name}}"
+        font: 600 14 Inter
+        color: $color.text
+      - text: "{{role}}"
+        font: 400 12 Inter
+        color: $color.text-secondary
+
+root:
+  width: 1280
+  height: 2400
+  fill: $color.bg
+  align: center
+
+  # Hero
+  - frame: hero
+    fill: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa)
+    padding: 80 64
+    gap: 24
+    align: center
+    - text: "Build faster. Ship smarter."
+      font: 800 56 Inter
+      color: white
+      text-align: center
+    - text: "The developer platform that scales with you. From prototype to production in minutes, not months."
+      font: 400 20 Inter
+      color: rgba(255,255,255,0.85)
+      text-align: center
+      max-width: 640
+      line-height: 1.6
+    - frame: hero-cta
+      direction: row
+      gap: 16
+      padding: 16 0 0 0
+      - frame:
+        fill: white
+        radius: $radius.sm
+        padding: 14 32
+        shadow: 0 4 16 rgba(0,0,0,0.1)
+        - text: "Start Free Trial"
+          font: 600 16 Inter
+          color: $color.brand-dark
+      - frame:
+        border: 2 solid rgba(255,255,255,0.3)
+        radius: $radius.sm
+        padding: 14 32
+        - text: "View Demo"
+          font: 600 16 Inter
+          color: white
+
+  # Social proof
+  - frame: social-proof
+    padding: 32 64
+    direction: row
+    gap: 48
+    justify: center
+    align: center
+    - text: "Trusted by 10,000+ developers"
+      font: 500 14 Inter
+      color: $color.text-secondary
+    - frame:
+      direction: row
+      gap: 24
+      - text: "Google"
+        font: 700 16 Inter
+        color: "#94a3b8"
+      - text: "Stripe"
+        font: 700 16 Inter
+        color: "#94a3b8"
+      - text: "Vercel"
+        font: 700 16 Inter
+        color: "#94a3b8"
+      - text: "Linear"
+        font: 700 16 Inter
+        color: "#94a3b8"
+
+  # Features
+  - frame: features
+    padding: 64
+    gap: 48
+    align: center
+    - frame:
+      gap: 12
+      align: center
+      - text: "Everything you need"
+        font: 700 40 Inter
+        color: $color.text
+        text-align: center
+      - text: "Powerful features that give your team superpowers"
+        font: 400 18 Inter
+        color: $color.text-secondary
+        text-align: center
+    - frame: feature-grid
+      layout: grid
+      columns: 3
+      column-gap: 24
+      row-gap: 24
+      - use: feature-card
+        icon: "⚡"
+        title: "Lightning Fast"
+        desc: "Sub-millisecond response times with our edge-first architecture. Your users won't wait."
+      - use: feature-card
+        icon: "🔒"
+        title: "Enterprise Security"
+        desc: "SOC2 Type II compliant with end-to-end encryption. Your data stays yours."
+      - use: feature-card
+        icon: "📊"
+        title: "Real-time Analytics"
+        desc: "Track every metric that matters with beautiful, customizable dashboards."
+      - use: feature-card
+        icon: "🔌"
+        title: "API-First"
+        desc: "RESTful and GraphQL APIs with SDKs for every major language and framework."
+      - use: feature-card
+        icon: "🚀"
+        title: "One-Click Deploy"
+        desc: "Push to deploy with zero-downtime rolling updates. CI/CD built right in."
+      - use: feature-card
+        icon: "🤝"
+        title: "Team Collaboration"
+        desc: "Real-time multiplayer editing with role-based access control for teams of any size."
+
+  # Pricing
+  - frame: pricing
+    padding: 64
+    gap: 48
+    align: center
+    fill: $color.bg-alt
+    - frame:
+      gap: 12
+      align: center
+      - text: "Simple, transparent pricing"
+        font: 700 40 Inter
+        color: $color.text
+        text-align: center
+      - text: "No hidden fees. Cancel anytime."
+        font: 400 18 Inter
+        color: $color.text-secondary
+    - frame: pricing-grid
+      direction: row
+      gap: 24
+      - use: pricing-card
+        plan: "STARTER"
+        price: "$0"
+        period: "/month"
+        desc: "Perfect for side projects"
+        cta: "Start Free"
+      - use: pricing-card
+        plan: "PRO"
+        price: "$29"
+        period: "/month"
+        desc: "For growing teams"
+        cta: "Start Trial"
+      - use: pricing-card
+        plan: "ENTERPRISE"
+        price: "$99"
+        period: "/month"
+        desc: "For large organizations"
+        cta: "Contact Sales"
+
+  # Testimonials
+  - frame: testimonials
+    padding: 64
+    gap: 32
+    align: center
+    - text: "Loved by developers"
+      font: 700 40 Inter
+      color: $color.text
+      text-align: center
+    - frame: testimonial-row
+      direction: row
+      gap: 24
+      - use: testimonial
+        quote: "This tool has completely transformed our workflow. We shipped 3x faster in our first month."
+        name: "Sarah Chen"
+        role: "CTO at Acme Inc"
+      - use: testimonial
+        quote: "The DX is incredible. It feels like the tool reads my mind. Our team is obsessed."
+        name: "James Rodriguez"
+        role: "Lead Engineer at Startup"
+      - use: testimonial
+        quote: "We evaluated 12 tools before choosing this one. Best decision we made all year."
+        name: "Emily Park"
+        role: "VP Engineering at BigCo"
+
+  # CTA
+  - frame: final-cta
+    fill: linear-gradient(135deg, #4f46e5, #7c3aed)
+    padding: 80 64
+    gap: 24
+    align: center
+    - text: "Ready to get started?"
+      font: 700 40 Inter
+      color: white
+      text-align: center
+    - text: "Join thousands of developers building the future."
+      font: 400 18 Inter
+      color: rgba(255,255,255,0.8)
+      text-align: center
+    - frame:
+      fill: white
+      radius: $radius.sm
+      padding: 16 40
+      shadow: 0 4 16 rgba(0,0,0,0.2)
+      - text: "Get Started for Free"
+        font: 700 16 Inter
+        color: $color.brand-dark

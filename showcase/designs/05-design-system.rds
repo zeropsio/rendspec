@@ -1,0 +1,484 @@
+theme: light
+
+tokens:
+  color:
+    brand:
+      50: "#eff6ff"
+      100: "#dbeafe"
+      200: "#bfdbfe"
+      300: "#93c5fd"
+      400: "#60a5fa"
+      500: "#3b82f6"
+      600: "#2563eb"
+      700: "#1d4ed8"
+      800: "#1e40af"
+      900: "#1e3a8a"
+    gray:
+      50: "#f8fafc"
+      100: "#f1f5f9"
+      200: "#e2e8f0"
+      300: "#cbd5e1"
+      400: "#94a3b8"
+      500: "#64748b"
+      600: "#475569"
+      700: "#334155"
+      800: "#1e293b"
+      900: "#0f172a"
+    semantic:
+      success: "#059669"
+      warning: "#d97706"
+      error: "#dc2626"
+      info: "#2563eb"
+  spacing:
+    xs: 4
+    sm: 8
+    md: 16
+    lg: 24
+    xl: 32
+    xxl: 48
+  radius:
+    sm: 4
+    md: 8
+    lg: 12
+    xl: 16
+    full: 9999
+  font:
+    display: "800 48 Inter"
+    h1: "700 32 Inter"
+    h2: "700 24 Inter"
+    h3: "600 20 Inter"
+    body: "400 16 Inter"
+    small: "400 14 Inter"
+    caption: "500 12 Inter"
+    mono: "400 14 JetBrains Mono"
+
+components:
+  color-swatch:
+    width: 80
+    gap: 6
+    align: center
+    params:
+      color: { default: "#3b82f6" }
+      label: { default: "500" }
+    - frame:
+      width: 80
+      height: 48
+      fill: "{{color}}"
+      radius: 8
+    - text: "{{label}}"
+      font: 500 11 Inter
+      color: "#64748b"
+      text-align: center
+    - text: "{{color}}"
+      font: 400 10 JetBrains Mono
+      color: "#94a3b8"
+      text-align: center
+
+  button-sample:
+    direction: row
+    gap: 12
+    align: center
+    params:
+      label: { default: "Button" }
+      bg: { default: "#3b82f6" }
+      fg: { default: "white" }
+      variant: { default: "filled" }
+    - frame:
+      fill: "{{bg}}"
+      radius: 8
+      padding: 10 20
+      align: center
+      - text: "{{label}}"
+        font: 600 14 Inter
+        color: "{{fg}}"
+
+  spacing-block:
+    direction: row
+    gap: 8
+    align: center
+    params:
+      size: { default: "16" }
+      label: { default: "md" }
+    - frame:
+      width: 40
+      height: 40
+      fill: "#dbeafe"
+      radius: 4
+    - frame:
+      gap: 2
+      - text: "{{label}}"
+        font: 600 12 Inter
+        color: "#0f172a"
+      - text: "{{size}}px"
+        font: 400 11 JetBrains Mono
+        color: "#64748b"
+
+root:
+  width: 1400
+  height: 1800
+  fill: white
+  padding: 48
+  gap: 48
+
+  # Header
+  - frame: ds-header
+    fill: linear-gradient(135deg, #1e3a8a, #3b82f6)
+    radius: 16
+    padding: 48
+    gap: 12
+    - text: "Design System"
+      font: 800 48 Inter
+      color: white
+    - text: "Foundation tokens, components, and patterns — v2.0"
+      font: 400 18 Inter
+      color: rgba(255,255,255,0.7)
+
+  # Typography
+  - frame: typography
+    gap: 24
+    - text: "Typography"
+      font: $font.h2
+      color: $color.gray.900
+    - frame: type-samples
+      fill: $color.gray.50
+      radius: $radius.lg
+      padding: 32
+      gap: 20
+      border: 1 solid $color.gray.200
+      - frame:
+        direction: row
+        align: center
+        gap: 24
+        - text: "Display"
+          font: $font.caption
+          color: $color.gray.400
+          min-width: 80
+        - text: "The quick brown fox"
+          font: $font.display
+          color: $color.gray.900
+      - frame:
+        direction: row
+        align: center
+        gap: 24
+        - text: "H1"
+          font: $font.caption
+          color: $color.gray.400
+          min-width: 80
+        - text: "The quick brown fox jumps"
+          font: $font.h1
+          color: $color.gray.900
+      - frame:
+        direction: row
+        align: center
+        gap: 24
+        - text: "H2"
+          font: $font.caption
+          color: $color.gray.400
+          min-width: 80
+        - text: "The quick brown fox jumps over"
+          font: $font.h2
+          color: $color.gray.900
+      - frame:
+        direction: row
+        align: center
+        gap: 24
+        - text: "H3"
+          font: $font.caption
+          color: $color.gray.400
+          min-width: 80
+        - text: "The quick brown fox jumps over the lazy dog"
+          font: $font.h3
+          color: $color.gray.900
+      - frame:
+        direction: row
+        align: center
+        gap: 24
+        - text: "Body"
+          font: $font.caption
+          color: $color.gray.400
+          min-width: 80
+        - text: "The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs."
+          font: $font.body
+          color: $color.gray.700
+          max-width: 600
+      - frame:
+        direction: row
+        align: center
+        gap: 24
+        - text: "Mono"
+          font: $font.caption
+          color: $color.gray.400
+          min-width: 80
+        - text: "const x = await fetch('/api')"
+          font: $font.mono
+          color: $color.gray.700
+
+  # Colors
+  - frame: colors
+    gap: 24
+    - text: "Color Palette"
+      font: $font.h2
+      color: $color.gray.900
+
+    - frame:
+      gap: 16
+      - text: "Brand Blue"
+        font: $font.h3
+        color: $color.gray.700
+      - frame: brand-swatches
+        direction: row
+        gap: 8
+        - use: color-swatch
+          color: $color.brand.50
+          label: "50"
+        - use: color-swatch
+          color: $color.brand.100
+          label: "100"
+        - use: color-swatch
+          color: $color.brand.200
+          label: "200"
+        - use: color-swatch
+          color: $color.brand.300
+          label: "300"
+        - use: color-swatch
+          color: $color.brand.400
+          label: "400"
+        - use: color-swatch
+          color: $color.brand.500
+          label: "500"
+        - use: color-swatch
+          color: $color.brand.600
+          label: "600"
+        - use: color-swatch
+          color: $color.brand.700
+          label: "700"
+        - use: color-swatch
+          color: $color.brand.800
+          label: "800"
+        - use: color-swatch
+          color: $color.brand.900
+          label: "900"
+
+    - frame:
+      gap: 16
+      - text: "Gray"
+        font: $font.h3
+        color: $color.gray.700
+      - frame: gray-swatches
+        direction: row
+        gap: 8
+        - use: color-swatch
+          color: $color.gray.50
+          label: "50"
+        - use: color-swatch
+          color: $color.gray.100
+          label: "100"
+        - use: color-swatch
+          color: $color.gray.200
+          label: "200"
+        - use: color-swatch
+          color: $color.gray.300
+          label: "300"
+        - use: color-swatch
+          color: $color.gray.400
+          label: "400"
+        - use: color-swatch
+          color: $color.gray.500
+          label: "500"
+        - use: color-swatch
+          color: $color.gray.600
+          label: "600"
+        - use: color-swatch
+          color: $color.gray.700
+          label: "700"
+        - use: color-swatch
+          color: $color.gray.800
+          label: "800"
+        - use: color-swatch
+          color: $color.gray.900
+          label: "900"
+
+    - frame:
+      gap: 16
+      - text: "Semantic"
+        font: $font.h3
+        color: $color.gray.700
+      - frame: semantic-swatches
+        direction: row
+        gap: 8
+        - use: color-swatch
+          color: $color.semantic.success
+          label: "Success"
+        - use: color-swatch
+          color: $color.semantic.warning
+          label: "Warning"
+        - use: color-swatch
+          color: $color.semantic.error
+          label: "Error"
+        - use: color-swatch
+          color: $color.semantic.info
+          label: "Info"
+
+  # Buttons
+  - frame: buttons
+    gap: 24
+    - text: "Buttons"
+      font: $font.h2
+      color: $color.gray.900
+    - frame: button-samples
+      fill: $color.gray.50
+      radius: $radius.lg
+      padding: 32
+      gap: 16
+      border: 1 solid $color.gray.200
+      - frame:
+        direction: row
+        gap: 16
+        align: center
+        - text: "Primary"
+          font: $font.caption
+          color: $color.gray.400
+          min-width: 80
+        - use: button-sample
+          label: "Default"
+          bg: $color.brand.600
+          fg: "white"
+        - use: button-sample
+          label: "Hover"
+          bg: $color.brand.700
+          fg: "white"
+        - use: button-sample
+          label: "Disabled"
+          bg: $color.gray.200
+          fg: $color.gray.400
+      - frame:
+        direction: row
+        gap: 16
+        align: center
+        - text: "Secondary"
+          font: $font.caption
+          color: $color.gray.400
+          min-width: 80
+        - use: button-sample
+          label: "Default"
+          bg: $color.gray.100
+          fg: $color.gray.800
+        - use: button-sample
+          label: "Hover"
+          bg: $color.gray.200
+          fg: $color.gray.800
+      - frame:
+        direction: row
+        gap: 16
+        align: center
+        - text: "Danger"
+          font: $font.caption
+          color: $color.gray.400
+          min-width: 80
+        - use: button-sample
+          label: "Delete"
+          bg: $color.semantic.error
+          fg: "white"
+
+  # Spacing
+  - frame: spacing-section
+    gap: 24
+    - text: "Spacing Scale"
+      font: $font.h2
+      color: $color.gray.900
+    - frame: spacing-samples
+      fill: $color.gray.50
+      radius: $radius.lg
+      padding: 32
+      gap: 16
+      border: 1 solid $color.gray.200
+      direction: row
+      wrap: true
+      - use: spacing-block
+        label: "xs"
+        size: "4"
+      - use: spacing-block
+        label: "sm"
+        size: "8"
+      - use: spacing-block
+        label: "md"
+        size: "16"
+      - use: spacing-block
+        label: "lg"
+        size: "24"
+      - use: spacing-block
+        label: "xl"
+        size: "32"
+      - use: spacing-block
+        label: "xxl"
+        size: "48"
+
+  # Radius
+  - frame: radius-section
+    gap: 24
+    - text: "Border Radius"
+      font: $font.h2
+      color: $color.gray.900
+    - frame: radius-samples
+      fill: $color.gray.50
+      radius: $radius.lg
+      padding: 32
+      gap: 16
+      border: 1 solid $color.gray.200
+      direction: row
+      - frame:
+        gap: 8
+        align: center
+        - frame:
+          width: 64
+          height: 64
+          fill: $color.brand.500
+          radius: 4
+        - text: "sm (4)"
+          font: $font.caption
+          color: $color.gray.500
+      - frame:
+        gap: 8
+        align: center
+        - frame:
+          width: 64
+          height: 64
+          fill: $color.brand.500
+          radius: 8
+        - text: "md (8)"
+          font: $font.caption
+          color: $color.gray.500
+      - frame:
+        gap: 8
+        align: center
+        - frame:
+          width: 64
+          height: 64
+          fill: $color.brand.500
+          radius: 12
+        - text: "lg (12)"
+          font: $font.caption
+          color: $color.gray.500
+      - frame:
+        gap: 8
+        align: center
+        - frame:
+          width: 64
+          height: 64
+          fill: $color.brand.500
+          radius: 16
+        - text: "xl (16)"
+          font: $font.caption
+          color: $color.gray.500
+      - frame:
+        gap: 8
+        align: center
+        - frame:
+          width: 64
+          height: 64
+          fill: $color.brand.500
+          radius: 9999
+          shape: circle
+        - text: "full"
+          font: $font.caption
+          color: $color.gray.500

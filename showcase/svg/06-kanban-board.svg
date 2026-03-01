@@ -1,0 +1,331 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1400" height="900" viewBox="0 0 1400 900">
+<style>
+  text { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+</style>
+<defs>
+  <filter id="shadow-1" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-2" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-3" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-4" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-5" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-6" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-7" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-8" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-9" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-10" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-11" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-12" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-13" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-14" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-15" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-16" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-17" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="rgba(0,0,0,0.15)" flood-opacity="1"/>
+  </filter>
+</defs>
+<g>
+<rect x="0" y="0" width="1400" height="900" fill="#0f172a"/>
+<g>
+<g>
+<text x="24" y="43.68" font-family='Inter, sans-serif' font-size="24" font-weight="700" fill="#f8fafc" text-anchor="start">Sprint Board</text>
+<text x="24" y="72.26" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#64748b" text-anchor="start">Sprint 23 — Feb 17 – Mar 2, 2026</text>
+</g>
+<g>
+<g>
+<rect x="1164.97" y="36.80" width="63.49" height="30.20" fill="#1e293b" rx="6" stroke="#334155" stroke-width="1"/>
+<text x="1178.97" y="53.46" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#94a3b8" text-anchor="start">Filter</text>
+</g>
+<g>
+<rect x="1236.46" y="36.80" width="139.54" height="30.20" fill="#1e293b" rx="6" stroke="#334155" stroke-width="1"/>
+<text x="1250.46" y="53.46" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#94a3b8" text-anchor="start">Group by: Assignee</text>
+</g>
+</g>
+</g>
+<g>
+<g>
+<rect x="24" y="99.80" width="257.60" height="776.20" fill="#1e293b" rx="14"/>
+<g>
+<g>
+<text x="44" y="130.08" font-family='Inter, sans-serif' font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Backlog</text>
+<g>
+<rect x="103.21" y="118.70" width="22.01" height="19.40" fill="rgba(148,163,184,0.15)" rx="10"/>
+<text x="111.21" y="129.72" font-family='Inter, sans-serif' font-size="11" font-weight="600" fill="#94a3b8" text-anchor="start">5</text>
+</g>
+</g>
+<text x="252.24" y="130.56" font-family='Inter, sans-serif' font-size="18" font-weight="500" fill="#64748b" text-anchor="start">+</text>
+</g>
+<g>
+<rect x="40" y="163" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-1)"/>
+<text x="54" y="187.66" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Implement real-time WebSocket notifications</text>
+<g>
+<text x="54" y="215.52" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Sarah C.</text>
+<g>
+<rect x="234.14" y="205.20" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="240.14" y="215.40" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">8</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="40" y="247.20" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-2)"/>
+<text x="54" y="271.86" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Add dark mode toggle to settings</text>
+<g>
+<text x="54" y="299.72" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">James R.</text>
+<g>
+<rect x="234.14" y="289.40" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="240.14" y="299.60" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">3</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="40" y="331.40" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-3)"/>
+<text x="54" y="356.06" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Database migration for v2 schema</text>
+<g>
+<text x="54" y="383.92" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Mike P.</text>
+<g>
+<rect x="234.14" y="373.60" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="240.14" y="383.80" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">5</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="40" y="415.60" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-4)"/>
+<text x="54" y="440.26" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Write E2E tests for checkout flow</text>
+<g>
+<text x="54" y="468.12" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Emily K.</text>
+<g>
+<rect x="234.14" y="457.80" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="240.14" y="468" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">5</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="40" y="499.80" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-5)"/>
+<text x="54" y="524.46" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Optimize image CDN pipeline</text>
+<g>
+<text x="54" y="552.32" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Unassigned</text>
+<g>
+<rect x="234.14" y="542" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="240.14" y="552.20" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">3</text>
+</g>
+</g>
+</g>
+</g>
+<g>
+<rect x="297.60" y="99.80" width="257.60" height="776.20" fill="#1e293b" rx="14"/>
+<g>
+<g>
+<text x="317.60" y="130.08" font-family='Inter, sans-serif' font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">To Do</text>
+<g>
+<rect x="364.20" y="118.70" width="22.01" height="19.40" fill="rgba(148,163,184,0.15)" rx="10"/>
+<text x="372.20" y="129.72" font-family='Inter, sans-serif' font-size="11" font-weight="600" fill="#94a3b8" text-anchor="start">4</text>
+</g>
+</g>
+<text x="525.84" y="130.56" font-family='Inter, sans-serif' font-size="18" font-weight="500" fill="#64748b" text-anchor="start">+</text>
+</g>
+<g>
+<rect x="313.60" y="163" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-6)"/>
+<text x="327.60" y="187.66" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Design onboarding wizard screens</text>
+<g>
+<text x="327.60" y="215.52" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Lisa M.</text>
+<g>
+<rect x="507.74" y="205.20" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="513.74" y="215.40" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">5</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="313.60" y="247.20" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-7)"/>
+<text x="327.60" y="271.86" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Implement OAuth2 PKCE flow</text>
+<g>
+<text x="327.60" y="299.72" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Sarah C.</text>
+<g>
+<rect x="507.74" y="289.40" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="513.74" y="299.60" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">8</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="313.60" y="331.40" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-8)"/>
+<text x="327.60" y="356.06" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Set up Prometheus monitoring</text>
+<g>
+<text x="327.60" y="383.92" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Alex T.</text>
+<g>
+<rect x="507.74" y="373.60" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="513.74" y="383.80" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">3</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="313.60" y="415.60" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-9)"/>
+<text x="327.60" y="440.26" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Refactor API response serializers</text>
+<g>
+<text x="327.60" y="468.12" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">James R.</text>
+<g>
+<rect x="507.74" y="457.80" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="513.74" y="468" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">2</text>
+</g>
+</g>
+</g>
+</g>
+<g>
+<rect x="571.20" y="99.80" width="257.60" height="776.20" fill="#1e293b" rx="14"/>
+<g>
+<g>
+<text x="591.20" y="130.08" font-family='Inter, sans-serif' font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">In Progress</text>
+<g>
+<rect x="677.55" y="118.70" width="22.01" height="19.40" fill="rgba(148,163,184,0.15)" rx="10"/>
+<text x="685.55" y="129.72" font-family='Inter, sans-serif' font-size="11" font-weight="600" fill="#94a3b8" text-anchor="start">3</text>
+</g>
+</g>
+<text x="799.44" y="130.56" font-family='Inter, sans-serif' font-size="18" font-weight="500" fill="#64748b" text-anchor="start">+</text>
+</g>
+<g>
+<rect x="587.20" y="163" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-10)"/>
+<text x="601.20" y="187.66" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Build search autocomplete with Elasticsearch</text>
+<g>
+<text x="601.20" y="215.52" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Mike P.</text>
+<g>
+<rect x="781.34" y="205.20" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="787.34" y="215.40" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">8</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="587.20" y="247.20" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-11)"/>
+<text x="601.20" y="271.86" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Implement file upload with progress</text>
+<g>
+<text x="601.20" y="299.72" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Sarah C.</text>
+<g>
+<rect x="781.34" y="289.40" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="787.34" y="299.60" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">5</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="587.20" y="331.40" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-12)"/>
+<text x="601.20" y="356.06" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Fix mobile responsive layout bugs</text>
+<g>
+<text x="601.20" y="383.92" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Lisa M.</text>
+<g>
+<rect x="781.34" y="373.60" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="787.34" y="383.80" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">2</text>
+</g>
+</g>
+</g>
+</g>
+<g>
+<rect x="844.80" y="99.80" width="257.60" height="776.20" fill="#1e293b" rx="14"/>
+<g>
+<g>
+<text x="864.80" y="130.08" font-family='Inter, sans-serif' font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">In Review</text>
+<g>
+<rect x="935.10" y="118.70" width="22.01" height="19.40" fill="rgba(148,163,184,0.15)" rx="10"/>
+<text x="943.10" y="129.72" font-family='Inter, sans-serif' font-size="11" font-weight="600" fill="#94a3b8" text-anchor="start">2</text>
+</g>
+</g>
+<text x="1073.04" y="130.56" font-family='Inter, sans-serif' font-size="18" font-weight="500" fill="#64748b" text-anchor="start">+</text>
+</g>
+<g>
+<rect x="860.80" y="163" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-13)"/>
+<text x="874.80" y="187.66" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Add rate limiting middleware</text>
+<g>
+<text x="874.80" y="215.52" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Alex T.</text>
+<g>
+<rect x="1054.94" y="205.20" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="1060.94" y="215.40" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">3</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="860.80" y="247.20" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-14)"/>
+<text x="874.80" y="271.86" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Redesign settings page</text>
+<g>
+<text x="874.80" y="299.72" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Emily K.</text>
+<g>
+<rect x="1054.94" y="289.40" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="1060.94" y="299.60" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">5</text>
+</g>
+</g>
+</g>
+</g>
+<g>
+<rect x="1118.40" y="99.80" width="257.60" height="776.20" fill="#1e293b" rx="14"/>
+<g>
+<g>
+<text x="1138.40" y="130.08" font-family='Inter, sans-serif' font-size="14" font-weight="700" fill="#f8fafc" text-anchor="start">Done</text>
+<g>
+<rect x="1179.65" y="118.70" width="22.01" height="19.40" fill="rgba(148,163,184,0.15)" rx="10"/>
+<text x="1187.65" y="129.72" font-family='Inter, sans-serif' font-size="11" font-weight="600" fill="#94a3b8" text-anchor="start">3</text>
+</g>
+</g>
+<text x="1346.64" y="130.56" font-family='Inter, sans-serif' font-size="18" font-weight="500" fill="#64748b" text-anchor="start">+</text>
+</g>
+<g>
+<rect x="1134.40" y="163" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-15)"/>
+<text x="1148.40" y="187.66" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Fix critical auth bypass vulnerability</text>
+<g>
+<text x="1148.40" y="215.52" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Sarah C.</text>
+<g>
+<rect x="1328.54" y="205.20" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="1334.54" y="215.40" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">3</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="1134.40" y="247.20" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-16)"/>
+<text x="1148.40" y="271.86" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Deploy staging environment</text>
+<g>
+<text x="1148.40" y="299.72" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">Alex T.</text>
+<g>
+<rect x="1328.54" y="289.40" width="17.46" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="1334.54" y="299.60" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">2</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="1134.40" y="331.40" width="225.60" height="74.20" fill="#263245" rx="10" stroke="#334155" stroke-width="1" filter="url(#shadow-17)"/>
+<text x="1148.40" y="356.06" font-family='Inter, sans-serif' font-size="13" font-weight="500" fill="#f8fafc" text-anchor="start">Update dependencies to latest</text>
+<g>
+<text x="1148.40" y="383.92" font-family='Inter, sans-serif' font-size="11" font-weight="400" fill="#64748b" text-anchor="start">James R.</text>
+<g>
+<rect x="1331" y="373.60" width="15" height="18" fill="rgba(148,163,184,0.1)" rx="4"/>
+<text x="1337" y="383.80" font-family='Inter, sans-serif' font-size="10" font-weight="600" fill="#94a3b8" text-anchor="start">1</text>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

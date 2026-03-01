@@ -1,0 +1,295 @@
+theme:
+  background: "#0c0c1d"
+  foreground: "#e2e8f0"
+  muted: "#64748b"
+  accent: "#22d3ee"
+  border: "#1e293b"
+  radius: 8
+  font-family: Inter
+  font-size: 14
+  font-weight: 400
+
+tokens:
+  color:
+    node: "#111827"
+    ingest: "#06b6d4"
+    process: "#8b5cf6"
+    store: "#f59e0b"
+    serve: "#10b981"
+    monitor: "#ec4899"
+
+components:
+  pipeline-node:
+    fill: $color.node
+    radius: 12
+    padding: 16 20
+    gap: 4
+    border: 1.5 solid #1e293b
+    shadow: 0 4 24 rgba(0,0,0,0.3)
+    align: center
+    min-width: 140
+    params:
+      name: { default: "Node" }
+      detail: { default: "" }
+      color: { default: "#22d3ee" }
+    - text: "{{name}}"
+      font: 600 13 Inter
+      color: "{{color}}"
+      text-align: center
+    - text: "{{detail}}"
+      font: 400 10 Inter
+      color: "#64748b"
+      text-align: center
+
+root:
+  width: 1200
+  height: 700
+  fill: "#0c0c1d"
+  padding: 40
+  gap: 32
+
+  - frame: title
+    gap: 8
+    - text: "Real-time Data Pipeline"
+      font: 700 28 Inter
+      color: "#e2e8f0"
+    - text: "Event ingestion → Stream processing → Storage → Serving layer"
+      font: 400 13 Inter
+      color: "#64748b"
+
+  - frame: pipeline
+    flex: 1
+    direction: row
+    gap: 32
+    align: start
+
+    # Ingestion
+    - frame: stage-ingest
+      gap: 16
+      align: center
+      flex: 1
+      - frame:
+        fill: rgba(6,182,212,0.1)
+        radius: 8
+        padding: 6 16
+        border: 1 solid rgba(6,182,212,0.2)
+        - text: "INGESTION"
+          font: 700 10 Inter
+          color: $color.ingest
+          letter-spacing: 2
+      - frame:
+        gap: 12
+        align: center
+        - use: pipeline-node
+          id: webhooks
+          name: "Webhooks"
+          detail: "HTTP/REST"
+          color: $color.ingest
+        - use: pipeline-node
+          id: sdk
+          name: "Client SDK"
+          detail: "JS / Go / Python"
+          color: $color.ingest
+        - use: pipeline-node
+          id: cdc
+          name: "CDC Connector"
+          detail: "Debezium"
+          color: $color.ingest
+
+    # Stream
+    - frame: stage-stream
+      gap: 16
+      align: center
+      flex: 1
+      - frame:
+        fill: rgba(139,92,246,0.1)
+        radius: 8
+        padding: 6 16
+        border: 1 solid rgba(139,92,246,0.2)
+        - text: "STREAM PROCESSING"
+          font: 700 10 Inter
+          color: $color.process
+          letter-spacing: 2
+      - frame:
+        gap: 12
+        align: center
+        - use: pipeline-node
+          id: kafka
+          name: "Kafka"
+          detail: "Event Bus"
+          color: $color.process
+        - use: pipeline-node
+          id: flink
+          name: "Flink"
+          detail: "Stream Processing"
+          color: $color.process
+        - use: pipeline-node
+          id: schema
+          name: "Schema Registry"
+          detail: "Avro / Protobuf"
+          color: $color.process
+
+    # Storage
+    - frame: stage-store
+      gap: 16
+      align: center
+      flex: 1
+      - frame:
+        fill: rgba(245,158,11,0.1)
+        radius: 8
+        padding: 6 16
+        border: 1 solid rgba(245,158,11,0.2)
+        - text: "STORAGE"
+          font: 700 10 Inter
+          color: $color.store
+          letter-spacing: 2
+      - frame:
+        gap: 12
+        align: center
+        - use: pipeline-node
+          id: clickhouse
+          name: "ClickHouse"
+          detail: "Analytics OLAP"
+          color: $color.store
+        - use: pipeline-node
+          id: postgres
+          name: "PostgreSQL"
+          detail: "OLTP + State"
+          color: $color.store
+        - use: pipeline-node
+          id: s3
+          name: "S3 / MinIO"
+          detail: "Data Lake"
+          color: $color.store
+
+    # Serving
+    - frame: stage-serve
+      gap: 16
+      align: center
+      flex: 1
+      - frame:
+        fill: rgba(16,185,129,0.1)
+        radius: 8
+        padding: 6 16
+        border: 1 solid rgba(16,185,129,0.2)
+        - text: "SERVING"
+          font: 700 10 Inter
+          color: $color.serve
+          letter-spacing: 2
+      - frame:
+        gap: 12
+        align: center
+        - use: pipeline-node
+          id: graphql
+          name: "GraphQL API"
+          detail: "Queries + Subs"
+          color: $color.serve
+        - use: pipeline-node
+          id: grpc
+          name: "gRPC Service"
+          detail: "Internal API"
+          color: $color.serve
+        - use: pipeline-node
+          id: ws
+          name: "WebSocket"
+          detail: "Real-time Push"
+          color: $color.serve
+
+    # Monitoring
+    - frame: stage-monitor
+      gap: 16
+      align: center
+      flex: 1
+      - frame:
+        fill: rgba(236,72,153,0.1)
+        radius: 8
+        padding: 6 16
+        border: 1 solid rgba(236,72,153,0.2)
+        - text: "OBSERVABILITY"
+          font: 700 10 Inter
+          color: $color.monitor
+          letter-spacing: 2
+      - frame:
+        gap: 12
+        align: center
+        - use: pipeline-node
+          id: otel
+          name: "OpenTelemetry"
+          detail: "Traces + Metrics"
+          color: $color.monitor
+        - use: pipeline-node
+          id: prom
+          name: "Prometheus"
+          detail: "Metrics Store"
+          color: $color.monitor
+        - use: pipeline-node
+          id: grafana
+          name: "Grafana"
+          detail: "Dashboards"
+          color: $color.monitor
+
+edges:
+  # Ingestion to Kafka
+  - from: webhooks
+    to: kafka
+    stroke: $color.ingest
+    curve: straight
+  - from: sdk
+    to: kafka
+    stroke: $color.ingest
+    curve: straight
+  - from: cdc
+    to: kafka
+    stroke: $color.ingest
+    curve: straight
+
+  # Kafka to processing
+  - from: kafka
+    to: flink
+    stroke: $color.process
+    curve: straight
+  - from: kafka
+    to: schema
+    stroke: $color.process
+    style: dashed
+    curve: straight
+
+  # Processing to storage
+  - from: flink
+    to: clickhouse
+    stroke: $color.store
+    curve: straight
+  - from: flink
+    to: postgres
+    stroke: $color.store
+    curve: straight
+  - from: flink
+    to: s3
+    stroke: $color.store
+    style: dashed
+    curve: straight
+
+  # Storage to serving
+  - from: clickhouse
+    to: graphql
+    stroke: $color.serve
+    curve: straight
+  - from: postgres
+    to: grpc
+    stroke: $color.serve
+    curve: straight
+  - from: postgres
+    to: ws
+    stroke: $color.serve
+    style: dashed
+    curve: straight
+
+  # Monitoring
+  - from: otel
+    to: prom
+    stroke: $color.monitor
+    curve: straight
+  - from: prom
+    to: grafana
+    stroke: $color.monitor
+    curve: straight

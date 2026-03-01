@@ -1,0 +1,272 @@
+theme: dark
+
+tokens:
+  color:
+    bg: "#0f172a"
+    column: "#1e293b"
+    card: "#263245"
+    text: "#f8fafc"
+    text2: "#94a3b8"
+    text3: "#64748b"
+    border: "#334155"
+    priority:
+      critical: "#ef4444"
+      high: "#f97316"
+      medium: "#eab308"
+      low: "#22c55e"
+    tag:
+      frontend: "#3b82f6"
+      backend: "#8b5cf6"
+      design: "#ec4899"
+      devops: "#06b6d4"
+      bug: "#ef4444"
+  radius:
+    sm: 6
+    md: 10
+    lg: 14
+
+components:
+  tag:
+    radius: 4
+    padding: 3 8
+    params:
+      label: { default: "tag" }
+      bg: { default: "rgba(59,130,246,0.15)" }
+      fg: { default: "#3b82f6" }
+    - text: "{{label}}"
+      font: 600 10 Inter
+      color: "{{fg}}"
+
+  priority-dot:
+    width: 8
+    height: 8
+    radius: 4
+    shape: circle
+    params:
+      color: { default: "#22c55e" }
+    fill: "{{color}}"
+
+  task-card:
+    fill: $color.card
+    radius: $radius.md
+    padding: 14
+    gap: 10
+    border: 1 solid $color.border
+    shadow: 0 2 8 rgba(0,0,0,0.15)
+    params:
+      title: { default: "Task" }
+      assignee: { default: "Unassigned" }
+      points: { default: "-" }
+    - text: "{{title}}"
+      font: 500 13 Inter
+      color: $color.text
+      line-height: 1.4
+    - frame:
+      direction: row
+      justify: between
+      align: center
+      - text: "{{assignee}}"
+        font: 400 11 Inter
+        color: $color.text3
+      - frame:
+        fill: rgba(148,163,184,0.1)
+        radius: 4
+        padding: 2 6
+        - text: "{{points}}"
+          font: 600 10 Inter
+          color: $color.text2
+
+  column-header:
+    direction: row
+    justify: between
+    align: center
+    padding: 0 4 12 4
+    params:
+      title: { default: "Column" }
+      count: { default: "0" }
+    - frame:
+      direction: row
+      gap: 8
+      align: center
+      - text: "{{title}}"
+        font: 700 14 Inter
+        color: $color.text
+      - frame:
+        fill: rgba(148,163,184,0.15)
+        radius: 10
+        padding: 2 8
+        - text: "{{count}}"
+          font: 600 11 Inter
+          color: $color.text2
+    - text: "+"
+      font: 500 18 Inter
+      color: $color.text3
+
+root:
+  width: 1400
+  height: 900
+  fill: $color.bg
+  padding: 24
+  gap: 20
+
+  # Top bar
+  - frame: topbar
+    direction: row
+    justify: between
+    align: center
+    - frame:
+      gap: 4
+      - text: "Sprint Board"
+        font: 700 24 Inter
+        color: $color.text
+      - text: "Sprint 23 — Feb 17 – Mar 2, 2026"
+        font: 400 13 Inter
+        color: $color.text3
+    - frame: filters
+      direction: row
+      gap: 8
+      - frame:
+        fill: $color.column
+        border: 1 solid $color.border
+        radius: $radius.sm
+        padding: 6 14
+        - text: "Filter"
+          font: 500 13 Inter
+          color: $color.text2
+      - frame:
+        fill: $color.column
+        border: 1 solid $color.border
+        radius: $radius.sm
+        padding: 6 14
+        - text: "Group by: Assignee"
+          font: 500 13 Inter
+          color: $color.text2
+
+  # Board columns
+  - frame: board
+    direction: row
+    gap: 16
+    flex: 1
+
+    # Backlog
+    - frame: col-backlog
+      flex: 1
+      fill: $color.column
+      radius: $radius.lg
+      padding: 16
+      gap: 10
+      - use: column-header
+        title: "Backlog"
+        count: "5"
+      - use: task-card
+        title: "Implement real-time WebSocket notifications"
+        assignee: "Sarah C."
+        points: "8"
+      - use: task-card
+        title: "Add dark mode toggle to settings"
+        assignee: "James R."
+        points: "3"
+      - use: task-card
+        title: "Database migration for v2 schema"
+        assignee: "Mike P."
+        points: "5"
+      - use: task-card
+        title: "Write E2E tests for checkout flow"
+        assignee: "Emily K."
+        points: "5"
+      - use: task-card
+        title: "Optimize image CDN pipeline"
+        assignee: "Unassigned"
+        points: "3"
+
+    # To Do
+    - frame: col-todo
+      flex: 1
+      fill: $color.column
+      radius: $radius.lg
+      padding: 16
+      gap: 10
+      - use: column-header
+        title: "To Do"
+        count: "4"
+      - use: task-card
+        title: "Design onboarding wizard screens"
+        assignee: "Lisa M."
+        points: "5"
+      - use: task-card
+        title: "Implement OAuth2 PKCE flow"
+        assignee: "Sarah C."
+        points: "8"
+      - use: task-card
+        title: "Set up Prometheus monitoring"
+        assignee: "Alex T."
+        points: "3"
+      - use: task-card
+        title: "Refactor API response serializers"
+        assignee: "James R."
+        points: "2"
+
+    # In Progress
+    - frame: col-progress
+      flex: 1
+      fill: $color.column
+      radius: $radius.lg
+      padding: 16
+      gap: 10
+      - use: column-header
+        title: "In Progress"
+        count: "3"
+      - use: task-card
+        title: "Build search autocomplete with Elasticsearch"
+        assignee: "Mike P."
+        points: "8"
+      - use: task-card
+        title: "Implement file upload with progress"
+        assignee: "Sarah C."
+        points: "5"
+      - use: task-card
+        title: "Fix mobile responsive layout bugs"
+        assignee: "Lisa M."
+        points: "2"
+
+    # Review
+    - frame: col-review
+      flex: 1
+      fill: $color.column
+      radius: $radius.lg
+      padding: 16
+      gap: 10
+      - use: column-header
+        title: "In Review"
+        count: "2"
+      - use: task-card
+        title: "Add rate limiting middleware"
+        assignee: "Alex T."
+        points: "3"
+      - use: task-card
+        title: "Redesign settings page"
+        assignee: "Emily K."
+        points: "5"
+
+    # Done
+    - frame: col-done
+      flex: 1
+      fill: $color.column
+      radius: $radius.lg
+      padding: 16
+      gap: 10
+      - use: column-header
+        title: "Done"
+        count: "3"
+      - use: task-card
+        title: "Fix critical auth bypass vulnerability"
+        assignee: "Sarah C."
+        points: "3"
+      - use: task-card
+        title: "Deploy staging environment"
+        assignee: "Alex T."
+        points: "2"
+      - use: task-card
+        title: "Update dependencies to latest"
+        assignee: "James R."
+        points: "1"

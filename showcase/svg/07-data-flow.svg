@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="700" viewBox="0 0 1200 700">
+<style>
+  text { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+</style>
+<defs>
+  <filter id="shadow-1" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-2" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-3" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-4" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-5" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-6" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-7" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-8" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-9" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-10" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-11" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-12" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-13" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-14" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <filter id="shadow-15" x="-50%" y="-50%" width="200%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="rgba(0,0,0,0.3)" flood-opacity="1"/>
+  </filter>
+  <marker id="arrow-16" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#06b6d4"/>
+  </marker>
+  <marker id="arrow-17" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#06b6d4"/>
+  </marker>
+  <marker id="arrow-18" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#06b6d4"/>
+  </marker>
+  <marker id="arrow-19" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b5cf6"/>
+  </marker>
+  <marker id="arrow-20" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#8b5cf6"/>
+  </marker>
+  <marker id="arrow-21" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+  </marker>
+  <marker id="arrow-22" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+  </marker>
+  <marker id="arrow-23" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#f59e0b"/>
+  </marker>
+  <marker id="arrow-24" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981"/>
+  </marker>
+  <marker id="arrow-25" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981"/>
+  </marker>
+  <marker id="arrow-26" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#10b981"/>
+  </marker>
+  <marker id="arrow-27" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ec4899"/>
+  </marker>
+  <marker id="arrow-28" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+    <path d="M 0 0 L 10 5 L 0 10 z" fill="#ec4899"/>
+  </marker>
+</defs>
+<g>
+<rect x="0" y="0" width="1200" height="700" fill="#0c0c1d"/>
+<g>
+<text x="40" y="62.96" font-family='Inter, sans-serif' font-size="28" font-weight="700" fill="#e2e8f0" text-anchor="start">Real-time Data Pipeline</text>
+<text x="40" y="97.86" font-family='Inter, sans-serif' font-size="13" font-weight="400" fill="#64748b" text-anchor="start">Event ingestion → Stream processing → Storage → Serving layer</text>
+</g>
+<g>
+<g>
+<g>
+<rect x="88.67" y="137.40" width="101.05" height="26" fill="rgba(6,182,212,0.1)" rx="8" stroke="rgba(6,182,212,0.2)" stroke-width="1"/>
+<text x="104.67" y="151.60" font-family='Inter, sans-serif' font-size="10" font-weight="700" fill="#06b6d4" text-anchor="start" letter-spacing="2">INGESTION</text>
+</g>
+<g>
+<g>
+<rect x="89.57" y="179.40" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-1)"/>
+<text x="159.57" y="206.06" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#06b6d4" text-anchor="middle">Webhooks</text>
+<text x="159.57" y="225.80" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">HTTP/REST</text>
+</g>
+<g>
+<rect x="80.72" y="259.60" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-2)"/>
+<text x="150.72" y="286.26" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#06b6d4" text-anchor="middle">Client SDK</text>
+<text x="150.72" y="306" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">JS / Go / Python</text>
+</g>
+<g>
+<rect x="71.82" y="339.80" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-3)"/>
+<text x="141.82" y="366.46" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#06b6d4" text-anchor="middle">CDC Connector</text>
+<text x="141.82" y="386.20" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Debezium</text>
+</g>
+</g>
+</g>
+<g>
+<g>
+<rect x="285.41" y="137.40" width="168.38" height="26" fill="rgba(139,92,246,0.1)" rx="8" stroke="rgba(139,92,246,0.2)" stroke-width="1"/>
+<text x="301.41" y="151.60" font-family='Inter, sans-serif' font-size="10" font-weight="700" fill="#8b5cf6" text-anchor="start" letter-spacing="2">STREAM PROCESSING</text>
+</g>
+<g>
+<g>
+<rect x="326.59" y="179.40" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-4)"/>
+<text x="396.59" y="206.06" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#8b5cf6" text-anchor="middle">Kafka</text>
+<text x="396.59" y="225.80" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Event Bus</text>
+</g>
+<g>
+<rect x="306.05" y="259.60" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-5)"/>
+<text x="376.05" y="286.26" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#8b5cf6" text-anchor="middle">Flink</text>
+<text x="376.05" y="306" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Stream Processing</text>
+</g>
+<g>
+<rect x="297.25" y="339.80" width="144.70" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-6)"/>
+<text x="369.60" y="366.46" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#8b5cf6" text-anchor="middle">Schema Registry</text>
+<text x="369.60" y="386.20" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Avro / Protobuf</text>
+</g>
+</g>
+</g>
+<g>
+<g>
+<rect x="554.48" y="137.40" width="91.05" height="26" fill="rgba(245,158,11,0.1)" rx="8" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+<text x="570.48" y="151.60" font-family='Inter, sans-serif' font-size="10" font-weight="700" fill="#f59e0b" text-anchor="start" letter-spacing="2">STORAGE</text>
+</g>
+<g>
+<g>
+<rect x="544.64" y="179.40" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-7)"/>
+<text x="614.64" y="206.06" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#f59e0b" text-anchor="middle">ClickHouse</text>
+<text x="614.64" y="225.80" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Analytics OLAP</text>
+</g>
+<g>
+<rect x="541.67" y="259.60" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-8)"/>
+<text x="611.67" y="286.26" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#f59e0b" text-anchor="middle">PostgreSQL</text>
+<text x="611.67" y="306" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">OLTP + State</text>
+</g>
+<g>
+<rect x="547.88" y="339.80" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-9)"/>
+<text x="617.88" y="366.46" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#f59e0b" text-anchor="middle">S3 / MinIO</text>
+<text x="617.88" y="386.20" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Data Lake</text>
+</g>
+</g>
+</g>
+<g>
+<g>
+<rect x="787.06" y="137.40" width="86.68" height="26" fill="rgba(16,185,129,0.1)" rx="8" stroke="rgba(16,185,129,0.2)" stroke-width="1"/>
+<text x="803.06" y="151.60" font-family='Inter, sans-serif' font-size="10" font-weight="700" fill="#10b981" text-anchor="start" letter-spacing="2">SERVING</text>
+</g>
+<g>
+<g>
+<rect x="771.18" y="179.40" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-10)"/>
+<text x="841.18" y="206.06" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#10b981" text-anchor="middle">GraphQL API</text>
+<text x="841.18" y="225.80" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Queries + Subs</text>
+</g>
+<g>
+<rect x="768.88" y="259.60" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-11)"/>
+<text x="838.88" y="286.26" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#10b981" text-anchor="middle">gRPC Service</text>
+<text x="838.88" y="306" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Internal API</text>
+</g>
+<g>
+<rect x="775.82" y="339.80" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-12)"/>
+<text x="845.82" y="366.46" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#10b981" text-anchor="middle">WebSocket</text>
+<text x="845.82" y="386.20" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Real-time Push</text>
+</g>
+</g>
+</g>
+<g>
+<g>
+<rect x="993.72" y="137.40" width="134.17" height="26" fill="rgba(236,72,153,0.1)" rx="8" stroke="rgba(236,72,153,0.2)" stroke-width="1"/>
+<text x="1009.72" y="151.60" font-family='Inter, sans-serif' font-size="10" font-weight="700" fill="#ec4899" text-anchor="start" letter-spacing="2">OBSERVABILITY</text>
+</g>
+<g>
+<g>
+<rect x="993.24" y="179.40" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-13)"/>
+<text x="1063.24" y="206.06" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#ec4899" text-anchor="middle">OpenTelemetry</text>
+<text x="1063.24" y="225.80" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Traces + Metrics</text>
+</g>
+<g>
+<rect x="1003.54" y="259.60" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-14)"/>
+<text x="1073.54" y="286.26" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#ec4899" text-anchor="middle">Prometheus</text>
+<text x="1073.54" y="306" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Metrics Store</text>
+</g>
+<g>
+<rect x="1013.89" y="339.80" width="140" height="68.20" fill="#111827" rx="12" stroke="#1e293b" stroke-width="1.50" filter="url(#shadow-15)"/>
+<text x="1083.89" y="366.46" font-family='Inter, sans-serif' font-size="13" font-weight="600" fill="#ec4899" text-anchor="middle">Grafana</text>
+<text x="1083.89" y="386.20" font-family='Inter, sans-serif' font-size="10" font-weight="400" fill="#64748b" text-anchor="middle">Dashboards</text>
+</g>
+</g>
+</g>
+</g>
+</g>
+<path d="M 229.57 213.50 L 326.59 213.50" fill="none" stroke="#06b6d4" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-1)"/>
+<path d="M 220.72 293.70 L 326.59 213.50" fill="none" stroke="#06b6d4" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-2)"/>
+<path d="M 211.82 373.90 L 326.59 213.50" fill="none" stroke="#06b6d4" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-3)"/>
+<path d="M 396.59 247.60 L 376.05 259.60" fill="none" stroke="#8b5cf6" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-4)"/>
+<path d="M 396.59 247.60 L 369.60 339.80" fill="none" stroke="#8b5cf6" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4" marker-end="url(#arrow-5)"/>
+<path d="M 446.05 293.70 L 544.64 213.50" fill="none" stroke="#f59e0b" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-6)"/>
+<path d="M 446.05 293.70 L 541.67 293.70" fill="none" stroke="#f59e0b" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-7)"/>
+<path d="M 446.05 293.70 L 547.88 373.90" fill="none" stroke="#f59e0b" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4" marker-end="url(#arrow-8)"/>
+<path d="M 684.64 213.50 L 771.18 213.50" fill="none" stroke="#10b981" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-9)"/>
+<path d="M 681.67 293.70 L 768.88 293.70" fill="none" stroke="#10b981" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-10)"/>
+<path d="M 681.67 293.70 L 775.82 373.90" fill="none" stroke="#10b981" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 4" marker-end="url(#arrow-11)"/>
+<path d="M 1063.24 247.60 L 1073.54 259.60" fill="none" stroke="#ec4899" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-12)"/>
+<path d="M 1073.54 327.80 L 1083.89 339.80" fill="none" stroke="#ec4899" stroke-width="1.50" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-13)"/>
+</svg>

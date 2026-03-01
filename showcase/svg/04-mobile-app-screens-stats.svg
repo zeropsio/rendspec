@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="390" height="844" viewBox="0 0 390 844">
+<style>
+  text { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+</style>
+<defs>
+  <linearGradient id="grad-1" x1="0.50" y1="0" x2="0.50" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="rgba(10,132,255,0.15)"/>
+    <stop offset="100%" stop-color="rgba(10,132,255,0)"/>
+  </linearGradient>
+</defs>
+<clipPath id="clip-1"><rect x="0" y="0" width="390" height="844" rx="44"/></clipPath>
+<g clip-path="url(#clip-1)">
+<rect x="0" y="0" width="390" height="844" fill="#000000" rx="44"/>
+<g>
+<text x="24" y="24.30" font-family='"SF Pro", sans-serif' font-size="15" font-weight="600" fill="white" text-anchor="start">9:41</text>
+<g>
+<text x="320.36" y="21.84" font-family='"SF Pro", sans-serif' font-size="12" font-weight="600" fill="white" text-anchor="start">5G</text>
+<text x="340.45" y="21.84" font-family='"SF Pro", sans-serif' font-size="12" font-weight="600" fill="white" text-anchor="start">100%</text>
+</g>
+</g>
+<g>
+<text x="24" y="96.88" font-family='"SF Pro", sans-serif' font-size="34" font-weight="700" fill="white" text-anchor="start">Statistics</text>
+<text x="24" y="132.08" font-family='"SF Pro", sans-serif' font-size="14" font-weight="400" fill="#98989d" text-anchor="start">Your spending overview</text>
+</g>
+<g>
+<g>
+<rect x="24" y="164.20" width="70.88" height="34.20" fill="#0a84ff" rx="20"/>
+<text x="44" y="182.86" font-family='"SF Pro", sans-serif' font-size="13" font-weight="600" fill="white" text-anchor="start">Week</text>
+</g>
+<g>
+<rect x="102.88" y="164.20" width="77.97" height="34.20" fill="#1c1c1e" rx="20"/>
+<text x="122.88" y="182.86" font-family='"SF Pro", sans-serif' font-size="13" font-weight="600" fill="#98989d" text-anchor="start">Month</text>
+</g>
+<g>
+<rect x="188.85" y="164.20" width="69.46" height="34.20" fill="#1c1c1e" rx="20"/>
+<text x="208.85" y="182.86" font-family='"SF Pro", sans-serif' font-size="13" font-weight="600" fill="#98989d" text-anchor="start">Year</text>
+</g>
+</g>
+<g>
+<rect x="24" y="214.40" width="390" height="286.80" fill="#1c1c1e" rx="20"/>
+<g>
+<g>
+<text x="48" y="249.88" font-family='"SF Pro", sans-serif' font-size="14" font-weight="400" fill="#98989d" text-anchor="start">This Week</text>
+<text x="48" y="284.96" font-family='"SF Pro", sans-serif' font-size="28" font-weight="700" fill="white" text-anchor="start">$1,847.32</text>
+</g>
+<g>
+<rect x="327.32" y="238.40" width="62.68" height="28" fill="rgba(48,209,88,0.15)" rx="8"/>
+<text x="339.32" y="255.06" font-family='"SF Pro", sans-serif' font-size="13" font-weight="600" fill="#30d158" text-anchor="start">-12.5%</text>
+</g>
+</g>
+<g>
+<rect x="48" y="317.20" width="342" height="160" fill="url(#grad-2)" rx="12"/>
+</g>
+</g>
+<g>
+<text x="24" y="533.60" font-family='"SF Pro", sans-serif' font-size="20" font-weight="700" fill="white" text-anchor="start">Top Categories</text>
+<g>
+<g>
+<line x1="24" y1="629.20" x2="366" y2="629.20" stroke="#38383a" stroke-width="0.50"/>
+<g>
+<text x="24" y="585.14" font-family='"SF Pro", sans-serif' font-size="17" font-weight="400" fill="white" text-anchor="start">Shopping</text>
+<text x="24" y="607.66" font-family='"SF Pro", sans-serif' font-size="13" font-weight="400" fill="#98989d" text-anchor="start">12 transactions</text>
+</g>
+<text x="305.20" y="595.24" font-family='"SF Pro", sans-serif' font-size="17" font-weight="600" fill="#ffffff" text-anchor="start">$845.00</text>
+</g>
+<g>
+<line x1="24" y1="701.20" x2="366" y2="701.20" stroke="#38383a" stroke-width="0.50"/>
+<g>
+<text x="24" y="657.14" font-family='"SF Pro", sans-serif' font-size="17" font-weight="400" fill="white" text-anchor="start">Food &amp; Drinks</text>
+<text x="24" y="679.66" font-family='"SF Pro", sans-serif' font-size="13" font-weight="400" fill="#98989d" text-anchor="start">28 transactions</text>
+</g>
+<text x="309.38" y="667.24" font-family='"SF Pro", sans-serif' font-size="17" font-weight="600" fill="#ffffff" text-anchor="start">$412.50</text>
+</g>
+<g>
+<line x1="24" y1="773.20" x2="366" y2="773.20" stroke="#38383a" stroke-width="0.50"/>
+<g>
+<text x="24" y="729.14" font-family='"SF Pro", sans-serif' font-size="17" font-weight="400" fill="white" text-anchor="start">Transport</text>
+<text x="24" y="751.66" font-family='"SF Pro", sans-serif' font-size="13" font-weight="400" fill="#98989d" text-anchor="start">8 transactions</text>
+</g>
+<text x="309.38" y="739.24" font-family='"SF Pro", sans-serif' font-size="17" font-weight="600" fill="#ffffff" text-anchor="start">$189.00</text>
+</g>
+<g>
+<line x1="24" y1="845.20" x2="366" y2="845.20" stroke="#38383a" stroke-width="0.50"/>
+<g>
+<text x="24" y="801.14" font-family='"SF Pro", sans-serif' font-size="17" font-weight="400" fill="white" text-anchor="start">Entertainment</text>
+<text x="24" y="823.66" font-family='"SF Pro", sans-serif' font-size="13" font-weight="400" fill="#98989d" text-anchor="start">5 transactions</text>
+</g>
+<text x="309.38" y="811.24" font-family='"SF Pro", sans-serif' font-size="17" font-weight="600" fill="#ffffff" text-anchor="start">$156.82</text>
+</g>
+</g>
+</g>
+<g>
+<rect x="0" y="806" width="390" height="70" fill="#1c1c1e"/>
+<line x1="0" y1="806" x2="390" y2="806" stroke="#38383a" stroke-width="0.50"/>
+<g>
+<text x="37.05" y="830.20" font-family='"SF Pro", sans-serif' font-size="10" font-weight="500" fill="#98989d" text-anchor="start">Home</text>
+</g>
+<g>
+<text x="132.86" y="830.20" font-family='"SF Pro", sans-serif' font-size="10" font-weight="500" fill="#98989d" text-anchor="start">Cards</text>
+</g>
+<g>
+<text x="230.36" y="830.20" font-family='"SF Pro", sans-serif' font-size="10" font-weight="500" fill="#98989d" text-anchor="start">Stats</text>
+</g>
+<g>
+<text x="325" y="830.20" font-family='"SF Pro", sans-serif' font-size="10" font-weight="500" fill="#98989d" text-anchor="start">Profile</text>
+</g>
+</g>
+</g>
+</svg>
