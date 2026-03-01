@@ -251,6 +251,60 @@ The [`showcase/`](showcase/) directory has 9 example designs covering dashboards
 | Z-Index Stress Test | [`08-z-index-stress.rds`](showcase/designs/08-z-index-stress.rds) | [`handover`](showcase/handover/08-z-index-stress.md) |
 | Observability Dashboard | [`09-observability-v2.rds`](showcase/designs/09-observability-v2.rds) | [`handover`](showcase/handover/09-observability-v2.md) |
 
+## How it compares
+
+There's no direct equivalent. rendspec sits at the intersection of diagram-as-code tools and GUI design tools, combining a text DSL with a real layout engine. Here's how it relates to things you might already know:
+
+### vs. diagram-as-code (Mermaid, D2, PlantUML, Graphviz)
+
+These tools are great at what they do — **graph layout**. You define nodes and edges, and a layout algorithm (dagre, ELK, Graphviz dot) minimizes crossings and produces a readable diagram.
+
+But they have no concept of UI layout. There's no flexbox, no grid, no padding, no `direction: row` with `gap: 16`. You can't build a dashboard mockup, a card with aligned text, or a sidebar with navigation items. They position nodes to optimize a graph, not to compose a user interface.
+
+rendspec does both: it has a CSS-like layout engine for UI composition *and* edge routing for connecting frames. You can build a dashboard with stat cards in a grid layout and draw data-flow arrows between services — in the same file.
+
+| | Mermaid | D2 | PlantUML | rendspec |
+|---|---|---|---|---|
+| Layout engine | Graph (dagre) | Graph (dagre/ELK/TALA) | Graph (Graphviz) | Flexbox + grid |
+| UI mockups | No | No | Salt (crude) | Yes |
+| Design tokens | No | No | No | Yes |
+| Components with params | No | No | No | Yes |
+| Edge routing | Yes | Yes | Yes | Yes |
+| MCP server | No | No | No | Yes |
+| Headless CLI | Yes | Yes | Yes | Yes |
+
+**Use Mermaid/D2/PlantUML** for UML, sequence diagrams, entity-relationship diagrams, or any graph where automatic node placement is the point. **Use rendspec** when you need to control the visual layout — cards, grids, sidebars, dashboards, wireframes.
+
+### vs. GUI design tools (Figma, Penpot)
+
+Figma and Penpot have real layout engines (auto-layout / flexbox / grid), design tokens, components with variants — the same primitives rendspec offers. The difference is the interface.
+
+Figma is GUI-first. You drag, click, and visually compose. That's ideal for human designers but unusable for AI agents, CI pipelines, or version-controlled design artifacts. There's no way to write a text file and get a rendered design — you need the app.
+
+Penpot is open-source and has a proper CSS grid/flexbox engine, but it's also GUI-first. No CLI, no text DSL, no headless rendering.
+
+rendspec is text-first. Same layout concepts, but the input is a YAML file and the output is an SVG. That makes it trivially usable by AI agents (via MCP), diffable in git, and runnable in any pipeline.
+
+**Use Figma/Penpot** for collaborative human design work. **Use rendspec** when the "designer" is an AI agent, a CI job, or anyone who'd rather type than click.
+
+### vs. canvas MCP tools (Excalidraw, tldraw)
+
+Both Excalidraw and tldraw have MCP servers, so AI agents can draw on them. But neither has a layout engine — the agent must compute every x/y coordinate itself. Want three cards in a row with 16px gap? The agent has to calculate `x=0`, `x=216`, `x=432` (assuming 200px cards). Resize a card and everything downstream breaks.
+
+With rendspec, the agent writes `direction: row, gap: 16` and the engine computes positions. The agent describes structure, not coordinates.
+
+Excalidraw also locks you into a hand-drawn aesthetic. tldraw's MCP implementations are fragmented across multiple repos. Neither supports design tokens, components, or theming.
+
+**Use Excalidraw** for informal sketching and brainstorming. **Use rendspec** when the agent needs to produce clean, structured layouts without doing coordinate math.
+
+### vs. AI wireframe generators (Visily, Uizard, Motiff)
+
+These are SaaS products where you type a prompt and get a wireframe. They're the AI, not tools for an AI agent. The output isn't deterministic (same prompt, different result), isn't version-controllable (no text source), and can't be embedded in a development workflow.
+
+rendspec is deterministic — same YAML always produces the same SVG. It's a tool that agents use, not an agent itself. The YAML is the source of truth, lives in your repo, and diffs cleanly.
+
+**Use AI wireframe generators** for quick human exploration of ideas. **Use rendspec** when you need reproducible, version-controlled design artifacts in an automated pipeline.
+
 ## Development
 
 ```bash
