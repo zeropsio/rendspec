@@ -95,17 +95,23 @@ Frames are the core building block. Use `- frame: name` for named frames or `- f
   padding: 12 24         # single | "vert horiz" | "top right bottom left"
   padding-x: 24
   padding-y: 12
-  margin: 8
+  margin: 8              # same shorthand as padding
+  margin-x: 24
+  margin-y: 12
 
   # Visual
   fill: "#2563eb"        # any CSS color
   fill: linear-gradient(135deg, #667eea, #764ba2)
   fill: radial-gradient(circle, #fff, #000)
+  gradient: linear-gradient(135deg, #667eea, #764ba2)  # explicit gradient
   opacity: 0.8
   radius: 12
-  border: 1 solid #e2e8f0
+  border: 1 solid #e2e8f0    # width style color
   border-top: 1.5 dashed #ccc
-  shadow: 0 4 16 rgba(0,0,0,0.08)
+  border-right: 1.5 dashed #ccc
+  border-bottom: 1.5 dashed #ccc
+  border-left: 1.5 dashed #ccc
+  shadow: 0 4 16 rgba(0,0,0,0.08)  # multiple via | separator
   clip: true
   visible: false
 
@@ -151,11 +157,13 @@ edges:
     style: dashed              # solid | dashed | dotted
     arrow: end                 # none | start | end | both
     curve: orthogonal          # straight | orthogonal | bus | vertical
+    corner-radius: 8          # curve corner radius
+    junction: 100              # bus curve Y position
     label: "HTTPS"
     label-font: 500 11 Inter
     label-color: "#64748b"
     label-position: 0.5
-    from-anchor: bottom
+    from-anchor: bottom        # auto | top | right | bottom | left
     to-anchor: top
 ```
 
@@ -232,6 +240,7 @@ root:
   - text: "Hello"
     font: $font.heading
     color: $color.primary
+  - text: "Price: $$9.99"      # $$ escapes to literal $
 ```
 
 ## Multi-Page Documents

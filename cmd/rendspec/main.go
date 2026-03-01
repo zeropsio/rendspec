@@ -72,122 +72,125 @@ func printSyntax() {
 	fmt.Fprintf(os.Stderr, `rendspec DSL Reference
 ======================
 
-Every .rds file is valid YAML with this top-level shape:
+EXAMPLE:
 
-  theme: light              # optional: light | dark | blueprint | sketch | {custom}
-  tokens:                   # optional: design token definitions
-    color:
-      primary: "#3b82f6"
-  components:               # optional: reusable frame templates
-    button: { ... }
-  root:                     # REQUIRED — the canvas
+  root:
     width: 1280
     height: 720
-    ...children...
-  edges:                    # optional: connections between frames
-    - from: a
-      to: b
+    fill: "#f8fafc"
+    padding: 24
+    gap: 16
+    - text: "Dashboard"
+      font: 700 28 Inter
+      color: "#0f172a"
+    - frame: cards
+      direction: row
+      gap: 16
+      - frame: card1
+        fill: white
+        radius: 12
+        padding: 20
+        flex: 1
+        border: 1 solid #e2e8f0
+        shadow: 0 2 8 rgba(0,0,0,0.06)
+        gap: 8
+        - text: "Revenue"
+          font: 500 14 Inter
+          color: "#64748b"
+        - text: "$12,450"
+          font: 700 32 Inter
+          color: "#0f172a"
 
-PREPROCESSOR (runs before YAML parsing)
-────────────────────────────────────────
-Auto-quoting — Multi-word shorthand values don't need quotes:
-  padding: 12 24                          font: 700 20 Inter
-  border: 1 solid #e2e8f0                 shadow: 0 4 16 rgba(0,0,0,0.08)
-  fill: linear-gradient(135deg, #667eea, #764ba2)
+SYNTAX:
 
-  Properties: padding, margin, font, border, border-top/right/bottom/left,
-              shadow, label-font, gradient, fill
+  The source is YAML with a custom preprocessor. Hex colors (#...)
+  must be quoted in standalone properties (fill: "#ff0000") since #
+  is the YAML comment character. The preprocessor auto-quotes
+  multi-word values for: padding, margin, font, border,
+  border-top/right/bottom/left, shadow, label-font, gradient, fill.
+  Children are written directly under their parent with "- " prefix.
+  Use $$ to produce a literal dollar sign when using design tokens.
 
-Implicit children — No need to write "children:":
-  - frame: card
-    fill: white
-    padding: 20
-    - text: "Hello"          # ← automatically becomes a child
-    - frame: inner           # ← also a child
+TOP-LEVEL STRUCTURE:
+  theme: light|dark|blueprint|sketch    # optional
+  tokens:                               # optional design tokens
+    color:
+      primary: "#3b82f6"
+  components:                           # optional reusable templates
+    button: { ... }
+  root:                                 # required — the canvas
+    width: 1280
+    height: 720
+    fill: "#f8fafc"
+    ...child frames and text...
+  edges:                                # optional connections
+    - from: frameA
+      to: frameB
 
-FRAME PROPERTIES (- frame: name)
-────────────────────────────────
-  # Sizing
-  width: 200                 # explicit size in pixels
-  height: 100
-  min-width / max-width / min-height / max-height: N
-  flex: 1                    # flex grow factor (fills available space)
-
-  # Layout (how children are arranged)
+FRAME (- frame: name)
+─────────────────────
+  id: custom-id
+  width: 200                 height: 100
+  min-width: N               max-width: N
+  min-height: N              max-height: N
+  flex: 1                    # grow to fill available space
   layout: flex|grid          # default: flex
   direction: row|column      # default: column
-  align: start|center|end|stretch       # default: stretch
-  justify: start|center|end|between|around   # default: start
-  gap: 16                    # space between children in px
-  wrap: true                 # flex wrapping (default: false)
-
-  # Grid layout (when layout: grid)
-  columns: 3                 rows: 2
-  column-gap: 16             row-gap: 12
-
-  # Spacing (CSS-like shorthand)
-  padding: 20                # single value
-  padding: 12 24             # vert horiz
-  padding: 8 16 12 16        # top right bottom left
+  align: start|center|end|stretch           # default: stretch
+  justify: start|center|end|between|around  # default: start
+  gap: 16                    wrap: true
+  columns: 3                 rows: 2          # grid mode
+  column-gap: 16             row-gap: 12      # grid mode
+  padding: 20                # or: 12 24 | 8 16 12 16
   padding-x: 24              padding-y: 12
-  margin: 8
-
-  # Visual
-  fill: "#2563eb"            # any CSS color
+  margin: 8                  # or: 12 24 | 8 16 12 16
+  margin-x: 24               margin-y: 12
+  fill: "#2563eb"            # any CSS color (quote hex)
   fill: linear-gradient(135deg, #667eea, #764ba2)
   fill: radial-gradient(circle, #fff, #000)
-  opacity: 0.8
-  radius: 12
+  gradient: linear-gradient(135deg, #667eea, #764ba2)
+  opacity: 0.8               radius: 12
   border: 1 solid #e2e8f0    # width style color
-  border-top/right/bottom/left: 1.5 dashed #ccc
-  shadow: 0 4 16 rgba(0,0,0,0.08)
-  clip: true
-  visible: false
+  border-top: 1 solid #ccc   # per-side borders
+  border-right: 1 solid #ccc
+  border-bottom: 1 solid #ccc
+  border-left: 1 solid #ccc
+  shadow: 0 4 16 rgba(0,0,0,0.08)      # multiple via | separator
+  clip: true                 visible: false
+  image: "photo.jpg"         image-fit: cover|contain|fill|none
+  shape: rect|circle|ellipse|diamond    # default: rect
+  position: absolute         x: 20    y: 40    z-index: 2
 
-  # Image
-  image: "photo.jpg"
-  image-fit: cover|contain|fill|none
-
-  # Shape
-  shape: rect|circle|ellipse|diamond   # default: rect
-
-  # Z-ordering and positioning
-  z-index: 2
-  position: absolute
-  x: 20
-  y: 40
-
-TEXT NODES (- text: "content")
-──────────────────────────────
-  font: 700 24 Inter         # "weight size family"
+TEXT (- text: "content")
+────────────────────────
+  font: 700 24 Inter         # weight size family (no px units)
   color: "#0f172a"
   text-align: left|center|right
-  line-height: 1.6
-  max-width: 400             # triggers word wrapping
-  letter-spacing: 1.5
+  line-height: 1.6           max-width: 400
+  letter-spacing: 1.5        truncate: true
   text-decoration: none|underline|strikethrough
-  truncate: true
   opacity: 0.5
 
-EDGES (connections between named frames)
-────────────────────────────────────────
+EDGES
+─────
   edges:
     - from: client            # frame name or id
       to: server
-      stroke: "#94a3b8"
-      stroke-width: 2
+      stroke: "#94a3b8"       stroke-width: 2
       style: solid|dashed|dotted
       arrow: none|start|end|both
       curve: straight|orthogonal|bus|vertical
+      corner-radius: 8        # curve corner radius
+      junction: 100            # bus curve Y position
       label: "HTTPS"
       label-font: 500 11 Inter
       label-color: "#64748b"
-      label-position: 0.5    # 0–1 along edge
-      from-anchor: top|right|bottom|left
-      to-anchor: top|right|bottom|left
+      label-position: 0.5     # 0–1 along edge
+      from-anchor: auto|top|right|bottom|left
+      to-anchor: auto|top|right|bottom|left
 
-COMPONENTS (reusable templates)
-───────────────────────────────
+COMPONENTS
+──────────
   components:
     chip:
       fill: "#eff6ff"
@@ -197,12 +200,11 @@ COMPONENTS (reusable templates)
       - text: "Default"
         font: 500 12 Inter
       variants:
-        dark:
-          fill: "#1e293b"
-  # Usage in root:
+        dark: { fill: "#1e293b" }
+  # Usage:
   - use: chip
-  - chip: "Custom Label"     # shorthand sets first text child
-  - chip: "Dark Mode"
+  - chip: "Custom Label"
+  - chip: "Dark"
     variant: dark
 
 PARAMETERIZED COMPONENTS
@@ -222,8 +224,8 @@ PARAMETERIZED COMPONENTS
     title: "Revenue"
     value: "$12,450"
 
-DESIGN TOKENS (referenced with $ prefix)
-─────────────────────────────────────────
+DESIGN TOKENS
+─────────────
   tokens:
     color:
       primary: "#3b82f6"
@@ -231,13 +233,11 @@ DESIGN TOKENS (referenced with $ prefix)
         card: "#1e293b"
     radius:
       md: 12
-  # Usage:
-  fill: $color.bg.card       # resolves to "#1e293b"
-  radius: $radius.md          # resolves to 12
+  # Usage: fill: $color.bg.card   radius: $radius.md
 
 THEMES
 ──────
-  theme: dark                 # built-in: light | dark | blueprint | sketch
+  theme: dark                # built-in: light, dark, blueprint, sketch
   # Or custom:
   theme:
     background: "#0f172a"
@@ -250,8 +250,8 @@ THEMES
     font-size: 14
     font-weight: 400
 
-MULTI-PAGE DOCUMENTS
-────────────────────
+MULTI-PAGE
+──────────
   pages:
     - name: Login
       root:
@@ -263,27 +263,6 @@ MULTI-PAGE DOCUMENTS
         width: 1280
         height: 800
         ...
-
-MINIMAL EXAMPLE
-───────────────
-  root:
-    width: 400
-    height: 300
-    fill: "#f8fafc"
-    padding: 24
-    gap: 16
-    - text: "Hello World"
-      font: 700 24 Inter
-      color: "#0f172a"
-    - frame: card
-      fill: white
-      radius: 12
-      padding: 16
-      border: 1 solid #e2e8f0
-      shadow: 0 2 8 rgba(0,0,0,0.06)
-      - text: "A simple card"
-        font: 400 14 Inter
-        color: "#475569"
 `)
 }
 

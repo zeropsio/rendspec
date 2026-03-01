@@ -24,7 +24,7 @@ const dslSyntaxHint = ` IMPORTANT: If you are unfamiliar with the rendspec DSL s
 const dslReference = `rendspec DSL Reference
 ======================
 
-WORKING EXAMPLE — use as starting template:
+EXAMPLE:
 
 root:
   width: 1280
@@ -66,83 +66,91 @@ root:
         font: 700 32 Inter
         color: "#0f172a"
 
-CRITICAL RULES — read before writing ANY source:
-- The top-level key MUST be "root:" (NOT canvas, NOT config, NOT scene, NOT layout)
-- Rectangles/containers are "- frame: name" (NOT type: rect, NOT - rect, NOT layers)
-- Text is "- text: \"content\"" (NOT - label, NOT type: text)
-- Background color is "fill:" (NOT background, NOT bg, NOT color on frames)
-- Font shorthand is "font: 700 24 Inter" — weight(number) size(number, NO px) family (NOT fontSize, NOT fontWeight, NOT font-size)
-- Children go directly under their parent frame, indented by 2 spaces with "- " prefix
-- There is NO "children:" key, NO "layers:" key, NO "elements:" key
-- Hex colors in standalone properties MUST be quoted: fill: "#ff0000" (the # starts a YAML comment otherwise)
-- Hex colors inside shorthand properties like border/shadow don't need quotes: border: 1 solid #e2e8f0
+SYNTAX:
+
+The source is YAML with a custom preprocessor. Hex colors (#...) must be quoted
+in standalone properties (fill: "#ff0000") since # is the YAML comment character.
+The preprocessor auto-quotes multi-word values for: padding, margin, font, border,
+border-top, border-right, border-bottom, border-left, shadow, label-font, gradient, fill.
+Children are written directly under their parent with "- " prefix — no "children:" key needed.
+Use $$ to produce a literal dollar sign when using design tokens.
 
 TOP-LEVEL STRUCTURE:
-  theme: light|dark|blueprint|sketch  # optional
-  tokens:                             # optional design tokens
+  theme: light|dark|blueprint|sketch    # optional
+  tokens:                               # optional design tokens
     color:
       primary: "#3b82f6"
-  components:                         # optional reusable templates
+  components:                           # optional reusable templates
     button: { ... }
-  root:                               # REQUIRED — the canvas
+  root:                                 # required — the canvas
     width: 1280
     height: 720
     fill: "#f8fafc"
-    ...child frames and text nodes...
-  edges:                              # optional connections between frames
+    ...child frames and text...
+  edges:                                # optional connections
     - from: frameA
       to: frameB
 
-FRAME PROPERTIES (- frame: name):
+FRAME (- frame: name):
+  id: custom-id
   width: 200                 height: 100
   min-width: N               max-width: N
   min-height: N              max-height: N
   flex: 1                    # grow to fill available space
   layout: flex|grid          # default: flex
   direction: row|column      # default: column
-  align: start|center|end|stretch     # default: stretch
+  align: start|center|end|stretch           # default: stretch
   justify: start|center|end|between|around  # default: start
   gap: 16                    wrap: true
-  columns: 3                 rows: 2        # grid mode
-  column-gap: 16             row-gap: 12    # grid mode
-  padding: 20                # or "12 24" or "8 16 12 16"
+  columns: 3                 rows: 2          # grid mode
+  column-gap: 16             row-gap: 12      # grid mode
+  padding: 20                # or: 12 24 | 8 16 12 16
   padding-x: 24              padding-y: 12
-  margin: 8
-  fill: "#2563eb"            # any CSS color, MUST quote hex
+  margin: 8                  # or: 12 24 | 8 16 12 16
+  margin-x: 24               margin-y: 12
+  fill: "#2563eb"            # any CSS color (quote hex)
   fill: linear-gradient(135deg, #667eea, #764ba2)
+  fill: radial-gradient(circle, #fff, #000)
+  gradient: linear-gradient(135deg, #667eea, #764ba2)  # explicit gradient
   opacity: 0.8               radius: 12
-  border: 1 solid #e2e8f0    # auto-quoted, no quotes needed
-  shadow: 0 4 16 rgba(0,0,0,0.08)
+  border: 1 solid #e2e8f0    # width style color
+  border-top: 1 solid #ccc   # per-side borders
+  border-right: 1 solid #ccc
+  border-bottom: 1 solid #ccc
+  border-left: 1 solid #ccc
+  shadow: 0 4 16 rgba(0,0,0,0.08)      # multiple via | separator
   clip: true                 visible: false
   image: "photo.jpg"         image-fit: cover|contain|fill|none
-  shape: rect|circle|ellipse|diamond
+  shape: rect|circle|ellipse|diamond    # default: rect
   position: absolute         x: 20    y: 40    z-index: 2
 
-TEXT NODE PROPERTIES (- text: "content"):
-  font: 700 24 Inter         # weight size family (NO px units!)
-  color: "#0f172a"           # MUST quote hex
+TEXT (- text: "content"):
+  font: 700 24 Inter         # weight size family (no px units)
+  color: "#0f172a"
   text-align: left|center|right
   line-height: 1.6           max-width: 400
   letter-spacing: 1.5        truncate: true
   text-decoration: none|underline|strikethrough
   opacity: 0.5
 
-EDGES (connections between named frames):
+EDGES:
   edges:
-    - from: client
+    - from: client            # frame name or id
       to: server
-      stroke: "#94a3b8"      stroke-width: 2
+      stroke: "#94a3b8"       stroke-width: 2
       style: solid|dashed|dotted
       arrow: none|start|end|both
       curve: straight|orthogonal|bus|vertical
+      corner-radius: 8        # curve corner radius
+      junction: 100            # bus curve Y position
       label: "HTTPS"
       label-font: 500 11 Inter
       label-color: "#64748b"
-      label-position: 0.5
-      from-anchor: top|right|bottom|left
-      to-anchor: top|right|bottom|left
+      label-position: 0.5     # 0–1 along edge
+      from-anchor: auto|top|right|bottom|left
+      to-anchor: auto|top|right|bottom|left
 
-COMPONENTS (reusable templates):
+COMPONENTS:
   components:
     chip:
       fill: "#eff6ff"
@@ -152,7 +160,11 @@ COMPONENTS (reusable templates):
         font: 500 12 Inter
       variants:
         dark: { fill: "#1e293b" }
-  # Usage: - use: chip   OR   - chip: "Label"   OR   - chip: "Dark" + variant: dark
+  # Usage:
+  - use: chip
+  - chip: "Custom Label"
+  - chip: "Dark"
+    variant: dark
 
 PARAMETERIZED COMPONENTS:
   components:
@@ -165,25 +177,46 @@ PARAMETERIZED COMPONENTS:
       - text: "{{title}}"
       - text: "{{value}}"
         font: 700 28 Inter
-  # Usage: - use: stat-card + title: "Revenue" + value: "$12,450"
+  # Usage:
+  - use: stat-card
+    title: "Revenue"
+    value: "$12,450"
 
-DESIGN TOKENS ($ prefix):
+DESIGN TOKENS:
   tokens:
     color:
       primary: "#3b82f6"
       bg: { card: "#1e293b" }
+    radius:
+      md: 12
   # Usage: fill: $color.bg.card   radius: $radius.md
 
 THEMES:
-  theme: dark    # built-in: light, dark, blueprint, sketch
-  # Custom: theme: { background: "#0f172a", foreground: "#f8fafc", accent: "#3b82f6", border: "#334155", radius: 8, font-family: Inter }
+  theme: dark                # built-in: light, dark, blueprint, sketch
+  # Or custom:
+  theme:
+    background: "#0f172a"
+    foreground: "#f8fafc"
+    muted: "#94a3b8"
+    accent: "#3b82f6"
+    border: "#334155"
+    radius: 8
+    font-family: Inter
+    font-size: 14
+    font-weight: 400
 
 MULTI-PAGE:
   pages:
     - name: Login
-      root: { width: 400, height: 600, ... }
+      root:
+        width: 400
+        height: 600
+        ...
     - name: Dashboard
-      root: { width: 1280, height: 800, ... }`
+      root:
+        width: 1280
+        height: 800
+        ...`
 
 func main() {
 	s := server.NewMCPServer("rendspec", "0.1.0",
