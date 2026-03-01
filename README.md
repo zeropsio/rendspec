@@ -7,8 +7,8 @@ Works as a CLI or as an [MCP server](#mcp-server) for AI agents.
 ## Install
 
 ```bash
-go install github.com/fxck/rendspec/cmd/rendspec@latest
-go install github.com/fxck/rendspec/cmd/rendspec-mcp@latest
+go install github.com/zeropsio/rendspec/cmd/rendspec@latest
+go install github.com/zeropsio/rendspec/cmd/rendspec-mcp@latest
 ```
 
 Or `make build` from source.
