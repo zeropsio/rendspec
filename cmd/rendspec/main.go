@@ -40,7 +40,11 @@ func main() {
 	case "version", "--version", "-v":
 		fmt.Printf("rendspec %s\n", version)
 	case "help", "--help", "-h":
-		printUsage()
+		if len(os.Args) > 2 && os.Args[2] == "syntax" {
+			printSyntax()
+		} else {
+			printUsage()
+		}
 	default:
 		fmt.Fprintf(os.Stderr, "Unknown command: %s\n", os.Args[1])
 		printUsage()
@@ -56,8 +60,231 @@ Usage:
   rendspec validate <file.rds>
   rendspec inspect <file.rds>
   rendspec handover <file.rds> [-o output.md] [--no-png] [--scale 2]
+  rendspec help syntax          show full DSL reference
   rendspec version
+
+PNG output is built-in (resvg via WASM, no external binary needed).
+Use -o file.png to render as PNG, --scale to set resolution multiplier.
 `, version)
+}
+
+func printSyntax() {
+	fmt.Fprintf(os.Stderr, `rendspec DSL Reference
+======================
+
+Every .rds file is valid YAML with this top-level shape:
+
+  theme: light              # optional: light | dark | blueprint | sketch | {custom}
+  tokens:                   # optional: design token definitions
+    color:
+      primary: "#3b82f6"
+  components:               # optional: reusable frame templates
+    button: { ... }
+  root:                     # REQUIRED — the canvas
+    width: 1280
+    height: 720
+    ...children...
+  edges:                    # optional: connections between frames
+    - from: a
+      to: b
+
+PREPROCESSOR (runs before YAML parsing)
+────────────────────────────────────────
+Auto-quoting — Multi-word shorthand values don't need quotes:
+  padding: 12 24                          font: 700 20 Inter
+  border: 1 solid #e2e8f0                 shadow: 0 4 16 rgba(0,0,0,0.08)
+  fill: linear-gradient(135deg, #667eea, #764ba2)
+
+  Properties: padding, margin, font, border, border-top/right/bottom/left,
+              shadow, label-font, gradient, fill
+
+Implicit children — No need to write "children:":
+  - frame: card
+    fill: white
+    padding: 20
+    - text: "Hello"          # ← automatically becomes a child
+    - frame: inner           # ← also a child
+
+FRAME PROPERTIES (- frame: name)
+────────────────────────────────
+  # Sizing
+  width: 200                 # explicit size in pixels
+  height: 100
+  min-width / max-width / min-height / max-height: N
+  flex: 1                    # flex grow factor (fills available space)
+
+  # Layout (how children are arranged)
+  layout: flex|grid          # default: flex
+  direction: row|column      # default: column
+  align: start|center|end|stretch       # default: stretch
+  justify: start|center|end|between|around   # default: start
+  gap: 16                    # space between children in px
+  wrap: true                 # flex wrapping (default: false)
+
+  # Grid layout (when layout: grid)
+  columns: 3                 rows: 2
+  column-gap: 16             row-gap: 12
+
+  # Spacing (CSS-like shorthand)
+  padding: 20                # single value
+  padding: 12 24             # vert horiz
+  padding: 8 16 12 16        # top right bottom left
+  padding-x: 24              padding-y: 12
+  margin: 8
+
+  # Visual
+  fill: "#2563eb"            # any CSS color
+  fill: linear-gradient(135deg, #667eea, #764ba2)
+  fill: radial-gradient(circle, #fff, #000)
+  opacity: 0.8
+  radius: 12
+  border: 1 solid #e2e8f0    # width style color
+  border-top/right/bottom/left: 1.5 dashed #ccc
+  shadow: 0 4 16 rgba(0,0,0,0.08)
+  clip: true
+  visible: false
+
+  # Image
+  image: "photo.jpg"
+  image-fit: cover|contain|fill|none
+
+  # Shape
+  shape: rect|circle|ellipse|diamond   # default: rect
+
+  # Z-ordering and positioning
+  z-index: 2
+  position: absolute
+  x: 20
+  y: 40
+
+TEXT NODES (- text: "content")
+──────────────────────────────
+  font: 700 24 Inter         # "weight size family"
+  color: "#0f172a"
+  text-align: left|center|right
+  line-height: 1.6
+  max-width: 400             # triggers word wrapping
+  letter-spacing: 1.5
+  text-decoration: none|underline|strikethrough
+  truncate: true
+  opacity: 0.5
+
+EDGES (connections between named frames)
+────────────────────────────────────────
+  edges:
+    - from: client            # frame name or id
+      to: server
+      stroke: "#94a3b8"
+      stroke-width: 2
+      style: solid|dashed|dotted
+      arrow: none|start|end|both
+      curve: straight|orthogonal|bus|vertical
+      label: "HTTPS"
+      label-font: 500 11 Inter
+      label-color: "#64748b"
+      label-position: 0.5    # 0–1 along edge
+      from-anchor: top|right|bottom|left
+      to-anchor: top|right|bottom|left
+
+COMPONENTS (reusable templates)
+───────────────────────────────
+  components:
+    chip:
+      fill: "#eff6ff"
+      radius: 20
+      padding: 6 16
+      border: 1 solid #bfdbfe
+      - text: "Default"
+        font: 500 12 Inter
+      variants:
+        dark:
+          fill: "#1e293b"
+  # Usage in root:
+  - use: chip
+  - chip: "Custom Label"     # shorthand sets first text child
+  - chip: "Dark Mode"
+    variant: dark
+
+PARAMETERIZED COMPONENTS
+────────────────────────
+  components:
+    stat-card:
+      params:
+        title: { default: "Metric" }
+        value: { default: "0" }
+      fill: "#1e293b"
+      padding: 20
+      - text: "{{title}}"
+      - text: "{{value}}"
+        font: 700 28 Inter
+  # Usage:
+  - use: stat-card
+    title: "Revenue"
+    value: "$12,450"
+
+DESIGN TOKENS (referenced with $ prefix)
+─────────────────────────────────────────
+  tokens:
+    color:
+      primary: "#3b82f6"
+      bg:
+        card: "#1e293b"
+    radius:
+      md: 12
+  # Usage:
+  fill: $color.bg.card       # resolves to "#1e293b"
+  radius: $radius.md          # resolves to 12
+
+THEMES
+──────
+  theme: dark                 # built-in: light | dark | blueprint | sketch
+  # Or custom:
+  theme:
+    background: "#0f172a"
+    foreground: "#f8fafc"
+    muted: "#94a3b8"
+    accent: "#3b82f6"
+    border: "#334155"
+    radius: 8
+    font-family: Inter
+    font-size: 14
+    font-weight: 400
+
+MULTI-PAGE DOCUMENTS
+────────────────────
+  pages:
+    - name: Login
+      root:
+        width: 400
+        height: 600
+        ...
+    - name: Dashboard
+      root:
+        width: 1280
+        height: 800
+        ...
+
+MINIMAL EXAMPLE
+───────────────
+  root:
+    width: 400
+    height: 300
+    fill: "#f8fafc"
+    padding: 24
+    gap: 16
+    - text: "Hello World"
+      font: 700 24 Inter
+      color: "#0f172a"
+    - frame: card
+      fill: white
+      radius: 12
+      padding: 16
+      border: 1 solid #e2e8f0
+      shadow: 0 2 8 rgba(0,0,0,0.06)
+      - text: "A simple card"
+        font: 400 14 Inter
+        color: "#475569"
+`)
 }
 
 func cmdRender(args []string) int {
@@ -414,7 +641,11 @@ func partitionArgs(args []string) (flagArgs, posArgs []string) {
 	i := 0
 	for i < len(args) {
 		a := args[i]
-		if strings.HasPrefix(a, "-") {
+		if a == "-" {
+			// Bare "-" means stdin, treat as positional
+			posArgs = append(posArgs, a)
+			i++
+		} else if strings.HasPrefix(a, "-") {
 			flagArgs = append(flagArgs, a)
 			// Check if this flag takes a value (next arg)
 			name := strings.TrimLeft(a, "-")

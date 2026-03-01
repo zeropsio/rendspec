@@ -266,3 +266,22 @@ func TestInlineCommentIdx(t *testing.T) {
 		}
 	}
 }
+
+func TestAutoQuote_BorderWithHexColors(t *testing.T) {
+	tests := []struct {
+		input    string
+		expected string
+	}{
+		{"  border: 1 solid #e0dfdb", `  border: "1 solid #e0dfdb"`},
+		{"  border: 1 solid #e2e8f0", `  border: "1 solid #e2e8f0"`},
+		{"  border: 1 solid #abc", `  border: "1 solid #abc"`},
+		{"  border: 1 solid #000", `  border: "1 solid #000"`},
+		{"border: 1 solid #e0dfdb", `border: "1 solid #e0dfdb"`},
+	}
+	for _, tt := range tests {
+		got := autoQuote(tt.input)
+		if got != tt.expected {
+			t.Errorf("autoQuote(%q) = %q, want %q", tt.input, got, tt.expected)
+		}
+	}
+}

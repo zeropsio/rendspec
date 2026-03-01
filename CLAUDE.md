@@ -10,7 +10,7 @@ go install ./cmd/rendspec-mcp      # install MCP server
 
 rendspec render file.rds            # SVG to stdout
 rendspec render file.rds -o out.svg # SVG to file
-rendspec render file.rds -o out.png # PNG (needs resvg)
+rendspec render file.rds -o out.png # PNG (built-in, resvg via WASM)
 rendspec validate file.rds          # parse + layout check
 rendspec inspect file.rds           # dump layout as JSON
 ```

@@ -19,8 +19,7 @@ import (
 	"github.com/mark3labs/mcp-go/server"
 )
 
-const renderDesignDesc = `Render a rendspec .rds design to SVG (or PNG). The source parameter takes a YAML-based DSL that describes visual designs — UI mockups, diagrams, architecture charts, etc. No coordinate math or browser required; the engine handles layout automatically via flexbox and grid.
-
+const dslReference = `
 IMPORTANT SYNTAX NOTES:
 - The source is YAML. String values containing special characters (#, :, etc.) MUST be quoted.
 - Multi-word shorthand values for padding, font, border, shadow, fill are auto-quoted by a preprocessor, so you can write: padding: 12 24 (no quotes needed for these specific properties).
@@ -216,6 +215,14 @@ MINIMAL EXAMPLE:
         font: 400 14 Inter
         color: "#475569"`
 
+const renderDesignDesc = `Render a rendspec .rds design to SVG (or PNG). The source parameter takes a YAML-based DSL that describes visual designs — UI mockups, diagrams, architecture charts, etc. No coordinate math or browser required; the engine handles layout automatically via flexbox and grid.` + dslReference
+
+const validateDesignDesc = `Validate a rendspec .rds DSL source without rendering. Returns canvas size, frame/text/edge counts, and any warnings or parse errors. Use this to check DSL syntax before rendering.` + dslReference
+
+const inspectLayoutDesc = `Parse and lay out a rendspec .rds DSL source, then return the computed layout tree as JSON. Each node includes type, id, x, y, width, height, and children. Use this to debug layout issues or extract positioning data.` + dslReference
+
+const generateHandoverDesc = `Generate a structured Markdown handover document from a rendspec .rds DSL source. Returns component tree, CSS property mappings, design tokens as CSS variables, and implementation notes for developers. Useful for converting a visual design into a development specification.` + dslReference
+
 func main() {
 	s := server.NewMCPServer("rendspec", "0.1.0",
 		server.WithToolCapabilities(true),
@@ -235,8 +242,8 @@ func main() {
 	// Tool: validate_design
 	s.AddTool(
 		mcp.NewTool("validate_design",
-			mcp.WithDescription("Validate a rendspec .rds DSL source without rendering. Returns canvas size, frame/text/edge counts, and any warnings or parse errors. Use this to check DSL syntax before rendering. The DSL format is documented in the render_design tool description."),
-			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML format)")),
+			mcp.WithDescription(validateDesignDesc),
+			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML format). See the tool description for full DSL reference.")),
 		),
 		handleValidate,
 	)
@@ -244,8 +251,8 @@ func main() {
 	// Tool: inspect_layout
 	s.AddTool(
 		mcp.NewTool("inspect_layout",
-			mcp.WithDescription("Parse and lay out a rendspec .rds DSL source, then return the computed layout tree as JSON. Each node includes type, id, x, y, width, height, and children. Use this to debug layout issues or extract positioning data. The DSL format is documented in the render_design tool description."),
-			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML format)")),
+			mcp.WithDescription(inspectLayoutDesc),
+			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML format). See the tool description for full DSL reference.")),
 		),
 		handleInspect,
 	)
@@ -253,8 +260,8 @@ func main() {
 	// Tool: generate_handover
 	s.AddTool(
 		mcp.NewTool("generate_handover",
-			mcp.WithDescription("Generate a structured Markdown handover document from a rendspec .rds DSL source. Returns component tree, CSS property mappings, design tokens as CSS variables, and implementation notes for developers. Useful for converting a visual design into a development specification. The DSL format is documented in the render_design tool description."),
-			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML format)")),
+			mcp.WithDescription(generateHandoverDesc),
+			mcp.WithString("source", mcp.Required(), mcp.Description("The .rds DSL source text (YAML format). See the tool description for full DSL reference.")),
 		),
 		handleHandover,
 	)
@@ -318,9 +325,15 @@ func handleRender(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallTo
 		return &mcp.CallToolResult{Content: results}, nil
 	}
 
-	sg, err := parser.ParseString(source)
-	if err != nil {
-		return mcp.NewToolResultError(fmt.Sprintf("Parse error: %v", err)), nil
+	// Single page — reuse already-parsed document instead of re-parsing
+	page := doc.Pages[0]
+	sg := &scene.SceneGraph{
+		Root:       page.Root,
+		Edges:      page.Edges,
+		Theme:      doc.Theme,
+		Components: doc.Components,
+		Tokens:     doc.Tokens,
+		Warnings:   doc.Warnings,
 	}
 
 	layout.ComputeLayout(sg)
@@ -353,22 +366,36 @@ func handleValidate(ctx context.Context, request mcp.CallToolRequest) (*mcp.Call
 		return mcp.NewToolResultError("source is required"), nil
 	}
 
-	sg, err := parser.ParseString(source)
+	doc, err := parser.ParseDocument(source)
 	if err != nil {
 		return mcp.NewToolResultError(fmt.Sprintf("Invalid: %v", err)), nil
 	}
 
-	layout.ComputeLayout(sg)
+	var results []string
+	for _, page := range doc.Pages {
+		sg := &scene.SceneGraph{
+			Root:       page.Root,
+			Edges:      page.Edges,
+			Theme:      doc.Theme,
+			Components: doc.Components,
+			Tokens:     doc.Tokens,
+		}
+		layout.ComputeLayout(sg)
 
-	frameCount := inspect.CountFrames(sg.Root)
-	textCount := inspect.CountTexts(sg.Root)
-	edgeCount := len(sg.Edges)
+		frameCount := inspect.CountFrames(sg.Root)
+		textCount := inspect.CountTexts(sg.Root)
+		edgeCount := len(sg.Edges)
 
-	result := fmt.Sprintf("Valid\n  Canvas: %.0f x %.0f\n  Frames: %d\n  Text nodes: %d\n  Edges: %d",
-		sg.Root.Layout.Width, sg.Root.Layout.Height, frameCount, textCount, edgeCount)
+		if len(doc.Pages) > 1 {
+			results = append(results, fmt.Sprintf("Page '%s':", page.Name))
+		}
+		results = append(results, fmt.Sprintf("Valid\n  Canvas: %.0f x %.0f\n  Frames: %d\n  Text nodes: %d\n  Edges: %d",
+			sg.Root.Layout.Width, sg.Root.Layout.Height, frameCount, textCount, edgeCount))
+	}
 
-	if len(sg.Warnings) > 0 {
-		result += "\n\nWarnings:\n" + joinStr(prefixEach(sg.Warnings, "  - "), "\n")
+	result := joinStr(results, "\n\n")
+	if len(doc.Warnings) > 0 {
+		result += "\n\nWarnings:\n" + joinStr(prefixEach(doc.Warnings, "  - "), "\n")
 	}
 
 	return mcp.NewToolResultText(result), nil
@@ -381,11 +408,43 @@ func handleInspect(ctx context.Context, request mcp.CallToolRequest) (*mcp.CallT
 		return mcp.NewToolResultError("source is required"), nil
 	}
 
-	sg, err := parser.ParseString(source)
+	doc, err := parser.ParseDocument(source)
 	if err != nil {
 		return mcp.NewToolResultError(fmt.Sprintf("Parse error: %v", err)), nil
 	}
 
+	if len(doc.Pages) > 1 {
+		var pages []map[string]interface{}
+		for _, page := range doc.Pages {
+			sg := &scene.SceneGraph{
+				Root:       page.Root,
+				Edges:      page.Edges,
+				Theme:      doc.Theme,
+				Components: doc.Components,
+				Tokens:     doc.Tokens,
+			}
+			layout.ComputeLayout(sg)
+			data := inspect.NodeToMap(sg.Root)
+			edges := make([]map[string]interface{}, len(sg.Edges))
+			for i, e := range sg.Edges {
+				edges[i] = inspect.EdgeToDict(e)
+			}
+			data["edges"] = edges
+			data["page"] = page.Name
+			pages = append(pages, data)
+		}
+		b, _ := json.MarshalIndent(map[string]interface{}{"pages": pages}, "", "  ")
+		return mcp.NewToolResultText(string(b)), nil
+	}
+
+	page := doc.Pages[0]
+	sg := &scene.SceneGraph{
+		Root:       page.Root,
+		Edges:      page.Edges,
+		Theme:      doc.Theme,
+		Components: doc.Components,
+		Tokens:     doc.Tokens,
+	}
 	layout.ComputeLayout(sg)
 
 	data := inspect.NodeToMap(sg.Root)
@@ -405,11 +464,34 @@ func handleHandover(ctx context.Context, request mcp.CallToolRequest) (*mcp.Call
 		return mcp.NewToolResultError("source is required"), nil
 	}
 
-	sg, err := parser.ParseString(source)
+	doc, err := parser.ParseDocument(source)
 	if err != nil {
 		return mcp.NewToolResultError(fmt.Sprintf("Parse error: %v", err)), nil
 	}
 
+	if len(doc.Pages) > 1 {
+		for i := range doc.Pages {
+			sg := &scene.SceneGraph{
+				Root:       doc.Pages[i].Root,
+				Edges:      doc.Pages[i].Edges,
+				Theme:      doc.Theme,
+				Components: doc.Components,
+				Tokens:     doc.Tokens,
+			}
+			layout.ComputeLayout(sg)
+		}
+		md := handover.GenerateDocument(doc, doc.Pages, nil)
+		return mcp.NewToolResultText(md), nil
+	}
+
+	page := doc.Pages[0]
+	sg := &scene.SceneGraph{
+		Root:       page.Root,
+		Edges:      page.Edges,
+		Theme:      doc.Theme,
+		Components: doc.Components,
+		Tokens:     doc.Tokens,
+	}
 	layout.ComputeLayout(sg)
 	md := handover.Generate(sg)
 
